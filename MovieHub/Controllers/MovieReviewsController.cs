@@ -30,10 +30,10 @@ public class MovieReviewsController(IMovieHubRepository repository, IMapper mapp
         return Ok(movieReviews);
     }
     
-    [HttpGet("{id:int}", Name = "GetReviewById")]
-    public async Task<ActionResult<MovieReviewDto>> GetReview(int id)
+    [HttpGet("{reviewId:int}", Name = "GetReviewById")]
+    public async Task<ActionResult<MovieReviewDto>> GetReview(int reviewId)
     {
-        var movieReviewEntity = await _movieHubRepository.GetReviewAsync(id);
+        var movieReviewEntity = await _movieHubRepository.GetReviewAsync(reviewId);
 
         if (movieReviewEntity == null)
         {
