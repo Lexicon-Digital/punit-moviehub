@@ -28,6 +28,10 @@ builder.Services.AddScoped<IMovieHubRepository, MovieHubRepository>();
 
 builder.Services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
 
+builder.Services.AddTransient<IPrincesTheatreService, PrincesTheatreService>();
+
+builder.Services.AddHttpClient();
+
 builder.Services.AddControllers(options =>
 {
     options.ReturnHttpNotAcceptable = true;

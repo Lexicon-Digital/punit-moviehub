@@ -2,7 +2,7 @@ using Newtonsoft.Json;
 
 namespace MovieHub.Models;
 
-public class MovieWithoutDetailsDto
+public class MovieWithPrincesTheatrePricesDto
 {
     public int Id { get; set; }
     public string Title { get; set; } = string.Empty;
@@ -15,6 +15,10 @@ public class MovieWithoutDetailsDto
     public string PrincessTheatreMovieId { get; set; } = string.Empty;
     
     public decimal AverageScore => Utils.Average.GetAverage(MovieReviews);
+    public decimal FilmWorldPrice;
+    public decimal CinemaWorldPrice;
+    
+    public ICollection<MovieCinemaDto> MovieCinemas { get; set; } = new List<MovieCinemaDto>();
     
     [JsonIgnore]
     public ICollection<MovieReviewDto> MovieReviews { get; set; } = new List<MovieReviewDto>();

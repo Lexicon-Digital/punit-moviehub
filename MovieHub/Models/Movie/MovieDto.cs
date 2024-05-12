@@ -1,4 +1,3 @@
-using MovieHub.Entities;
 using Newtonsoft.Json;
 
 namespace MovieHub.Models;

@@ -550,6 +550,53 @@
               ],
               "cookie": [],
               "body": "{\n    \"id\": 2,\n    \"title\": \"Star Wars: Attack of the Clones (Episode II)\",\n    \"releaseDate\": \"2002-05-16T00:00:00\",\n    \"genre\": \"Action, Adventure, Fantasy, Live Action, Science Fiction\",\n    \"runTime\": 8520,\n    \"synopsis\": \"Watch the seeds of Anakin Skywalker's transformation take root in Star Wars: Episode II - Attack of the Clones. Ten years after the invasion of Naboo, the galaxy is on the brink of civil war. Under the leadership of a renegade Jedi named Count Dooku, thousands of solar systems threaten to break away from the Galactic Republic. When an assassination attempt is made on Senator Padmé Amidala, the former Queen of Naboo, twenty-year-old Jedi apprentice Anakin Skywalker is assigned to protect her. In the course of his mission, Anakin discovers his love for Padmé as well as his own darker side. Soon, Anakin, Padmé, and Obi-Wan Kenobi are drawn into the heart of the Separatist movement and the beginning of the Clone Wars.\",\n    \"director\": \"George Lucas\",\n    \"rating\": \"PG-13\",\n    \"princessTheatreMovieId\": \"0121765\",\n    \"averageScore\": 7.25,\n    \"movieCinemas\": [\n        {\n            \"id\": 8,\n            \"showTime\": \"2024-12-31T00:00:00\",\n            \"ticketPrice\": 26.25,\n            \"cinemaName\": \"Cinemarvel\"\n        },\n        {\n            \"id\": 9,\n            \"showTime\": \"2024-12-31T00:00:00\",\n            \"ticketPrice\": 21.75,\n            \"cinemaName\": \"Moviemania\"\n        },\n        {\n            \"id\": 10,\n            \"showTime\": \"2024-12-31T00:00:00\",\n            \"ticketPrice\": 25.5,\n            \"cinemaName\": \"BigScreen Bliss\"\n        },\n        {\n            \"id\": 11,\n            \"showTime\": \"2024-12-31T00:00:00\",\n            \"ticketPrice\": 27.75,\n            \"cinemaName\": \"CineNova\"\n        },\n        {\n            \"id\": 12,\n            \"showTime\": \"2024-12-31T00:00:00\",\n            \"ticketPrice\": 22.5,\n            \"cinemaName\": \"Cinema Royale\"\n        },\n        {\n            \"id\": 13,\n            \"showTime\": \"2024-12-31T00:00:00\",\n            \"ticketPrice\": 29.75,\n            \"cinemaName\": \"Flicker Factory\"\n        },\n        {\n            \"id\": 14,\n            \"showTime\": \"2024-12-31T00:00:00\",\n            \"ticketPrice\": 23,\n            \"cinemaName\": \"CineSpectra\"\n        }\n    ]\n}"
+            },
+            {
+              "name": "Get Movie By Id With Princes Theatre Details",
+              "originalRequest": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "{{base_url}}/{{route}}/:movieId?details=true",
+                  "host": ["{{base_url}}"],
+                  "path": ["{{route}}", ":movieId"],
+                  "query": [
+                    {
+                      "key": "details",
+                      "value": "true"
+                    }
+                  ],
+                  "variable": [
+                    {
+                      "key": "movieId",
+                      "value": "1"
+                    }
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Content-Length",
+                  "value": "1777"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "Date",
+                  "value": "Sun, 12 May 2024 17:07:23 GMT"
+                },
+                {
+                  "key": "Server",
+                  "value": "Kestrel"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"filmWorldPrice\": 27.2,\n    \"cinemaWorldPrice\": 26.4,\n    \"id\": 1,\n    \"title\": \"Star Wars: The Phantom Menace (Episode I)\",\n    \"releaseDate\": \"1999-05-19T00:00:00\",\n    \"genre\": \"Action, Adventure, Fantasy, Live Action, Science Fiction\",\n    \"runTime\": 8160,\n    \"synopsis\": \"Experience the heroic action and unforgettable adventures of Star Wars: Episode I - The Phantom Menace. See the first fateful steps in the journey of Anakin Skywalker. Stranded on the desert planet Tatooine after rescuing young Queen Amidala from the impending invasion of Naboo, Jedi apprentice Obi-Wan Kenobi and his Jedi Master Qui-Gon Jinn discover nine-year-old Anakin, who is unusually strong in the Force. Anakin wins a thrilling Podrace and with it his freedom as he leaves his home to be trained as a Jedi. The heroes return to Naboo where Anakin and the Queen face massive invasion forces while the two Jedi contend with a deadly foe named Darth Maul. Only then do they realize the invasion is merely the first step in a sinister scheme by the re-emergent forces of darkness known as the Sith.\",\n    \"director\": \"George Lucas\",\n    \"rating\": \"PG\",\n    \"princessTheatreMovieId\": \"0120915\",\n    \"averageScore\": 7,\n    \"movieCinemas\": [\n        {\n            \"id\": 1,\n            \"showTime\": \"2024-12-31T00:00:00\",\n            \"ticketPrice\": 24.5,\n            \"cinemaName\": \"Cinemarvel\"\n        },\n        {\n            \"id\": 2,\n            \"showTime\": \"2024-12-31T00:00:00\",\n            \"ticketPrice\": 22.75,\n            \"cinemaName\": \"Moviemania\"\n        },\n        {\n            \"id\": 3,\n            \"showTime\": \"2024-12-31T00:00:00\",\n            \"ticketPrice\": 20,\n            \"cinemaName\": \"BigScreen Bliss\"\n        },\n        {\n            \"id\": 4,\n            \"showTime\": \"2024-12-31T00:00:00\",\n            \"ticketPrice\": 21.5,\n            \"cinemaName\": \"CineNova\"\n        },\n        {\n            \"id\": 5,\n            \"showTime\": \"2024-12-31T00:00:00\",\n            \"ticketPrice\": 22.25,\n            \"cinemaName\": \"Cinema Royale\"\n        },\n        {\n            \"id\": 6,\n            \"showTime\": \"2024-12-31T00:00:00\",\n            \"ticketPrice\": 23.75,\n            \"cinemaName\": \"Flicker Factory\"\n        },\n        {\n            \"id\": 7,\n            \"showTime\": \"2024-12-31T00:00:00\",\n            \"ticketPrice\": 22.75,\n            \"cinemaName\": \"CineSpectra\"\n        }\n    ]\n}"
             }
           ]
         }

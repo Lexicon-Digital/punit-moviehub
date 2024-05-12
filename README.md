@@ -25,6 +25,12 @@ Ensure that all the necessary packages are restored:
 dotnet restore
 ```
 
+### Add configuration
+Add your Princess Theatre API key to the [MovieHub/appsettings.json](MovieHub/appsettings.json) configuration file in the `princesTheatreAPIKey` property, as shown below.
+
+![Add Princess Theatre API Key](screenshot-app-settings.png)
+
+
 ### Configure the database
 The API uses SQLite database, which will be automatically generated upon running migrations.
 

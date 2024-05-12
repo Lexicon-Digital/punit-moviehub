@@ -8,5 +8,6 @@ public class MovieProfile : Profile
     {
         CreateMap<Movie, MovieDto>();
         CreateMap<Movie, MovieWithoutDetailsDto>();
+        CreateMap<Movie, MovieWithPrincesTheatrePricesDto>();
     }
 }
