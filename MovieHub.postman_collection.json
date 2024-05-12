@@ -1,0 +1,520 @@
+{
+	"info": {
+		"_postman_id": "d25015a4-15be-4739-b2e2-84db010d9b05",
+		"name": "MovieHub",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "18076510"
+	},
+	"item": [
+		{
+			"name": "Movies",
+			"item": [
+				{
+					"name": "Get All Movies",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:{{port}}/{{__current_controller}}",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "{{port}}",
+							"path": [
+								"{{__current_controller}}"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Get All Movies",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "https://localhost:{{port}}/{{__controller}}",
+									"protocol": "https",
+									"host": [
+										"localhost"
+									],
+									"port": "{{port}}",
+									"path": [
+										"{{__controller}}"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Length",
+									"value": "7224"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 12 May 2024 09:29:44 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "Kestrel"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"id\": 1,\n        \"title\": \"Star Wars: The Phantom Menace (Episode I)\",\n        \"releaseDate\": \"1999-05-19T00:00:00\",\n        \"genre\": \"Action, Adventure, Fantasy, Live Action, Science Fiction\",\n        \"runTime\": 8160,\n        \"synopsis\": \"Experience the heroic action and unforgettable adventures of Star Wars: Episode I - The Phantom Menace. See the first fateful steps in the journey of Anakin Skywalker. Stranded on the desert planet Tatooine after rescuing young Queen Amidala from the impending invasion of Naboo, Jedi apprentice Obi-Wan Kenobi and his Jedi Master Qui-Gon Jinn discover nine-year-old Anakin, who is unusually strong in the Force. Anakin wins a thrilling Podrace and with it his freedom as he leaves his home to be trained as a Jedi. The heroes return to Naboo where Anakin and the Queen face massive invasion forces while the two Jedi contend with a deadly foe named Darth Maul. Only then do they realize the invasion is merely the first step in a sinister scheme by the re-emergent forces of darkness known as the Sith.\",\n        \"director\": \"George Lucas\",\n        \"rating\": \"PG\",\n        \"princessTheatreMovieId\": \"0120915\"\n    },\n    {\n        \"id\": 2,\n        \"title\": \"Star Wars: Attack of the Clones (Episode II)\",\n        \"releaseDate\": \"2002-05-16T00:00:00\",\n        \"genre\": \"Action, Adventure, Fantasy, Live Action, Science Fiction\",\n        \"runTime\": 8520,\n        \"synopsis\": \"Watch the seeds of Anakin Skywalker's transformation take root in Star Wars: Episode II - Attack of the Clones. Ten years after the invasion of Naboo, the galaxy is on the brink of civil war. Under the leadership of a renegade Jedi named Count Dooku, thousands of solar systems threaten to break away from the Galactic Republic. When an assassination attempt is made on Senator Padmé Amidala, the former Queen of Naboo, twenty-year-old Jedi apprentice Anakin Skywalker is assigned to protect her. In the course of his mission, Anakin discovers his love for Padmé as well as his own darker side. Soon, Anakin, Padmé, and Obi-Wan Kenobi are drawn into the heart of the Separatist movement and the beginning of the Clone Wars.\",\n        \"director\": \"George Lucas\",\n        \"rating\": \"PG-13\",\n        \"princessTheatreMovieId\": \"0121765\"\n    },\n    {\n        \"id\": 3,\n        \"title\": \"Star Wars: Revenge of the Sith (Episode III)\",\n        \"releaseDate\": \"2005-05-19T00:00:00\",\n        \"genre\": \"Action, Adventure, Fantasy, Live Action, Science Fiction\",\n        \"runTime\": 8399,\n        \"synopsis\": \"Discover the true power of the dark side in Star Wars: Episode III - Revenge of the Sith. Years after the onset of the Clone Wars, the noble Jedi Knights lead a massive clone army into a galaxy-wide battle against the Separatists. When the sinister Sith unveil a thousand-year-old plot to rule the galaxy, the Republic crumbles and from its ashes rises the evil Galactic Empire. Jedi hero Anakin Skywalker is seduced by the dark side of the Force to become the Emperor's new apprentice – Darth Vader. The Jedi are decimated, as Obi-Wan Kenobi and Jedi Master Yoda are forced into hiding.\",\n        \"director\": \"George Lucas\",\n        \"rating\": \"PG-13\",\n        \"princessTheatreMovieId\": \"0121766\"\n    },\n    {\n        \"id\": 4,\n        \"title\": \"Star Wars: A New Hope (Episode IV)\",\n        \"releaseDate\": \"1977-10-27T00:00:00\",\n        \"genre\": \"Action, Adventure, Fantasy, Live Action, Science Fiction\",\n        \"runTime\": 6300,\n        \"synopsis\": \"Luke Skywalker begins a journey that will change the galaxy in Star Wars: Episode IV - A New Hope. Nineteen years after the formation of the Empire, Luke is thrust into the struggle of the Rebel Alliance when he meets Obi-Wan Kenobi, who has lived for years in seclusion on the desert planet of Tatooine. Obi-Wan begins Luke's Jedi training as Luke joins him on a daring mission to rescue the beautiful Rebel leader Princess Leia from the clutches of Darth Vader and the evil Empire.\",\n        \"director\": \"George Lucas\",\n        \"rating\": \"PG\",\n        \"princessTheatreMovieId\": \"0076759\"\n    },\n    {\n        \"id\": 5,\n        \"title\": \"Star Wars: The Empire Strikes Back (Episode V)\",\n        \"releaseDate\": \"1980-08-07T00:00:00\",\n        \"genre\": \"Action, Adventure, Fantasy, Live Action, Science Fiction\",\n        \"runTime\": 7440,\n        \"synopsis\": \"After the destruction of the Death Star, Imperial forces continue to pursue the Rebels. After the Rebellion's defeat on the ice planet Hoth, Luke journeys to the planet Dagobah to train with Jedi Master Yoda, who has lived in hiding since the fall of the Republic. In an attempt to convert Luke to the dark side, Darth Vader lures young Skywalker into a trap in the Cloud City of Bespin.\",\n        \"director\": \"George Lucas\",\n        \"rating\": \"PG\",\n        \"princessTheatreMovieId\": \"0080684\"\n    },\n    {\n        \"id\": 6,\n        \"title\": \"Star Wars: Return of the Jedi (Episode VI)\",\n        \"releaseDate\": \"1983-10-27T00:00:00\",\n        \"genre\": \"Action, Adventure, Fantasy, Live Action, Science Fiction\",\n        \"runTime\": 7859,\n        \"synopsis\": \"After a quick trip back to Tatooine, Luke Skywalker, Leia Organa, and Han Solo are reunited and join up with the amassing rebel fleet to take down the evil Empire once and for all. But the Empire is plotting too. Emperor Palpatine commands his troops aboard his newly consturcted Death Star stationed above the forest moon of Endor, where the rebels - and some unlikely furry friends - make their stand against the Empire. While Luke Skywalker confronts Darth Vader on the Death Star once more, Han leads a team to take out a shield protecting the battle station so that the rebel fleet can destory it once more and finally put an end to the war.\",\n        \"director\": \"George Lucas\",\n        \"rating\": \"PG\",\n        \"princessTheatreMovieId\": \"0086190\"\n    },\n    {\n        \"id\": 7,\n        \"title\": \"Star Wars: The Force Awakens (Episode VII)\",\n        \"releaseDate\": \"2015-12-18T00:00:00\",\n        \"genre\": \"Action - Adventure, Science Fiction\",\n        \"runTime\": 8160,\n        \"synopsis\": \"Thirty years since the destruction of the second Death Star, the sinister First Order, commanded by the mysterious Snoke and apprentice Kylo Ren, rise from the ashes of the Empire. The Resistance, led by General Leia Organa, attempts to thwart the First Order's threat, but they're desperate for help. Rey, a desert scavenger, and Finn, an ex-stormtrooper, find themselves joining forces with Han Solo and Chewbacca in a desperate mission to return a BB-unit droid with a map to Luke Skywalker back to the Resistance.\",\n        \"director\": \"George Lucas\",\n        \"rating\": \"PG-13\",\n        \"princessTheatreMovieId\": \"2488496\"\n    },\n    {\n        \"id\": 8,\n        \"title\": \"Star Wars: The Last Jedi (Episode VIII)\",\n        \"releaseDate\": \"2017-12-13T00:00:00\",\n        \"genre\": \"Action - Adventure, Science Fiction\",\n        \"runTime\": 9000,\n        \"synopsis\": \"The Resistance is in desperate need of help when they find themselves impossibly pursued by the First Order. While Rey travels to a remote planet called Ahch-To to recruit Luke Skywalker to the Resistance, Finn and Rose, a mechanic, go on their own mission in the hopes of helping the Resistance finally escape the First Order. But everyone finds themselves on the salt-planet of Crait for a last stand.\",\n        \"director\": \"George Lucas\",\n        \"rating\": \"PG-13\",\n        \"princessTheatreMovieId\": \"2527336\"\n    },\n    {\n        \"id\": 9,\n        \"title\": \"Star Wars: The Rise of Skywalker (Episode IX)\",\n        \"releaseDate\": \"2019-12-18T00:00:00\",\n        \"genre\": \"Action - Adventure, Science Fiction\",\n        \"runTime\": 7992,\n        \"synopsis\": \"Lucasfilm and director J.J. Abrams join forces once  more to take viewers on an epic journey to a galaxy far, far away with Star Wars: The Rise of Skywalker, the riveting conclusion of the  landmark Skywalker saga, in which new legends will be born and the final battle for freedom is yet to come.\",\n        \"director\": \"George Lucas\",\n        \"rating\": \"PG-13\",\n        \"princessTheatreMovieId\": \"2527338\"\n    }\n]"
+						}
+					]
+				},
+				{
+					"name": "Search Movies By Genre",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:{{port}}/{{__current_controller}}?genre=fantasy",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "{{port}}",
+							"path": [
+								"{{__current_controller}}"
+							],
+							"query": [
+								{
+									"key": "genre",
+									"value": "fantasy"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Search Movie Genre \"Fantasy\"",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "https://localhost:{{port}}/{{__controller}}?genre=fantasy",
+									"protocol": "https",
+									"host": [
+										"localhost"
+									],
+									"port": "{{port}}",
+									"path": [
+										"{{__controller}}"
+									],
+									"query": [
+										{
+											"key": "genre",
+											"value": "fantasy"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Length",
+									"value": "5254"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 12 May 2024 09:29:48 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "Kestrel"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"id\": 1,\n        \"title\": \"Star Wars: The Phantom Menace (Episode I)\",\n        \"releaseDate\": \"1999-05-19T00:00:00\",\n        \"genre\": \"Action, Adventure, Fantasy, Live Action, Science Fiction\",\n        \"runTime\": 8160,\n        \"synopsis\": \"Experience the heroic action and unforgettable adventures of Star Wars: Episode I - The Phantom Menace. See the first fateful steps in the journey of Anakin Skywalker. Stranded on the desert planet Tatooine after rescuing young Queen Amidala from the impending invasion of Naboo, Jedi apprentice Obi-Wan Kenobi and his Jedi Master Qui-Gon Jinn discover nine-year-old Anakin, who is unusually strong in the Force. Anakin wins a thrilling Podrace and with it his freedom as he leaves his home to be trained as a Jedi. The heroes return to Naboo where Anakin and the Queen face massive invasion forces while the two Jedi contend with a deadly foe named Darth Maul. Only then do they realize the invasion is merely the first step in a sinister scheme by the re-emergent forces of darkness known as the Sith.\",\n        \"director\": \"George Lucas\",\n        \"rating\": \"PG\",\n        \"princessTheatreMovieId\": \"0120915\"\n    },\n    {\n        \"id\": 2,\n        \"title\": \"Star Wars: Attack of the Clones (Episode II)\",\n        \"releaseDate\": \"2002-05-16T00:00:00\",\n        \"genre\": \"Action, Adventure, Fantasy, Live Action, Science Fiction\",\n        \"runTime\": 8520,\n        \"synopsis\": \"Watch the seeds of Anakin Skywalker's transformation take root in Star Wars: Episode II - Attack of the Clones. Ten years after the invasion of Naboo, the galaxy is on the brink of civil war. Under the leadership of a renegade Jedi named Count Dooku, thousands of solar systems threaten to break away from the Galactic Republic. When an assassination attempt is made on Senator Padmé Amidala, the former Queen of Naboo, twenty-year-old Jedi apprentice Anakin Skywalker is assigned to protect her. In the course of his mission, Anakin discovers his love for Padmé as well as his own darker side. Soon, Anakin, Padmé, and Obi-Wan Kenobi are drawn into the heart of the Separatist movement and the beginning of the Clone Wars.\",\n        \"director\": \"George Lucas\",\n        \"rating\": \"PG-13\",\n        \"princessTheatreMovieId\": \"0121765\"\n    },\n    {\n        \"id\": 3,\n        \"title\": \"Star Wars: Revenge of the Sith (Episode III)\",\n        \"releaseDate\": \"2005-05-19T00:00:00\",\n        \"genre\": \"Action, Adventure, Fantasy, Live Action, Science Fiction\",\n        \"runTime\": 8399,\n        \"synopsis\": \"Discover the true power of the dark side in Star Wars: Episode III - Revenge of the Sith. Years after the onset of the Clone Wars, the noble Jedi Knights lead a massive clone army into a galaxy-wide battle against the Separatists. When the sinister Sith unveil a thousand-year-old plot to rule the galaxy, the Republic crumbles and from its ashes rises the evil Galactic Empire. Jedi hero Anakin Skywalker is seduced by the dark side of the Force to become the Emperor's new apprentice – Darth Vader. The Jedi are decimated, as Obi-Wan Kenobi and Jedi Master Yoda are forced into hiding.\",\n        \"director\": \"George Lucas\",\n        \"rating\": \"PG-13\",\n        \"princessTheatreMovieId\": \"0121766\"\n    },\n    {\n        \"id\": 4,\n        \"title\": \"Star Wars: A New Hope (Episode IV)\",\n        \"releaseDate\": \"1977-10-27T00:00:00\",\n        \"genre\": \"Action, Adventure, Fantasy, Live Action, Science Fiction\",\n        \"runTime\": 6300,\n        \"synopsis\": \"Luke Skywalker begins a journey that will change the galaxy in Star Wars: Episode IV - A New Hope. Nineteen years after the formation of the Empire, Luke is thrust into the struggle of the Rebel Alliance when he meets Obi-Wan Kenobi, who has lived for years in seclusion on the desert planet of Tatooine. Obi-Wan begins Luke's Jedi training as Luke joins him on a daring mission to rescue the beautiful Rebel leader Princess Leia from the clutches of Darth Vader and the evil Empire.\",\n        \"director\": \"George Lucas\",\n        \"rating\": \"PG\",\n        \"princessTheatreMovieId\": \"0076759\"\n    },\n    {\n        \"id\": 5,\n        \"title\": \"Star Wars: The Empire Strikes Back (Episode V)\",\n        \"releaseDate\": \"1980-08-07T00:00:00\",\n        \"genre\": \"Action, Adventure, Fantasy, Live Action, Science Fiction\",\n        \"runTime\": 7440,\n        \"synopsis\": \"After the destruction of the Death Star, Imperial forces continue to pursue the Rebels. After the Rebellion's defeat on the ice planet Hoth, Luke journeys to the planet Dagobah to train with Jedi Master Yoda, who has lived in hiding since the fall of the Republic. In an attempt to convert Luke to the dark side, Darth Vader lures young Skywalker into a trap in the Cloud City of Bespin.\",\n        \"director\": \"George Lucas\",\n        \"rating\": \"PG\",\n        \"princessTheatreMovieId\": \"0080684\"\n    },\n    {\n        \"id\": 6,\n        \"title\": \"Star Wars: Return of the Jedi (Episode VI)\",\n        \"releaseDate\": \"1983-10-27T00:00:00\",\n        \"genre\": \"Action, Adventure, Fantasy, Live Action, Science Fiction\",\n        \"runTime\": 7859,\n        \"synopsis\": \"After a quick trip back to Tatooine, Luke Skywalker, Leia Organa, and Han Solo are reunited and join up with the amassing rebel fleet to take down the evil Empire once and for all. But the Empire is plotting too. Emperor Palpatine commands his troops aboard his newly consturcted Death Star stationed above the forest moon of Endor, where the rebels - and some unlikely furry friends - make their stand against the Empire. While Luke Skywalker confronts Darth Vader on the Death Star once more, Han leads a team to take out a shield protecting the battle station so that the rebel fleet can destory it once more and finally put an end to the war.\",\n        \"director\": \"George Lucas\",\n        \"rating\": \"PG\",\n        \"princessTheatreMovieId\": \"0086190\"\n    }\n]"
+						}
+					]
+				},
+				{
+					"name": "Search Movies By Title",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:{{port}}/{{__current_controller}}?title=clones",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "{{port}}",
+							"path": [
+								"{{__current_controller}}"
+							],
+							"query": [
+								{
+									"key": "title",
+									"value": "clones"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Search Movie Title \"Clones\"",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "https://localhost:{{port}}/{{__controller}}?title=clones",
+									"protocol": "https",
+									"host": [
+										"localhost"
+									],
+									"port": "{{port}}",
+									"path": [
+										"{{__controller}}"
+									],
+									"query": [
+										{
+											"key": "title",
+											"value": "clones"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Length",
+									"value": "1001"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 12 May 2024 09:29:56 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "Kestrel"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"id\": 2,\n        \"title\": \"Star Wars: Attack of the Clones (Episode II)\",\n        \"releaseDate\": \"2002-05-16T00:00:00\",\n        \"genre\": \"Action, Adventure, Fantasy, Live Action, Science Fiction\",\n        \"runTime\": 8520,\n        \"synopsis\": \"Watch the seeds of Anakin Skywalker's transformation take root in Star Wars: Episode II - Attack of the Clones. Ten years after the invasion of Naboo, the galaxy is on the brink of civil war. Under the leadership of a renegade Jedi named Count Dooku, thousands of solar systems threaten to break away from the Galactic Republic. When an assassination attempt is made on Senator Padmé Amidala, the former Queen of Naboo, twenty-year-old Jedi apprentice Anakin Skywalker is assigned to protect her. In the course of his mission, Anakin discovers his love for Padmé as well as his own darker side. Soon, Anakin, Padmé, and Obi-Wan Kenobi are drawn into the heart of the Separatist movement and the beginning of the Clone Wars.\",\n        \"director\": \"George Lucas\",\n        \"rating\": \"PG-13\",\n        \"princessTheatreMovieId\": \"0121765\"\n    }\n]"
+						}
+					]
+				},
+				{
+					"name": "Search Movies By Title/Genre",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:{{port}}/{{__current_controller}}?title=clones&genre=fantasy",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "{{port}}",
+							"path": [
+								"{{__current_controller}}"
+							],
+							"query": [
+								{
+									"key": "title",
+									"value": "clones"
+								},
+								{
+									"key": "genre",
+									"value": "fantasy"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Search Movie Title/Genre",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "https://localhost:{{port}}/{{__controller}}?title=clones&genre=fantasy",
+									"protocol": "https",
+									"host": [
+										"localhost"
+									],
+									"port": "{{port}}",
+									"path": [
+										"{{__controller}}"
+									],
+									"query": [
+										{
+											"key": "title",
+											"value": "clones"
+										},
+										{
+											"key": "genre",
+											"value": "fantasy"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Length",
+									"value": "1001"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 12 May 2024 09:31:27 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "Kestrel"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"id\": 2,\n        \"title\": \"Star Wars: Attack of the Clones (Episode II)\",\n        \"releaseDate\": \"2002-05-16T00:00:00\",\n        \"genre\": \"Action, Adventure, Fantasy, Live Action, Science Fiction\",\n        \"runTime\": 8520,\n        \"synopsis\": \"Watch the seeds of Anakin Skywalker's transformation take root in Star Wars: Episode II - Attack of the Clones. Ten years after the invasion of Naboo, the galaxy is on the brink of civil war. Under the leadership of a renegade Jedi named Count Dooku, thousands of solar systems threaten to break away from the Galactic Republic. When an assassination attempt is made on Senator Padmé Amidala, the former Queen of Naboo, twenty-year-old Jedi apprentice Anakin Skywalker is assigned to protect her. In the course of his mission, Anakin discovers his love for Padmé as well as his own darker side. Soon, Anakin, Padmé, and Obi-Wan Kenobi are drawn into the heart of the Separatist movement and the beginning of the Clone Wars.\",\n        \"director\": \"George Lucas\",\n        \"rating\": \"PG-13\",\n        \"princessTheatreMovieId\": \"0121765\"\n    }\n]"
+						}
+					]
+				},
+				{
+					"name": "Get Movie By Id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:{{port}}/{{__current_controller}}/:movieId",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "{{port}}",
+							"path": [
+								"{{__current_controller}}",
+								":movieId"
+							],
+							"variable": [
+								{
+									"key": "movieId",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Search Movie Title/Genre",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "https://localhost:{{port}}/{{__controller}}?title=clones&genre=fantasy",
+									"protocol": "https",
+									"host": [
+										"localhost"
+									],
+									"port": "{{port}}",
+									"path": [
+										"{{__controller}}"
+									],
+									"query": [
+										{
+											"key": "title",
+											"value": "clones"
+										},
+										{
+											"key": "genre",
+											"value": "fantasy"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Length",
+									"value": "1001"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 12 May 2024 09:31:27 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "Kestrel"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"id\": 2,\n        \"title\": \"Star Wars: Attack of the Clones (Episode II)\",\n        \"releaseDate\": \"2002-05-16T00:00:00\",\n        \"genre\": \"Action, Adventure, Fantasy, Live Action, Science Fiction\",\n        \"runTime\": 8520,\n        \"synopsis\": \"Watch the seeds of Anakin Skywalker's transformation take root in Star Wars: Episode II - Attack of the Clones. Ten years after the invasion of Naboo, the galaxy is on the brink of civil war. Under the leadership of a renegade Jedi named Count Dooku, thousands of solar systems threaten to break away from the Galactic Republic. When an assassination attempt is made on Senator Padmé Amidala, the former Queen of Naboo, twenty-year-old Jedi apprentice Anakin Skywalker is assigned to protect her. In the course of his mission, Anakin discovers his love for Padmé as well as his own darker side. Soon, Anakin, Padmé, and Obi-Wan Kenobi are drawn into the heart of the Separatist movement and the beginning of the Clone Wars.\",\n        \"director\": \"George Lucas\",\n        \"rating\": \"PG-13\",\n        \"princessTheatreMovieId\": \"0121765\"\n    }\n]"
+						}
+					]
+				},
+				{
+					"name": "Get Movie By Id With Details",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:{{port}}/{{__current_controller}}/:movieId?details=true",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "{{port}}",
+							"path": [
+								"{{__current_controller}}",
+								":movieId"
+							],
+							"query": [
+								{
+									"key": "details",
+									"value": "true"
+								}
+							],
+							"variable": [
+								{
+									"key": "movieId",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Search Movie Title/Genre",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "https://localhost:{{port}}/{{__controller}}?title=clones&genre=fantasy",
+									"protocol": "https",
+									"host": [
+										"localhost"
+									],
+									"port": "{{port}}",
+									"path": [
+										"{{__controller}}"
+									],
+									"query": [
+										{
+											"key": "title",
+											"value": "clones"
+										},
+										{
+											"key": "genre",
+											"value": "fantasy"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Length",
+									"value": "1001"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 12 May 2024 09:31:27 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "Kestrel"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"id\": 2,\n        \"title\": \"Star Wars: Attack of the Clones (Episode II)\",\n        \"releaseDate\": \"2002-05-16T00:00:00\",\n        \"genre\": \"Action, Adventure, Fantasy, Live Action, Science Fiction\",\n        \"runTime\": 8520,\n        \"synopsis\": \"Watch the seeds of Anakin Skywalker's transformation take root in Star Wars: Episode II - Attack of the Clones. Ten years after the invasion of Naboo, the galaxy is on the brink of civil war. Under the leadership of a renegade Jedi named Count Dooku, thousands of solar systems threaten to break away from the Galactic Republic. When an assassination attempt is made on Senator Padmé Amidala, the former Queen of Naboo, twenty-year-old Jedi apprentice Anakin Skywalker is assigned to protect her. In the course of his mission, Anakin discovers his love for Padmé as well as his own darker side. Soon, Anakin, Padmé, and Obi-Wan Kenobi are drawn into the heart of the Separatist movement and the beginning of the Clone Wars.\",\n        \"director\": \"George Lucas\",\n        \"rating\": \"PG-13\",\n        \"princessTheatreMovieId\": \"0121765\"\n    }\n]"
+						}
+					]
+				}
+			],
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"type": "text/javascript",
+						"packages": {},
+						"exec": [
+							"pm.collectionVariables.set(\"__current_controller\", \"api/movies\");"
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"packages": {},
+						"exec": [
+							""
+						]
+					}
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "port",
+			"value": "7190",
+			"type": "string"
+		},
+		{
+			"key": "__current_controller",
+			"value": "Do not modify"
+		}
+	]
+}
