@@ -1,4 +1,6 @@
 using MovieHub.Entities;
+using Newtonsoft.Json;
+
 namespace MovieHub.Models;
 
 public class MovieWithoutDetailsDto
@@ -11,6 +13,10 @@ public class MovieWithoutDetailsDto
     public string Synopsis { get; set; } = string.Empty;
     public string Director { get; set; } = string.Empty;
     public string Rating { get; set; } = string.Empty;
-    
     public string PrincessTheatreMovieId { get; set; } = string.Empty;
+    
+    public decimal AverageScore => Utils.Average.GetAverage(MovieReviews);
+    
+    [JsonIgnore]
+    public ICollection<MovieReviewDto> MovieReviews { get; set; } = new List<MovieReviewDto>();
 }

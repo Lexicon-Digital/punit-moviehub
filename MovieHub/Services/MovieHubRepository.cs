@@ -1,4 +1,5 @@
 using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.Internal;
 using MovieHub.DbContexts;
 using MovieHub.Entities;
 
@@ -10,7 +11,7 @@ public class MovieHubRepository(MovieHubContext context) : IMovieHubRepository
 
     public async Task<IEnumerable<Movie>> GetMoviesAsync()
     {
-        return await _context.Movies.ToListAsync();
+        return await _context.Movies.Include(movie => movie.MovieReviews).ToListAsync();
     }
 
     public async Task<IEnumerable<Movie>> GetMoviesAsync(string? title, string? genre)
@@ -20,7 +21,7 @@ public class MovieHubRepository(MovieHubContext context) : IMovieHubRepository
             return await GetMoviesAsync();
         }
 
-        var collection = _context.Movies as IQueryable<Movie>;
+        var collection = _context.Movies.Include(movie => movie.MovieReviews) as IQueryable<Movie>;
 
         if (!string.IsNullOrWhiteSpace(title))
         {
@@ -39,7 +40,9 @@ public class MovieHubRepository(MovieHubContext context) : IMovieHubRepository
 
     public async Task<Movie?> GetMovieAsync(int id, bool details)
     {
-        var query = _context.Movies.Where(movie => movie.Id == id);
+        var query = _context.Movies
+            .Include(movie => movie.MovieReviews)
+            .Where(movie => movie.Id == id);
         
         if (details)
         {
@@ -49,5 +52,45 @@ public class MovieHubRepository(MovieHubContext context) : IMovieHubRepository
         }
         
         return await query.FirstOrDefaultAsync();
+    }
+
+    public async Task<MovieReview?> GetReviewAsync(int id)
+    {
+        return await _context.MovieReviews
+            .Where(movieReview => movieReview.Id == id)
+            .FirstOrDefaultAsync();
+    }
+
+    public async Task<IEnumerable<MovieReview>> GetReviewsByMovieAsync(int movieId)
+    {
+        return await _context.MovieReviews
+            .Where(movieReview => movieReview.MovieId == movieId)
+            .ToListAsync();
+    }
+
+    public async Task CreateReviewForMovieAsync(int movieId, MovieReview movieReview)
+    {
+        var movie = await GetMovieAsync(movieId, false);
+        movie?.MovieReviews.Add(movieReview);
+    }
+
+    public void DeleteReviewAsync(MovieReview movieReview)
+    {
+        _context.MovieReviews.Remove(movieReview);
+    }
+
+    public void DeleteReviewsByMovieAsync(IEnumerable<MovieReview> movieReviews)
+    {
+        _context.MovieReviews.RemoveRange(movieReviews);
+    }
+
+    public async Task<bool> MovieExistsAsync(int id)
+    {
+        return await _context.Movies.AnyAsync(movie => movie.Id == id);
+    }
+
+    public async Task<bool> SaveChangesAsync()
+    {
+        return await _context.SaveChangesAsync() >= 0;
     }
 }

@@ -8,4 +8,5 @@ public class MovieHubContext(DbContextOptions<MovieHubContext> options) : DbCont
     public DbSet<Movie> Movies { get; set; }
     public DbSet<Cinema> Cinemas { get; set; }
     public DbSet<MovieCinema> MovieCinemas { get; set; }
+    public DbSet<MovieReview> MovieReviews { get; set; }
 }

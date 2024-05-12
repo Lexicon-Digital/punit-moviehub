@@ -51,4 +51,6 @@ public class Movie(
     public string PrincessTheatreMovieId { get; set; } = princessTheatreMovieId;
 
     public ICollection<MovieCinema> MovieCinemas { get; set; } = new List<MovieCinema>();
+    
+    public ICollection<MovieReview> MovieReviews { get; set; } = new List<MovieReview>();
 }

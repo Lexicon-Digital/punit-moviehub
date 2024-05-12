@@ -24,13 +24,13 @@ public class MoviesController(IMovieHubRepository repository, IMapper mapper) : 
         return Ok(movies);
     }
     
-    [HttpGet("{id:int}")]
+    [HttpGet("{movieId:int}")]
     public async Task<ActionResult<IEnumerable<MovieDto>>> GetMovie(
-        int id,
+        int movieId,
         [FromQuery(Name = "details")] bool details = false
     )
     {
-        var movieEntity = await _movieHubRepository.GetMovieAsync(id, details);
+        var movieEntity = await _movieHubRepository.GetMovieAsync(movieId, details);
 
         if (movieEntity == null)
         {
