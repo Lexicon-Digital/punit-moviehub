@@ -1,4 +1,4 @@
-# MovieHub API
+# MovieHub API - Punit Dharmadhikari
 
 ## Overview
 MovieHub API provides detailed information on movies and the cinemas where they are shown. This API can retrieve movies by their attributes and provide detailed or general information based on user requests.
