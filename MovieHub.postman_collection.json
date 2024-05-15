@@ -1,1811 +1,1896 @@
 {
-  "info": {
-    "_postman_id": "d25015a4-15be-4739-b2e2-84db010d9b05",
-    "name": "MovieHub",
-    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
-    "_exporter_id": "18076510"
-  },
-  "item": [
-    {
-      "name": "Movies",
-      "item": [
-        {
-          "name": "Get All Movies",
-          "request": {
-            "method": "GET",
-            "header": [],
-            "url": {
-              "raw": "{{base_url}}/{{route}}",
-              "host": ["{{base_url}}"],
-              "path": ["{{route}}"]
-            }
-          },
-          "response": [
-            {
-              "name": "Get All Movies",
-              "originalRequest": {
-                "method": "GET",
-                "header": [],
-                "url": {
-                  "raw": "{{base_url}}/{{route}}",
-                  "host": ["{{base_url}}"],
-                  "path": ["{{route}}"]
-                }
-              },
-              "status": "OK",
-              "code": 200,
-              "_postman_previewlanguage": "json",
-              "header": [
-                {
-                  "key": "Content-Length",
-                  "value": "7224"
-                },
-                {
-                  "key": "Content-Type",
-                  "value": "application/json; charset=utf-8"
-                },
-                {
-                  "key": "Date",
-                  "value": "Sun, 12 May 2024 11:20:32 GMT"
-                },
-                {
-                  "key": "Server",
-                  "value": "Kestrel"
-                }
-              ],
-              "cookie": [],
-              "body": "[\n    {\n        \"id\": 1,\n        \"title\": \"Star Wars: The Phantom Menace (Episode I)\",\n        \"releaseDate\": \"1999-05-19T00:00:00\",\n        \"genre\": \"Action, Adventure, Fantasy, Live Action, Science Fiction\",\n        \"runTime\": 8160,\n        \"synopsis\": \"Experience the heroic action and unforgettable adventures of Star Wars: Episode I - The Phantom Menace. See the first fateful steps in the journey of Anakin Skywalker. Stranded on the desert planet Tatooine after rescuing young Queen Amidala from the impending invasion of Naboo, Jedi apprentice Obi-Wan Kenobi and his Jedi Master Qui-Gon Jinn discover nine-year-old Anakin, who is unusually strong in the Force. Anakin wins a thrilling Podrace and with it his freedom as he leaves his home to be trained as a Jedi. The heroes return to Naboo where Anakin and the Queen face massive invasion forces while the two Jedi contend with a deadly foe named Darth Maul. Only then do they realize the invasion is merely the first step in a sinister scheme by the re-emergent forces of darkness known as the Sith.\",\n        \"director\": \"George Lucas\",\n        \"rating\": \"PG\",\n        \"princessTheatreMovieId\": \"0120915\"\n    },\n    {\n        \"id\": 2,\n        \"title\": \"Star Wars: Attack of the Clones (Episode II)\",\n        \"releaseDate\": \"2002-05-16T00:00:00\",\n        \"genre\": \"Action, Adventure, Fantasy, Live Action, Science Fiction\",\n        \"runTime\": 8520,\n        \"synopsis\": \"Watch the seeds of Anakin Skywalker's transformation take root in Star Wars: Episode II - Attack of the Clones. Ten years after the invasion of Naboo, the galaxy is on the brink of civil war. Under the leadership of a renegade Jedi named Count Dooku, thousands of solar systems threaten to break away from the Galactic Republic. When an assassination attempt is made on Senator Padmé Amidala, the former Queen of Naboo, twenty-year-old Jedi apprentice Anakin Skywalker is assigned to protect her. In the course of his mission, Anakin discovers his love for Padmé as well as his own darker side. Soon, Anakin, Padmé, and Obi-Wan Kenobi are drawn into the heart of the Separatist movement and the beginning of the Clone Wars.\",\n        \"director\": \"George Lucas\",\n        \"rating\": \"PG-13\",\n        \"princessTheatreMovieId\": \"0121765\"\n    },\n    {\n        \"id\": 3,\n        \"title\": \"Star Wars: Revenge of the Sith (Episode III)\",\n        \"releaseDate\": \"2005-05-19T00:00:00\",\n        \"genre\": \"Action, Adventure, Fantasy, Live Action, Science Fiction\",\n        \"runTime\": 8399,\n        \"synopsis\": \"Discover the true power of the dark side in Star Wars: Episode III - Revenge of the Sith. Years after the onset of the Clone Wars, the noble Jedi Knights lead a massive clone army into a galaxy-wide battle against the Separatists. When the sinister Sith unveil a thousand-year-old plot to rule the galaxy, the Republic crumbles and from its ashes rises the evil Galactic Empire. Jedi hero Anakin Skywalker is seduced by the dark side of the Force to become the Emperor's new apprentice – Darth Vader. The Jedi are decimated, as Obi-Wan Kenobi and Jedi Master Yoda are forced into hiding.\",\n        \"director\": \"George Lucas\",\n        \"rating\": \"PG-13\",\n        \"princessTheatreMovieId\": \"0121766\"\n    },\n    {\n        \"id\": 4,\n        \"title\": \"Star Wars: A New Hope (Episode IV)\",\n        \"releaseDate\": \"1977-10-27T00:00:00\",\n        \"genre\": \"Action, Adventure, Fantasy, Live Action, Science Fiction\",\n        \"runTime\": 6300,\n        \"synopsis\": \"Luke Skywalker begins a journey that will change the galaxy in Star Wars: Episode IV - A New Hope. Nineteen years after the formation of the Empire, Luke is thrust into the struggle of the Rebel Alliance when he meets Obi-Wan Kenobi, who has lived for years in seclusion on the desert planet of Tatooine. Obi-Wan begins Luke's Jedi training as Luke joins him on a daring mission to rescue the beautiful Rebel leader Princess Leia from the clutches of Darth Vader and the evil Empire.\",\n        \"director\": \"George Lucas\",\n        \"rating\": \"PG\",\n        \"princessTheatreMovieId\": \"0076759\"\n    },\n    {\n        \"id\": 5,\n        \"title\": \"Star Wars: The Empire Strikes Back (Episode V)\",\n        \"releaseDate\": \"1980-08-07T00:00:00\",\n        \"genre\": \"Action, Adventure, Fantasy, Live Action, Science Fiction\",\n        \"runTime\": 7440,\n        \"synopsis\": \"After the destruction of the Death Star, Imperial forces continue to pursue the Rebels. After the Rebellion's defeat on the ice planet Hoth, Luke journeys to the planet Dagobah to train with Jedi Master Yoda, who has lived in hiding since the fall of the Republic. In an attempt to convert Luke to the dark side, Darth Vader lures young Skywalker into a trap in the Cloud City of Bespin.\",\n        \"director\": \"George Lucas\",\n        \"rating\": \"PG\",\n        \"princessTheatreMovieId\": \"0080684\"\n    },\n    {\n        \"id\": 6,\n        \"title\": \"Star Wars: Return of the Jedi (Episode VI)\",\n        \"releaseDate\": \"1983-10-27T00:00:00\",\n        \"genre\": \"Action, Adventure, Fantasy, Live Action, Science Fiction\",\n        \"runTime\": 7859,\n        \"synopsis\": \"After a quick trip back to Tatooine, Luke Skywalker, Leia Organa, and Han Solo are reunited and join up with the amassing rebel fleet to take down the evil Empire once and for all. But the Empire is plotting too. Emperor Palpatine commands his troops aboard his newly consturcted Death Star stationed above the forest moon of Endor, where the rebels - and some unlikely furry friends - make their stand against the Empire. While Luke Skywalker confronts Darth Vader on the Death Star once more, Han leads a team to take out a shield protecting the battle station so that the rebel fleet can destory it once more and finally put an end to the war.\",\n        \"director\": \"George Lucas\",\n        \"rating\": \"PG\",\n        \"princessTheatreMovieId\": \"0086190\"\n    },\n    {\n        \"id\": 7,\n        \"title\": \"Star Wars: The Force Awakens (Episode VII)\",\n        \"releaseDate\": \"2015-12-18T00:00:00\",\n        \"genre\": \"Action - Adventure, Science Fiction\",\n        \"runTime\": 8160,\n        \"synopsis\": \"Thirty years since the destruction of the second Death Star, the sinister First Order, commanded by the mysterious Snoke and apprentice Kylo Ren, rise from the ashes of the Empire. The Resistance, led by General Leia Organa, attempts to thwart the First Order's threat, but they're desperate for help. Rey, a desert scavenger, and Finn, an ex-stormtrooper, find themselves joining forces with Han Solo and Chewbacca in a desperate mission to return a BB-unit droid with a map to Luke Skywalker back to the Resistance.\",\n        \"director\": \"George Lucas\",\n        \"rating\": \"PG-13\",\n        \"princessTheatreMovieId\": \"2488496\"\n    },\n    {\n        \"id\": 8,\n        \"title\": \"Star Wars: The Last Jedi (Episode VIII)\",\n        \"releaseDate\": \"2017-12-13T00:00:00\",\n        \"genre\": \"Action - Adventure, Science Fiction\",\n        \"runTime\": 9000,\n        \"synopsis\": \"The Resistance is in desperate need of help when they find themselves impossibly pursued by the First Order. While Rey travels to a remote planet called Ahch-To to recruit Luke Skywalker to the Resistance, Finn and Rose, a mechanic, go on their own mission in the hopes of helping the Resistance finally escape the First Order. But everyone finds themselves on the salt-planet of Crait for a last stand.\",\n        \"director\": \"George Lucas\",\n        \"rating\": \"PG-13\",\n        \"princessTheatreMovieId\": \"2527336\"\n    },\n    {\n        \"id\": 9,\n        \"title\": \"Star Wars: The Rise of Skywalker (Episode IX)\",\n        \"releaseDate\": \"2019-12-18T00:00:00\",\n        \"genre\": \"Action - Adventure, Science Fiction\",\n        \"runTime\": 7992,\n        \"synopsis\": \"Lucasfilm and director J.J. Abrams join forces once  more to take viewers on an epic journey to a galaxy far, far away with Star Wars: The Rise of Skywalker, the riveting conclusion of the  landmark Skywalker saga, in which new legends will be born and the final battle for freedom is yet to come.\",\n        \"director\": \"George Lucas\",\n        \"rating\": \"PG-13\",\n        \"princessTheatreMovieId\": \"2527338\"\n    }\n]"
-            },
-            {
-              "name": "Get All Movies - With Average Scores",
-              "originalRequest": {
-                "method": "GET",
-                "header": [],
-                "url": {
-                  "raw": "{{base_url}}/{{route}}",
-                  "host": ["{{base_url}}"],
-                  "path": ["{{route}}"]
-                }
-              },
-              "status": "OK",
-              "code": 200,
-              "_postman_previewlanguage": "json",
-              "header": [
-                {
-                  "key": "Content-Length",
-                  "value": "7396"
-                },
-                {
-                  "key": "Content-Type",
-                  "value": "application/json; charset=utf-8"
-                },
-                {
-                  "key": "Date",
-                  "value": "Sun, 12 May 2024 14:57:23 GMT"
-                },
-                {
-                  "key": "Server",
-                  "value": "Kestrel"
-                }
-              ],
-              "cookie": [],
-              "body": "[\n    {\n        \"id\": 1,\n        \"title\": \"Star Wars: The Phantom Menace (Episode I)\",\n        \"releaseDate\": \"1999-05-19T00:00:00\",\n        \"genre\": \"Action, Adventure, Fantasy, Live Action, Science Fiction\",\n        \"runTime\": 8160,\n        \"synopsis\": \"Experience the heroic action and unforgettable adventures of Star Wars: Episode I - The Phantom Menace. See the first fateful steps in the journey of Anakin Skywalker. Stranded on the desert planet Tatooine after rescuing young Queen Amidala from the impending invasion of Naboo, Jedi apprentice Obi-Wan Kenobi and his Jedi Master Qui-Gon Jinn discover nine-year-old Anakin, who is unusually strong in the Force. Anakin wins a thrilling Podrace and with it his freedom as he leaves his home to be trained as a Jedi. The heroes return to Naboo where Anakin and the Queen face massive invasion forces while the two Jedi contend with a deadly foe named Darth Maul. Only then do they realize the invasion is merely the first step in a sinister scheme by the re-emergent forces of darkness known as the Sith.\",\n        \"director\": \"George Lucas\",\n        \"rating\": \"PG\",\n        \"princessTheatreMovieId\": \"0120915\",\n        \"averageScore\": 7\n    },\n    {\n        \"id\": 2,\n        \"title\": \"Star Wars: Attack of the Clones (Episode II)\",\n        \"releaseDate\": \"2002-05-16T00:00:00\",\n        \"genre\": \"Action, Adventure, Fantasy, Live Action, Science Fiction\",\n        \"runTime\": 8520,\n        \"synopsis\": \"Watch the seeds of Anakin Skywalker's transformation take root in Star Wars: Episode II - Attack of the Clones. Ten years after the invasion of Naboo, the galaxy is on the brink of civil war. Under the leadership of a renegade Jedi named Count Dooku, thousands of solar systems threaten to break away from the Galactic Republic. When an assassination attempt is made on Senator Padmé Amidala, the former Queen of Naboo, twenty-year-old Jedi apprentice Anakin Skywalker is assigned to protect her. In the course of his mission, Anakin discovers his love for Padmé as well as his own darker side. Soon, Anakin, Padmé, and Obi-Wan Kenobi are drawn into the heart of the Separatist movement and the beginning of the Clone Wars.\",\n        \"director\": \"George Lucas\",\n        \"rating\": \"PG-13\",\n        \"princessTheatreMovieId\": \"0121765\",\n        \"averageScore\": 7.25\n    },\n    {\n        \"id\": 3,\n        \"title\": \"Star Wars: Revenge of the Sith (Episode III)\",\n        \"releaseDate\": \"2005-05-19T00:00:00\",\n        \"genre\": \"Action, Adventure, Fantasy, Live Action, Science Fiction\",\n        \"runTime\": 8399,\n        \"synopsis\": \"Discover the true power of the dark side in Star Wars: Episode III - Revenge of the Sith. Years after the onset of the Clone Wars, the noble Jedi Knights lead a massive clone army into a galaxy-wide battle against the Separatists. When the sinister Sith unveil a thousand-year-old plot to rule the galaxy, the Republic crumbles and from its ashes rises the evil Galactic Empire. Jedi hero Anakin Skywalker is seduced by the dark side of the Force to become the Emperor's new apprentice – Darth Vader. The Jedi are decimated, as Obi-Wan Kenobi and Jedi Master Yoda are forced into hiding.\",\n        \"director\": \"George Lucas\",\n        \"rating\": \"PG-13\",\n        \"princessTheatreMovieId\": \"0121766\",\n        \"averageScore\": 0\n    },\n    {\n        \"id\": 4,\n        \"title\": \"Star Wars: A New Hope (Episode IV)\",\n        \"releaseDate\": \"1977-10-27T00:00:00\",\n        \"genre\": \"Action, Adventure, Fantasy, Live Action, Science Fiction\",\n        \"runTime\": 6300,\n        \"synopsis\": \"Luke Skywalker begins a journey that will change the galaxy in Star Wars: Episode IV - A New Hope. Nineteen years after the formation of the Empire, Luke is thrust into the struggle of the Rebel Alliance when he meets Obi-Wan Kenobi, who has lived for years in seclusion on the desert planet of Tatooine. Obi-Wan begins Luke's Jedi training as Luke joins him on a daring mission to rescue the beautiful Rebel leader Princess Leia from the clutches of Darth Vader and the evil Empire.\",\n        \"director\": \"George Lucas\",\n        \"rating\": \"PG\",\n        \"princessTheatreMovieId\": \"0076759\",\n        \"averageScore\": 0\n    },\n    {\n        \"id\": 5,\n        \"title\": \"Star Wars: The Empire Strikes Back (Episode V)\",\n        \"releaseDate\": \"1980-08-07T00:00:00\",\n        \"genre\": \"Action, Adventure, Fantasy, Live Action, Science Fiction\",\n        \"runTime\": 7440,\n        \"synopsis\": \"After the destruction of the Death Star, Imperial forces continue to pursue the Rebels. After the Rebellion's defeat on the ice planet Hoth, Luke journeys to the planet Dagobah to train with Jedi Master Yoda, who has lived in hiding since the fall of the Republic. In an attempt to convert Luke to the dark side, Darth Vader lures young Skywalker into a trap in the Cloud City of Bespin.\",\n        \"director\": \"George Lucas\",\n        \"rating\": \"PG\",\n        \"princessTheatreMovieId\": \"0080684\",\n        \"averageScore\": 0\n    },\n    {\n        \"id\": 6,\n        \"title\": \"Star Wars: Return of the Jedi (Episode VI)\",\n        \"releaseDate\": \"1983-10-27T00:00:00\",\n        \"genre\": \"Action, Adventure, Fantasy, Live Action, Science Fiction\",\n        \"runTime\": 7859,\n        \"synopsis\": \"After a quick trip back to Tatooine, Luke Skywalker, Leia Organa, and Han Solo are reunited and join up with the amassing rebel fleet to take down the evil Empire once and for all. But the Empire is plotting too. Emperor Palpatine commands his troops aboard his newly consturcted Death Star stationed above the forest moon of Endor, where the rebels - and some unlikely furry friends - make their stand against the Empire. While Luke Skywalker confronts Darth Vader on the Death Star once more, Han leads a team to take out a shield protecting the battle station so that the rebel fleet can destory it once more and finally put an end to the war.\",\n        \"director\": \"George Lucas\",\n        \"rating\": \"PG\",\n        \"princessTheatreMovieId\": \"0086190\",\n        \"averageScore\": 0\n    },\n    {\n        \"id\": 7,\n        \"title\": \"Star Wars: The Force Awakens (Episode VII)\",\n        \"releaseDate\": \"2015-12-18T00:00:00\",\n        \"genre\": \"Action - Adventure, Science Fiction\",\n        \"runTime\": 8160,\n        \"synopsis\": \"Thirty years since the destruction of the second Death Star, the sinister First Order, commanded by the mysterious Snoke and apprentice Kylo Ren, rise from the ashes of the Empire. The Resistance, led by General Leia Organa, attempts to thwart the First Order's threat, but they're desperate for help. Rey, a desert scavenger, and Finn, an ex-stormtrooper, find themselves joining forces with Han Solo and Chewbacca in a desperate mission to return a BB-unit droid with a map to Luke Skywalker back to the Resistance.\",\n        \"director\": \"George Lucas\",\n        \"rating\": \"PG-13\",\n        \"princessTheatreMovieId\": \"2488496\",\n        \"averageScore\": 0\n    },\n    {\n        \"id\": 8,\n        \"title\": \"Star Wars: The Last Jedi (Episode VIII)\",\n        \"releaseDate\": \"2017-12-13T00:00:00\",\n        \"genre\": \"Action - Adventure, Science Fiction\",\n        \"runTime\": 9000,\n        \"synopsis\": \"The Resistance is in desperate need of help when they find themselves impossibly pursued by the First Order. While Rey travels to a remote planet called Ahch-To to recruit Luke Skywalker to the Resistance, Finn and Rose, a mechanic, go on their own mission in the hopes of helping the Resistance finally escape the First Order. But everyone finds themselves on the salt-planet of Crait for a last stand.\",\n        \"director\": \"George Lucas\",\n        \"rating\": \"PG-13\",\n        \"princessTheatreMovieId\": \"2527336\",\n        \"averageScore\": 0\n    },\n    {\n        \"id\": 9,\n        \"title\": \"Star Wars: The Rise of Skywalker (Episode IX)\",\n        \"releaseDate\": \"2019-12-18T00:00:00\",\n        \"genre\": \"Action - Adventure, Science Fiction\",\n        \"runTime\": 7992,\n        \"synopsis\": \"Lucasfilm and director J.J. Abrams join forces once  more to take viewers on an epic journey to a galaxy far, far away with Star Wars: The Rise of Skywalker, the riveting conclusion of the  landmark Skywalker saga, in which new legends will be born and the final battle for freedom is yet to come.\",\n        \"director\": \"George Lucas\",\n        \"rating\": \"PG-13\",\n        \"princessTheatreMovieId\": \"2527338\",\n        \"averageScore\": 0\n    }\n]"
-            }
-          ]
-        },
-        {
-          "name": "Search Movies By Genre",
-          "request": {
-            "method": "GET",
-            "header": [],
-            "url": {
-              "raw": "{{base_url}}/{{route}}?genre=fantasy",
-              "host": ["{{base_url}}"],
-              "path": ["{{route}}"],
-              "query": [
-                {
-                  "key": "genre",
-                  "value": "fantasy"
-                }
-              ]
-            }
-          },
-          "response": [
-            {
-              "name": "Search Movies By Genre \"Fantasy\"",
-              "originalRequest": {
-                "method": "GET",
-                "header": [],
-                "url": {
-                  "raw": "{{base_url}}/{{route}}?genre=fantasy",
-                  "host": ["{{base_url}}"],
-                  "path": ["{{route}}"],
-                  "query": [
-                    {
-                      "key": "genre",
-                      "value": "fantasy"
-                    }
-                  ]
-                }
-              },
-              "status": "OK",
-              "code": 200,
-              "_postman_previewlanguage": "json",
-              "header": [
-                {
-                  "key": "Content-Length",
-                  "value": "5254"
-                },
-                {
-                  "key": "Content-Type",
-                  "value": "application/json; charset=utf-8"
-                },
-                {
-                  "key": "Date",
-                  "value": "Sun, 12 May 2024 11:20:45 GMT"
-                },
-                {
-                  "key": "Server",
-                  "value": "Kestrel"
-                }
-              ],
-              "cookie": [],
-              "body": "[\n    {\n        \"id\": 1,\n        \"title\": \"Star Wars: The Phantom Menace (Episode I)\",\n        \"releaseDate\": \"1999-05-19T00:00:00\",\n        \"genre\": \"Action, Adventure, Fantasy, Live Action, Science Fiction\",\n        \"runTime\": 8160,\n        \"synopsis\": \"Experience the heroic action and unforgettable adventures of Star Wars: Episode I - The Phantom Menace. See the first fateful steps in the journey of Anakin Skywalker. Stranded on the desert planet Tatooine after rescuing young Queen Amidala from the impending invasion of Naboo, Jedi apprentice Obi-Wan Kenobi and his Jedi Master Qui-Gon Jinn discover nine-year-old Anakin, who is unusually strong in the Force. Anakin wins a thrilling Podrace and with it his freedom as he leaves his home to be trained as a Jedi. The heroes return to Naboo where Anakin and the Queen face massive invasion forces while the two Jedi contend with a deadly foe named Darth Maul. Only then do they realize the invasion is merely the first step in a sinister scheme by the re-emergent forces of darkness known as the Sith.\",\n        \"director\": \"George Lucas\",\n        \"rating\": \"PG\",\n        \"princessTheatreMovieId\": \"0120915\"\n    },\n    {\n        \"id\": 2,\n        \"title\": \"Star Wars: Attack of the Clones (Episode II)\",\n        \"releaseDate\": \"2002-05-16T00:00:00\",\n        \"genre\": \"Action, Adventure, Fantasy, Live Action, Science Fiction\",\n        \"runTime\": 8520,\n        \"synopsis\": \"Watch the seeds of Anakin Skywalker's transformation take root in Star Wars: Episode II - Attack of the Clones. Ten years after the invasion of Naboo, the galaxy is on the brink of civil war. Under the leadership of a renegade Jedi named Count Dooku, thousands of solar systems threaten to break away from the Galactic Republic. When an assassination attempt is made on Senator Padmé Amidala, the former Queen of Naboo, twenty-year-old Jedi apprentice Anakin Skywalker is assigned to protect her. In the course of his mission, Anakin discovers his love for Padmé as well as his own darker side. Soon, Anakin, Padmé, and Obi-Wan Kenobi are drawn into the heart of the Separatist movement and the beginning of the Clone Wars.\",\n        \"director\": \"George Lucas\",\n        \"rating\": \"PG-13\",\n        \"princessTheatreMovieId\": \"0121765\"\n    },\n    {\n        \"id\": 3,\n        \"title\": \"Star Wars: Revenge of the Sith (Episode III)\",\n        \"releaseDate\": \"2005-05-19T00:00:00\",\n        \"genre\": \"Action, Adventure, Fantasy, Live Action, Science Fiction\",\n        \"runTime\": 8399,\n        \"synopsis\": \"Discover the true power of the dark side in Star Wars: Episode III - Revenge of the Sith. Years after the onset of the Clone Wars, the noble Jedi Knights lead a massive clone army into a galaxy-wide battle against the Separatists. When the sinister Sith unveil a thousand-year-old plot to rule the galaxy, the Republic crumbles and from its ashes rises the evil Galactic Empire. Jedi hero Anakin Skywalker is seduced by the dark side of the Force to become the Emperor's new apprentice – Darth Vader. The Jedi are decimated, as Obi-Wan Kenobi and Jedi Master Yoda are forced into hiding.\",\n        \"director\": \"George Lucas\",\n        \"rating\": \"PG-13\",\n        \"princessTheatreMovieId\": \"0121766\"\n    },\n    {\n        \"id\": 4,\n        \"title\": \"Star Wars: A New Hope (Episode IV)\",\n        \"releaseDate\": \"1977-10-27T00:00:00\",\n        \"genre\": \"Action, Adventure, Fantasy, Live Action, Science Fiction\",\n        \"runTime\": 6300,\n        \"synopsis\": \"Luke Skywalker begins a journey that will change the galaxy in Star Wars: Episode IV - A New Hope. Nineteen years after the formation of the Empire, Luke is thrust into the struggle of the Rebel Alliance when he meets Obi-Wan Kenobi, who has lived for years in seclusion on the desert planet of Tatooine. Obi-Wan begins Luke's Jedi training as Luke joins him on a daring mission to rescue the beautiful Rebel leader Princess Leia from the clutches of Darth Vader and the evil Empire.\",\n        \"director\": \"George Lucas\",\n        \"rating\": \"PG\",\n        \"princessTheatreMovieId\": \"0076759\"\n    },\n    {\n        \"id\": 5,\n        \"title\": \"Star Wars: The Empire Strikes Back (Episode V)\",\n        \"releaseDate\": \"1980-08-07T00:00:00\",\n        \"genre\": \"Action, Adventure, Fantasy, Live Action, Science Fiction\",\n        \"runTime\": 7440,\n        \"synopsis\": \"After the destruction of the Death Star, Imperial forces continue to pursue the Rebels. After the Rebellion's defeat on the ice planet Hoth, Luke journeys to the planet Dagobah to train with Jedi Master Yoda, who has lived in hiding since the fall of the Republic. In an attempt to convert Luke to the dark side, Darth Vader lures young Skywalker into a trap in the Cloud City of Bespin.\",\n        \"director\": \"George Lucas\",\n        \"rating\": \"PG\",\n        \"princessTheatreMovieId\": \"0080684\"\n    },\n    {\n        \"id\": 6,\n        \"title\": \"Star Wars: Return of the Jedi (Episode VI)\",\n        \"releaseDate\": \"1983-10-27T00:00:00\",\n        \"genre\": \"Action, Adventure, Fantasy, Live Action, Science Fiction\",\n        \"runTime\": 7859,\n        \"synopsis\": \"After a quick trip back to Tatooine, Luke Skywalker, Leia Organa, and Han Solo are reunited and join up with the amassing rebel fleet to take down the evil Empire once and for all. But the Empire is plotting too. Emperor Palpatine commands his troops aboard his newly consturcted Death Star stationed above the forest moon of Endor, where the rebels - and some unlikely furry friends - make their stand against the Empire. While Luke Skywalker confronts Darth Vader on the Death Star once more, Han leads a team to take out a shield protecting the battle station so that the rebel fleet can destory it once more and finally put an end to the war.\",\n        \"director\": \"George Lucas\",\n        \"rating\": \"PG\",\n        \"princessTheatreMovieId\": \"0086190\"\n    }\n]"
-            }
-          ]
-        },
-        {
-          "name": "Search Movies By Title",
-          "request": {
-            "method": "GET",
-            "header": [],
-            "url": {
-              "raw": "{{base_url}}/{{route}}?title=clones",
-              "host": ["{{base_url}}"],
-              "path": ["{{route}}"],
-              "query": [
-                {
-                  "key": "title",
-                  "value": "clones"
-                }
-              ]
-            }
-          },
-          "response": [
-            {
-              "name": "Search Movies By Title \"Clones\"",
-              "originalRequest": {
-                "method": "GET",
-                "header": [],
-                "url": {
-                  "raw": "{{base_url}}/{{route}}?title=clones",
-                  "host": ["{{base_url}}"],
-                  "path": ["{{route}}"],
-                  "query": [
-                    {
-                      "key": "title",
-                      "value": "clones"
-                    }
-                  ]
-                }
-              },
-              "status": "OK",
-              "code": 200,
-              "_postman_previewlanguage": "json",
-              "header": [
-                {
-                  "key": "Content-Length",
-                  "value": "1001"
-                },
-                {
-                  "key": "Content-Type",
-                  "value": "application/json; charset=utf-8"
-                },
-                {
-                  "key": "Date",
-                  "value": "Sun, 12 May 2024 11:21:08 GMT"
-                },
-                {
-                  "key": "Server",
-                  "value": "Kestrel"
-                }
-              ],
-              "cookie": [],
-              "body": "[\n    {\n        \"id\": 2,\n        \"title\": \"Star Wars: Attack of the Clones (Episode II)\",\n        \"releaseDate\": \"2002-05-16T00:00:00\",\n        \"genre\": \"Action, Adventure, Fantasy, Live Action, Science Fiction\",\n        \"runTime\": 8520,\n        \"synopsis\": \"Watch the seeds of Anakin Skywalker's transformation take root in Star Wars: Episode II - Attack of the Clones. Ten years after the invasion of Naboo, the galaxy is on the brink of civil war. Under the leadership of a renegade Jedi named Count Dooku, thousands of solar systems threaten to break away from the Galactic Republic. When an assassination attempt is made on Senator Padmé Amidala, the former Queen of Naboo, twenty-year-old Jedi apprentice Anakin Skywalker is assigned to protect her. In the course of his mission, Anakin discovers his love for Padmé as well as his own darker side. Soon, Anakin, Padmé, and Obi-Wan Kenobi are drawn into the heart of the Separatist movement and the beginning of the Clone Wars.\",\n        \"director\": \"George Lucas\",\n        \"rating\": \"PG-13\",\n        \"princessTheatreMovieId\": \"0121765\"\n    }\n]"
-            }
-          ]
-        },
-        {
-          "name": "Search Movies By Title/Genre",
-          "request": {
-            "method": "GET",
-            "header": [],
-            "url": {
-              "raw": "{{base_url}}/{{route}}?title=clones&genre=fantasy",
-              "host": ["{{base_url}}"],
-              "path": ["{{route}}"],
-              "query": [
-                {
-                  "key": "title",
-                  "value": "clones"
-                },
-                {
-                  "key": "genre",
-                  "value": "fantasy"
-                }
-              ]
-            }
-          },
-          "response": [
-            {
-              "name": "Search Movies By Title/Genre \"Clones/Fantasy\"",
-              "originalRequest": {
-                "method": "GET",
-                "header": [],
-                "url": {
-                  "raw": "{{base_url}}/{{route}}?title=clones&genre=fantasy",
-                  "host": ["{{base_url}}"],
-                  "path": ["{{route}}"],
-                  "query": [
-                    {
-                      "key": "title",
-                      "value": "clones"
-                    },
-                    {
-                      "key": "genre",
-                      "value": "fantasy"
-                    }
-                  ]
-                }
-              },
-              "status": "OK",
-              "code": 200,
-              "_postman_previewlanguage": "json",
-              "header": [
-                {
-                  "key": "Content-Length",
-                  "value": "1001"
-                },
-                {
-                  "key": "Content-Type",
-                  "value": "application/json; charset=utf-8"
-                },
-                {
-                  "key": "Date",
-                  "value": "Sun, 12 May 2024 11:21:23 GMT"
-                },
-                {
-                  "key": "Server",
-                  "value": "Kestrel"
-                }
-              ],
-              "cookie": [],
-              "body": "[\n    {\n        \"id\": 2,\n        \"title\": \"Star Wars: Attack of the Clones (Episode II)\",\n        \"releaseDate\": \"2002-05-16T00:00:00\",\n        \"genre\": \"Action, Adventure, Fantasy, Live Action, Science Fiction\",\n        \"runTime\": 8520,\n        \"synopsis\": \"Watch the seeds of Anakin Skywalker's transformation take root in Star Wars: Episode II - Attack of the Clones. Ten years after the invasion of Naboo, the galaxy is on the brink of civil war. Under the leadership of a renegade Jedi named Count Dooku, thousands of solar systems threaten to break away from the Galactic Republic. When an assassination attempt is made on Senator Padmé Amidala, the former Queen of Naboo, twenty-year-old Jedi apprentice Anakin Skywalker is assigned to protect her. In the course of his mission, Anakin discovers his love for Padmé as well as his own darker side. Soon, Anakin, Padmé, and Obi-Wan Kenobi are drawn into the heart of the Separatist movement and the beginning of the Clone Wars.\",\n        \"director\": \"George Lucas\",\n        \"rating\": \"PG-13\",\n        \"princessTheatreMovieId\": \"0121765\"\n    }\n]"
-            }
-          ]
-        },
-        {
-          "name": "Get Movie By Id",
-          "request": {
-            "method": "GET",
-            "header": [],
-            "url": {
-              "raw": "{{base_url}}/{{route}}/:movieId",
-              "host": ["{{base_url}}"],
-              "path": ["{{route}}", ":movieId"],
-              "variable": [
-                {
-                  "key": "movieId",
-                  "value": "1"
-                }
-              ]
-            }
-          },
-          "response": [
-            {
-              "name": "Get Movie By Id 1",
-              "originalRequest": {
-                "method": "GET",
-                "header": [],
-                "url": {
-                  "raw": "{{base_url}}/{{route}}/:movieId",
-                  "host": ["{{base_url}}"],
-                  "path": ["{{route}}", ":movieId"],
-                  "variable": [
-                    {
-                      "key": "movieId",
-                      "value": "1"
-                    }
-                  ]
-                }
-              },
-              "status": "OK",
-              "code": 200,
-              "_postman_previewlanguage": "json",
-              "header": [
-                {
-                  "key": "Content-Length",
-                  "value": "1070"
-                },
-                {
-                  "key": "Content-Type",
-                  "value": "application/json; charset=utf-8"
-                },
-                {
-                  "key": "Date",
-                  "value": "Sun, 12 May 2024 11:21:49 GMT"
-                },
-                {
-                  "key": "Server",
-                  "value": "Kestrel"
-                }
-              ],
-              "cookie": [],
-              "body": "{\n    \"id\": 1,\n    \"title\": \"Star Wars: The Phantom Menace (Episode I)\",\n    \"releaseDate\": \"1999-05-19T00:00:00\",\n    \"genre\": \"Action, Adventure, Fantasy, Live Action, Science Fiction\",\n    \"runTime\": 8160,\n    \"synopsis\": \"Experience the heroic action and unforgettable adventures of Star Wars: Episode I - The Phantom Menace. See the first fateful steps in the journey of Anakin Skywalker. Stranded on the desert planet Tatooine after rescuing young Queen Amidala from the impending invasion of Naboo, Jedi apprentice Obi-Wan Kenobi and his Jedi Master Qui-Gon Jinn discover nine-year-old Anakin, who is unusually strong in the Force. Anakin wins a thrilling Podrace and with it his freedom as he leaves his home to be trained as a Jedi. The heroes return to Naboo where Anakin and the Queen face massive invasion forces while the two Jedi contend with a deadly foe named Darth Maul. Only then do they realize the invasion is merely the first step in a sinister scheme by the re-emergent forces of darkness known as the Sith.\",\n    \"director\": \"George Lucas\",\n    \"rating\": \"PG\",\n    \"princessTheatreMovieId\": \"0120915\"\n}"
-            },
-            {
-              "name": "Error - Movie Not Found",
-              "originalRequest": {
-                "method": "GET",
-                "header": [],
-                "url": {
-                  "raw": "{{base_url}}/{{route}}/:movieId",
-                  "host": ["{{base_url}}"],
-                  "path": ["{{route}}", ":movieId"],
-                  "variable": [
-                    {
-                      "key": "movieId",
-                      "value": "10"
-                    }
-                  ]
-                }
-              },
-              "status": "Not Found",
-              "code": 404,
-              "_postman_previewlanguage": "json",
-              "header": [
-                {
-                  "key": "Content-Length",
-                  "value": "162"
-                },
-                {
-                  "key": "Content-Type",
-                  "value": "application/problem+json; charset=utf-8"
-                },
-                {
-                  "key": "Date",
-                  "value": "Sun, 12 May 2024 12:57:50 GMT"
-                },
-                {
-                  "key": "Server",
-                  "value": "Kestrel"
-                }
-              ],
-              "cookie": [],
-              "body": "{\n    \"type\": \"https://tools.ietf.org/html/rfc9110#section-15.5.5\",\n    \"title\": \"Not Found\",\n    \"status\": 404,\n    \"traceId\": \"00-38f2048ce42c7acc00d782291ab132f2-0a17cef93022b506-00\"\n}"
-            }
-          ]
-        },
-        {
-          "name": "Get Movie By Id With Details",
-          "request": {
-            "method": "GET",
-            "header": [],
-            "url": {
-              "raw": "{{base_url}}/{{route}}/:movieId?details=true",
-              "host": ["{{base_url}}"],
-              "path": ["{{route}}", ":movieId"],
-              "query": [
-                {
-                  "key": "details",
-                  "value": "true"
-                }
-              ],
-              "variable": [
-                {
-                  "key": "movieId",
-                  "value": "1"
-                }
-              ]
-            }
-          },
-          "response": [
-            {
-              "name": "Get Movie By Id 1 With Details",
-              "originalRequest": {
-                "method": "GET",
-                "header": [],
-                "url": {
-                  "raw": "{{base_url}}/{{route}}/:movieId?details=true",
-                  "host": ["{{base_url}}"],
-                  "path": ["{{route}}", ":movieId"],
-                  "query": [
-                    {
-                      "key": "details",
-                      "value": "true"
-                    }
-                  ],
-                  "variable": [
-                    {
-                      "key": "movieId",
-                      "value": "1"
-                    }
-                  ]
-                }
-              },
-              "status": "OK",
-              "code": 200,
-              "_postman_previewlanguage": "json",
-              "header": [
-                {
-                  "key": "Content-Length",
-                  "value": "1712"
-                },
-                {
-                  "key": "Content-Type",
-                  "value": "application/json; charset=utf-8"
-                },
-                {
-                  "key": "Date",
-                  "value": "Sun, 12 May 2024 11:22:07 GMT"
-                },
-                {
-                  "key": "Server",
-                  "value": "Kestrel"
-                }
-              ],
-              "cookie": [],
-              "body": "{\n    \"id\": 1,\n    \"title\": \"Star Wars: The Phantom Menace (Episode I)\",\n    \"releaseDate\": \"1999-05-19T00:00:00\",\n    \"genre\": \"Action, Adventure, Fantasy, Live Action, Science Fiction\",\n    \"runTime\": 8160,\n    \"synopsis\": \"Experience the heroic action and unforgettable adventures of Star Wars: Episode I - The Phantom Menace. See the first fateful steps in the journey of Anakin Skywalker. Stranded on the desert planet Tatooine after rescuing young Queen Amidala from the impending invasion of Naboo, Jedi apprentice Obi-Wan Kenobi and his Jedi Master Qui-Gon Jinn discover nine-year-old Anakin, who is unusually strong in the Force. Anakin wins a thrilling Podrace and with it his freedom as he leaves his home to be trained as a Jedi. The heroes return to Naboo where Anakin and the Queen face massive invasion forces while the two Jedi contend with a deadly foe named Darth Maul. Only then do they realize the invasion is merely the first step in a sinister scheme by the re-emergent forces of darkness known as the Sith.\",\n    \"director\": \"George Lucas\",\n    \"rating\": \"PG\",\n    \"princessTheatreMovieId\": \"0120915\",\n    \"movieCinemas\": [\n        {\n            \"id\": 1,\n            \"showTime\": \"2024-12-31T00:00:00\",\n            \"ticketPrice\": 24.5,\n            \"cinemaName\": \"Cinemarvel\"\n        },\n        {\n            \"id\": 2,\n            \"showTime\": \"2024-12-31T00:00:00\",\n            \"ticketPrice\": 22.75,\n            \"cinemaName\": \"Moviemania\"\n        },\n        {\n            \"id\": 3,\n            \"showTime\": \"2024-12-31T00:00:00\",\n            \"ticketPrice\": 20,\n            \"cinemaName\": \"BigScreen Bliss\"\n        },\n        {\n            \"id\": 4,\n            \"showTime\": \"2024-12-31T00:00:00\",\n            \"ticketPrice\": 21.5,\n            \"cinemaName\": \"CineNova\"\n        },\n        {\n            \"id\": 5,\n            \"showTime\": \"2024-12-31T00:00:00\",\n            \"ticketPrice\": 22.25,\n            \"cinemaName\": \"Cinema Royale\"\n        },\n        {\n            \"id\": 6,\n            \"showTime\": \"2024-12-31T00:00:00\",\n            \"ticketPrice\": 23.75,\n            \"cinemaName\": \"Flicker Factory\"\n        },\n        {\n            \"id\": 7,\n            \"showTime\": \"2024-12-31T00:00:00\",\n            \"ticketPrice\": 22.75,\n            \"cinemaName\": \"CineSpectra\"\n        }\n    ]\n}"
-            },
-            {
-              "name": "Error - Movie Not Found",
-              "originalRequest": {
-                "method": "GET",
-                "header": [],
-                "url": {
-                  "raw": "{{base_url}}/{{route}}/:movieId?details=true",
-                  "host": ["{{base_url}}"],
-                  "path": ["{{route}}", ":movieId"],
-                  "query": [
-                    {
-                      "key": "details",
-                      "value": "true"
-                    }
-                  ],
-                  "variable": [
-                    {
-                      "key": "movieId",
-                      "value": "10"
-                    }
-                  ]
-                }
-              },
-              "status": "Not Found",
-              "code": 404,
-              "_postman_previewlanguage": "json",
-              "header": [
-                {
-                  "key": "Content-Length",
-                  "value": "162"
-                },
-                {
-                  "key": "Content-Type",
-                  "value": "application/problem+json; charset=utf-8"
-                },
-                {
-                  "key": "Date",
-                  "value": "Sun, 12 May 2024 12:58:20 GMT"
-                },
-                {
-                  "key": "Server",
-                  "value": "Kestrel"
-                }
-              ],
-              "cookie": [],
-              "body": "{\n    \"type\": \"https://tools.ietf.org/html/rfc9110#section-15.5.5\",\n    \"title\": \"Not Found\",\n    \"status\": 404,\n    \"traceId\": \"00-dd90c75095ed79a3e46152c0d5094a74-036202ba922fff07-00\"\n}"
-            },
-            {
-              "name": "Get Movie By Id 2 With Average Score",
-              "originalRequest": {
-                "method": "GET",
-                "header": [],
-                "url": {
-                  "raw": "{{base_url}}/{{route}}/:movieId?details=true",
-                  "host": ["{{base_url}}"],
-                  "path": ["{{route}}", ":movieId"],
-                  "query": [
-                    {
-                      "key": "details",
-                      "value": "true"
-                    }
-                  ],
-                  "variable": [
-                    {
-                      "key": "movieId",
-                      "value": "2"
-                    }
-                  ]
-                }
-              },
-              "status": "OK",
-              "code": 200,
-              "_postman_previewlanguage": "json",
-              "header": [
-                {
-                  "key": "Content-Length",
-                  "value": "1666"
-                },
-                {
-                  "key": "Content-Type",
-                  "value": "application/json; charset=utf-8"
-                },
-                {
-                  "key": "Date",
-                  "value": "Sun, 12 May 2024 14:54:58 GMT"
-                },
-                {
-                  "key": "Server",
-                  "value": "Kestrel"
-                }
-              ],
-              "cookie": [],
-              "body": "{\n    \"id\": 2,\n    \"title\": \"Star Wars: Attack of the Clones (Episode II)\",\n    \"releaseDate\": \"2002-05-16T00:00:00\",\n    \"genre\": \"Action, Adventure, Fantasy, Live Action, Science Fiction\",\n    \"runTime\": 8520,\n    \"synopsis\": \"Watch the seeds of Anakin Skywalker's transformation take root in Star Wars: Episode II - Attack of the Clones. Ten years after the invasion of Naboo, the galaxy is on the brink of civil war. Under the leadership of a renegade Jedi named Count Dooku, thousands of solar systems threaten to break away from the Galactic Republic. When an assassination attempt is made on Senator Padmé Amidala, the former Queen of Naboo, twenty-year-old Jedi apprentice Anakin Skywalker is assigned to protect her. In the course of his mission, Anakin discovers his love for Padmé as well as his own darker side. Soon, Anakin, Padmé, and Obi-Wan Kenobi are drawn into the heart of the Separatist movement and the beginning of the Clone Wars.\",\n    \"director\": \"George Lucas\",\n    \"rating\": \"PG-13\",\n    \"princessTheatreMovieId\": \"0121765\",\n    \"averageScore\": 7.25,\n    \"movieCinemas\": [\n        {\n            \"id\": 8,\n            \"showTime\": \"2024-12-31T00:00:00\",\n            \"ticketPrice\": 26.25,\n            \"cinemaName\": \"Cinemarvel\"\n        },\n        {\n            \"id\": 9,\n            \"showTime\": \"2024-12-31T00:00:00\",\n            \"ticketPrice\": 21.75,\n            \"cinemaName\": \"Moviemania\"\n        },\n        {\n            \"id\": 10,\n            \"showTime\": \"2024-12-31T00:00:00\",\n            \"ticketPrice\": 25.5,\n            \"cinemaName\": \"BigScreen Bliss\"\n        },\n        {\n            \"id\": 11,\n            \"showTime\": \"2024-12-31T00:00:00\",\n            \"ticketPrice\": 27.75,\n            \"cinemaName\": \"CineNova\"\n        },\n        {\n            \"id\": 12,\n            \"showTime\": \"2024-12-31T00:00:00\",\n            \"ticketPrice\": 22.5,\n            \"cinemaName\": \"Cinema Royale\"\n        },\n        {\n            \"id\": 13,\n            \"showTime\": \"2024-12-31T00:00:00\",\n            \"ticketPrice\": 29.75,\n            \"cinemaName\": \"Flicker Factory\"\n        },\n        {\n            \"id\": 14,\n            \"showTime\": \"2024-12-31T00:00:00\",\n            \"ticketPrice\": 23,\n            \"cinemaName\": \"CineSpectra\"\n        }\n    ]\n}"
-            },
-            {
-              "name": "Get Movie By Id With Princes Theatre Details",
-              "originalRequest": {
-                "method": "GET",
-                "header": [],
-                "url": {
-                  "raw": "{{base_url}}/{{route}}/:movieId?details=true",
-                  "host": ["{{base_url}}"],
-                  "path": ["{{route}}", ":movieId"],
-                  "query": [
-                    {
-                      "key": "details",
-                      "value": "true"
-                    }
-                  ],
-                  "variable": [
-                    {
-                      "key": "movieId",
-                      "value": "1"
-                    }
-                  ]
-                }
-              },
-              "status": "OK",
-              "code": 200,
-              "_postman_previewlanguage": "json",
-              "header": [
-                {
-                  "key": "Content-Length",
-                  "value": "1777"
-                },
-                {
-                  "key": "Content-Type",
-                  "value": "application/json; charset=utf-8"
-                },
-                {
-                  "key": "Date",
-                  "value": "Sun, 12 May 2024 17:07:23 GMT"
-                },
-                {
-                  "key": "Server",
-                  "value": "Kestrel"
-                }
-              ],
-              "cookie": [],
-              "body": "{\n    \"filmWorldPrice\": 27.2,\n    \"cinemaWorldPrice\": 26.4,\n    \"id\": 1,\n    \"title\": \"Star Wars: The Phantom Menace (Episode I)\",\n    \"releaseDate\": \"1999-05-19T00:00:00\",\n    \"genre\": \"Action, Adventure, Fantasy, Live Action, Science Fiction\",\n    \"runTime\": 8160,\n    \"synopsis\": \"Experience the heroic action and unforgettable adventures of Star Wars: Episode I - The Phantom Menace. See the first fateful steps in the journey of Anakin Skywalker. Stranded on the desert planet Tatooine after rescuing young Queen Amidala from the impending invasion of Naboo, Jedi apprentice Obi-Wan Kenobi and his Jedi Master Qui-Gon Jinn discover nine-year-old Anakin, who is unusually strong in the Force. Anakin wins a thrilling Podrace and with it his freedom as he leaves his home to be trained as a Jedi. The heroes return to Naboo where Anakin and the Queen face massive invasion forces while the two Jedi contend with a deadly foe named Darth Maul. Only then do they realize the invasion is merely the first step in a sinister scheme by the re-emergent forces of darkness known as the Sith.\",\n    \"director\": \"George Lucas\",\n    \"rating\": \"PG\",\n    \"princessTheatreMovieId\": \"0120915\",\n    \"averageScore\": 7,\n    \"movieCinemas\": [\n        {\n            \"id\": 1,\n            \"showTime\": \"2024-12-31T00:00:00\",\n            \"ticketPrice\": 24.5,\n            \"cinemaName\": \"Cinemarvel\"\n        },\n        {\n            \"id\": 2,\n            \"showTime\": \"2024-12-31T00:00:00\",\n            \"ticketPrice\": 22.75,\n            \"cinemaName\": \"Moviemania\"\n        },\n        {\n            \"id\": 3,\n            \"showTime\": \"2024-12-31T00:00:00\",\n            \"ticketPrice\": 20,\n            \"cinemaName\": \"BigScreen Bliss\"\n        },\n        {\n            \"id\": 4,\n            \"showTime\": \"2024-12-31T00:00:00\",\n            \"ticketPrice\": 21.5,\n            \"cinemaName\": \"CineNova\"\n        },\n        {\n            \"id\": 5,\n            \"showTime\": \"2024-12-31T00:00:00\",\n            \"ticketPrice\": 22.25,\n            \"cinemaName\": \"Cinema Royale\"\n        },\n        {\n            \"id\": 6,\n            \"showTime\": \"2024-12-31T00:00:00\",\n            \"ticketPrice\": 23.75,\n            \"cinemaName\": \"Flicker Factory\"\n        },\n        {\n            \"id\": 7,\n            \"showTime\": \"2024-12-31T00:00:00\",\n            \"ticketPrice\": 22.75,\n            \"cinemaName\": \"CineSpectra\"\n        }\n    ]\n}"
-            }
-          ]
-        }
-      ],
-      "event": [
-        {
-          "listen": "prerequest",
-          "script": {
-            "type": "text/javascript",
-            "packages": {},
-            "exec": ["pm.collectionVariables.set(\"route\", \"api/Movies\");"]
-          }
-        },
-        {
-          "listen": "test",
-          "script": {
-            "type": "text/javascript",
-            "packages": {},
-            "exec": [""]
-          }
-        }
-      ]
-    },
-    {
-      "name": "MovieReviews",
-      "item": [
-        {
-          "name": "Get Review By Id",
-          "request": {
-            "method": "GET",
-            "header": [],
-            "url": {
-              "raw": "{{base_url}}/{{route}}/:reviewId",
-              "host": ["{{base_url}}"],
-              "path": ["{{route}}", ":reviewId"],
-              "variable": [
-                {
-                  "key": "reviewId",
-                  "value": "1"
-                }
-              ]
-            }
-          },
-          "response": [
-            {
-              "name": "Get Review By Id 1",
-              "originalRequest": {
-                "method": "GET",
-                "header": [],
-                "url": {
-                  "raw": "{{base_url}}/{{route}}/:reviewId",
-                  "host": ["{{base_url}}"],
-                  "path": ["{{route}}", ":reviewId"],
-                  "variable": [
-                    {
-                      "key": "reviewId",
-                      "value": "1"
-                    }
-                  ]
-                }
-              },
-              "status": "OK",
-              "code": 200,
-              "_postman_previewlanguage": "json",
-              "header": [
-                {
-                  "key": "Content-Length",
-                  "value": "108"
-                },
-                {
-                  "key": "Content-Type",
-                  "value": "application/json; charset=utf-8"
-                },
-                {
-                  "key": "Date",
-                  "value": "Sun, 12 May 2024 12:46:21 GMT"
-                },
-                {
-                  "key": "Server",
-                  "value": "Kestrel"
-                }
-              ],
-              "cookie": [],
-              "body": "{\n    \"id\": 1,\n    \"score\": 8,\n    \"comment\": \"This movie was great!\",\n    \"reviewDate\": \"2024-05-12T22:44:50.947256\",\n    \"movieId\": 1\n}"
-            },
-            {
-              "name": "Error - Movie Not Found",
-              "originalRequest": {
-                "method": "GET",
-                "header": [],
-                "url": {
-                  "raw": "{{base_url}}/{{route}}/:reviewId",
-                  "host": ["{{base_url}}"],
-                  "path": ["{{route}}", ":reviewId"],
-                  "variable": [
-                    {
-                      "key": "reviewId",
-                      "value": "20"
-                    }
-                  ]
-                }
-              },
-              "status": "Not Found",
-              "code": 404,
-              "_postman_previewlanguage": "json",
-              "header": [
-                {
-                  "key": "Content-Length",
-                  "value": "162"
-                },
-                {
-                  "key": "Content-Type",
-                  "value": "application/problem+json; charset=utf-8"
-                },
-                {
-                  "key": "Date",
-                  "value": "Sun, 12 May 2024 12:57:35 GMT"
-                },
-                {
-                  "key": "Server",
-                  "value": "Kestrel"
-                }
-              ],
-              "cookie": [],
-              "body": "{\n    \"type\": \"https://tools.ietf.org/html/rfc9110#section-15.5.5\",\n    \"title\": \"Not Found\",\n    \"status\": 404,\n    \"traceId\": \"00-d0993c321ea84521a625130204526b1b-f02f2ea9b72dcc0f-00\"\n}"
-            }
-          ]
-        },
-        {
-          "name": "Get Reviews By Movie Id",
-          "request": {
-            "method": "GET",
-            "header": [],
-            "url": {
-              "raw": "{{base_url}}/{{route}}/movies/:movieId",
-              "host": ["{{base_url}}"],
-              "path": ["{{route}}", "movies", ":movieId"],
-              "variable": [
-                {
-                  "key": "movieId",
-                  "value": "1"
-                }
-              ]
-            }
-          },
-          "response": [
-            {
-              "name": "Get Reviews By Movie Id 1",
-              "originalRequest": {
-                "method": "GET",
-                "header": [],
-                "url": {
-                  "raw": "{{base_url}}/{{route}}/movies/:movieId",
-                  "host": ["{{base_url}}"],
-                  "path": ["{{route}}", "movies", ":movieId"],
-                  "variable": [
-                    {
-                      "key": "movieId",
-                      "value": "1"
-                    }
-                  ]
-                }
-              },
-              "status": "OK",
-              "code": 200,
-              "_postman_previewlanguage": "json",
-              "header": [
-                {
-                  "key": "Content-Length",
-                  "value": "110"
-                },
-                {
-                  "key": "Content-Type",
-                  "value": "application/json; charset=utf-8"
-                },
-                {
-                  "key": "Date",
-                  "value": "Sun, 12 May 2024 12:46:40 GMT"
-                },
-                {
-                  "key": "Server",
-                  "value": "Kestrel"
-                }
-              ],
-              "cookie": [],
-              "body": "[\n    {\n        \"id\": 1,\n        \"score\": 8,\n        \"comment\": \"This movie was great!\",\n        \"reviewDate\": \"2024-05-12T22:44:50.947256\",\n        \"movieId\": 1\n    }\n]"
-            },
-            {
-              "name": "Error - Movie Not Found",
-              "originalRequest": {
-                "method": "GET",
-                "header": [],
-                "url": {
-                  "raw": "{{base_url}}/{{route}}/movies/:movieId",
-                  "host": ["{{base_url}}"],
-                  "path": ["{{route}}", "movies", ":movieId"],
-                  "variable": [
-                    {
-                      "key": "movieId",
-                      "value": "10"
-                    }
-                  ]
-                }
-              },
-              "status": "Not Found",
-              "code": 404,
-              "_postman_previewlanguage": "json",
-              "header": [
-                {
-                  "key": "Content-Length",
-                  "value": "162"
-                },
-                {
-                  "key": "Content-Type",
-                  "value": "application/problem+json; charset=utf-8"
-                },
-                {
-                  "key": "Date",
-                  "value": "Sun, 12 May 2024 12:57:07 GMT"
-                },
-                {
-                  "key": "Server",
-                  "value": "Kestrel"
-                }
-              ],
-              "cookie": [],
-              "body": "{\n    \"type\": \"https://tools.ietf.org/html/rfc9110#section-15.5.5\",\n    \"title\": \"Not Found\",\n    \"status\": 404,\n    \"traceId\": \"00-cdf048d65d2347803d028a5507f3c2cc-2d1d7b134a29beec-00\"\n}"
-            },
-            {
-              "name": "UPDATED - Get Reviews By Movie Id 1",
-              "originalRequest": {
-                "method": "GET",
-                "header": [],
-                "url": {
-                  "raw": "{{base_url}}/{{route}}/movies/:movieId",
-                  "host": ["{{base_url}}"],
-                  "path": ["{{route}}", "movies", ":movieId"],
-                  "variable": [
-                    {
-                      "key": "movieId",
-                      "value": "1"
-                    }
-                  ]
-                }
-              },
-              "status": "OK",
-              "code": 200,
-              "_postman_previewlanguage": "json",
-              "header": [
-                {
-                  "key": "Content-Length",
-                  "value": "119"
-                },
-                {
-                  "key": "Content-Type",
-                  "value": "application/json; charset=utf-8"
-                },
-                {
-                  "key": "Date",
-                  "value": "Sun, 12 May 2024 13:12:29 GMT"
-                },
-                {
-                  "key": "Server",
-                  "value": "Kestrel"
-                }
-              ],
-              "cookie": [],
-              "body": "[\n    {\n        \"id\": 1,\n        \"score\": 5,\n        \"comment\": \"UPDATED - This movie was okay!\",\n        \"reviewDate\": \"2024-05-12T22:44:50.947256\",\n        \"movieId\": 1\n    }\n]"
-            },
-            {
-              "name": "PATCHED - Get Reviews By Movie Id",
-              "originalRequest": {
-                "method": "GET",
-                "header": [],
-                "url": {
-                  "raw": "{{base_url}}/{{route}}/movies/:movieId",
-                  "host": ["{{base_url}}"],
-                  "path": ["{{route}}", "movies", ":movieId"],
-                  "variable": [
-                    {
-                      "key": "movieId",
-                      "value": "1"
-                    }
-                  ]
-                }
-              },
-              "status": "OK",
-              "code": 200,
-              "_postman_previewlanguage": "json",
-              "header": [
-                {
-                  "key": "Content-Length",
-                  "value": "124"
-                },
-                {
-                  "key": "Content-Type",
-                  "value": "application/json; charset=utf-8"
-                },
-                {
-                  "key": "Date",
-                  "value": "Sun, 12 May 2024 13:21:37 GMT"
-                },
-                {
-                  "key": "Server",
-                  "value": "Kestrel"
-                }
-              ],
-              "cookie": [],
-              "body": "[\n    {\n        \"id\": 1,\n        \"score\": 7,\n        \"comment\": \"PATCHED - This movie was excellent!\",\n        \"reviewDate\": \"2024-05-12T22:44:50.947256\",\n        \"movieId\": 1\n    }\n]"
-            },
-            {
-              "name": "Get Reviews By Movie Id 2",
-              "originalRequest": {
-                "method": "GET",
-                "header": [],
-                "url": {
-                  "raw": "{{base_url}}/{{route}}/movies/:movieId",
-                  "host": ["{{base_url}}"],
-                  "path": ["{{route}}", "movies", ":movieId"],
-                  "variable": [
-                    {
-                      "key": "movieId",
-                      "value": "2"
-                    }
-                  ]
-                }
-              },
-              "status": "OK",
-              "code": 200,
-              "_postman_previewlanguage": "json",
-              "header": [
-                {
-                  "key": "Content-Length",
-                  "value": "443"
-                },
-                {
-                  "key": "Content-Type",
-                  "value": "application/json; charset=utf-8"
-                },
-                {
-                  "key": "Date",
-                  "value": "Sun, 12 May 2024 13:39:02 GMT"
-                },
-                {
-                  "key": "Server",
-                  "value": "Kestrel"
-                }
-              ],
-              "cookie": [],
-              "body": "[\n    {\n        \"id\": 3,\n        \"score\": 8,\n        \"comment\": \"This movie was great!\",\n        \"reviewDate\": \"2024-05-12T23:35:59.021152\",\n        \"movieId\": 2\n    },\n    {\n        \"id\": 4,\n        \"score\": 7,\n        \"comment\": \"This movie was fine!\",\n        \"reviewDate\": \"2024-05-12T23:36:11.617238\",\n        \"movieId\": 2\n    },\n    {\n        \"id\": 5,\n        \"score\": 6,\n        \"comment\": \"This movie was okay!\",\n        \"reviewDate\": \"2024-05-12T23:36:18.171018\",\n        \"movieId\": 2\n    },\n    {\n        \"id\": 7,\n        \"score\": 4,\n        \"comment\": \"This movie was below average!\",\n        \"reviewDate\": \"2024-05-12T23:38:43.282181\",\n        \"movieId\": 2\n    }\n]"
-            },
-            {
-              "name": "ALL DELETED - Get Reviews By Movie Id",
-              "originalRequest": {
-                "method": "GET",
-                "header": [],
-                "url": {
-                  "raw": "{{base_url}}/{{route}}/movies/:movieId",
-                  "host": ["{{base_url}}"],
-                  "path": ["{{route}}", "movies", ":movieId"],
-                  "variable": [
-                    {
-                      "key": "movieId",
-                      "value": "2"
-                    }
-                  ]
-                }
-              },
-              "status": "OK",
-              "code": 200,
-              "_postman_previewlanguage": "json",
-              "header": [
-                {
-                  "key": "Content-Length",
-                  "value": "2"
-                },
-                {
-                  "key": "Content-Type",
-                  "value": "application/json; charset=utf-8"
-                },
-                {
-                  "key": "Date",
-                  "value": "Sun, 12 May 2024 13:45:12 GMT"
-                },
-                {
-                  "key": "Server",
-                  "value": "Kestrel"
-                }
-              ],
-              "cookie": [],
-              "body": "[]"
-            }
-          ]
-        },
-        {
-          "name": "Create Review For Movie",
-          "request": {
-            "method": "POST",
-            "header": [],
-            "body": {
-              "mode": "raw",
-              "raw": "{\n    \"score\": 8.0,\n    \"comment\": \"This movie was excellent!\"\n}",
-              "options": {
-                "raw": {
-                  "language": "json"
-                }
-              }
-            },
-            "url": {
-              "raw": "{{base_url}}/{{route}}/movies/:movieId",
-              "host": ["{{base_url}}"],
-              "path": ["{{route}}", "movies", ":movieId"],
-              "variable": [
-                {
-                  "key": "movieId",
-                  "value": "1"
-                }
-              ]
-            }
-          },
-          "response": [
-            {
-              "name": "Create Reviews For Movie 1",
-              "originalRequest": {
-                "method": "POST",
-                "header": [],
-                "body": {
-                  "mode": "raw",
-                  "raw": "{\n    \"score\": 8.0,\n    \"comment\": \"This movie was great!\"\n}",
-                  "options": {
-                    "raw": {
-                      "language": "json"
-                    }
-                  }
-                },
-                "url": {
-                  "raw": "{{base_url}}/{{route}}/movies/:movieId",
-                  "host": ["{{base_url}}"],
-                  "path": ["{{route}}", "movies", ":movieId"],
-                  "variable": [
-                    {
-                      "key": "movieId",
-                      "value": "1"
-                    }
-                  ]
-                }
-              },
-              "status": "Created",
-              "code": 201,
-              "_postman_previewlanguage": "json",
-              "header": [
-                {
-                  "key": "Content-Length",
-                  "value": "114"
-                },
-                {
-                  "key": "Content-Type",
-                  "value": "application/json; charset=utf-8"
-                },
-                {
-                  "key": "Date",
-                  "value": "Sun, 12 May 2024 12:44:51 GMT"
-                },
-                {
-                  "key": "Server",
-                  "value": "Kestrel"
-                },
-                {
-                  "key": "Location",
-                  "value": "https://localhost:7190/api/MovieReviews/1"
-                }
-              ],
-              "cookie": [],
-              "body": "{\n    \"id\": 1,\n    \"score\": 8,\n    \"comment\": \"This movie was great!\",\n    \"reviewDate\": \"2024-05-12T22:44:50.947256+10:00\",\n    \"movieId\": 1\n}"
-            },
-            {
-              "name": "Error - Comment",
-              "originalRequest": {
-                "method": "POST",
-                "header": [],
-                "body": {
-                  "mode": "raw",
-                  "raw": "{\n    \"score\": 8.0\n}",
-                  "options": {
-                    "raw": {
-                      "language": "json"
-                    }
-                  }
-                },
-                "url": {
-                  "raw": "{{base_url}}/{{route}}/movies/:movieId",
-                  "host": ["{{base_url}}"],
-                  "path": ["{{route}}", "movies", ":movieId"],
-                  "variable": [
-                    {
-                      "key": "movieId",
-                      "value": "1"
-                    }
-                  ]
-                }
-              },
-              "status": "Bad Request",
-              "code": 400,
-              "_postman_previewlanguage": "json",
-              "header": [
-                {
-                  "key": "Content-Length",
-                  "value": "246"
-                },
-                {
-                  "key": "Content-Type",
-                  "value": "application/problem+json; charset=utf-8"
-                },
-                {
-                  "key": "Date",
-                  "value": "Sun, 12 May 2024 12:51:55 GMT"
-                },
-                {
-                  "key": "Server",
-                  "value": "Kestrel"
-                }
-              ],
-              "cookie": [],
-              "body": "{\n    \"errors\": {\n        \"Comment\": [\n            \"A review comment is required\"\n        ]\n    },\n    \"type\": \"https://tools.ietf.org/html/rfc9110#section-15.5.1\",\n    \"title\": \"One or more validation errors occurred.\",\n    \"status\": 400,\n    \"traceId\": \"00-d46824f2035fa262eec7c44d0e904692-e40a38af6f009c95-00\"\n}"
-            },
-            {
-              "name": "Error - Score",
-              "originalRequest": {
-                "method": "POST",
-                "header": [],
-                "body": {
-                  "mode": "raw",
-                  "raw": "{\n    \"comment\": \"This movie was great!\"\n}",
-                  "options": {
-                    "raw": {
-                      "language": "json"
-                    }
-                  }
-                },
-                "url": {
-                  "raw": "{{base_url}}/{{route}}/movies/:movieId",
-                  "host": ["{{base_url}}"],
-                  "path": ["{{route}}", "movies", ":movieId"],
-                  "variable": [
-                    {
-                      "key": "movieId",
-                      "value": "1"
-                    }
-                  ]
-                }
-              },
-              "status": "Bad Request",
-              "code": 400,
-              "_postman_previewlanguage": "json",
-              "header": [
-                {
-                  "key": "Content-Length",
-                  "value": "257"
-                },
-                {
-                  "key": "Content-Type",
-                  "value": "application/problem+json; charset=utf-8"
-                },
-                {
-                  "key": "Date",
-                  "value": "Sun, 12 May 2024 12:55:54 GMT"
-                },
-                {
-                  "key": "Server",
-                  "value": "Kestrel"
-                }
-              ],
-              "cookie": [],
-              "body": "{\n    \"errors\": {\n        \"Score\": [\n            \"The field Score must be between 1 and 10.\"\n        ]\n    },\n    \"type\": \"https://tools.ietf.org/html/rfc9110#section-15.5.1\",\n    \"title\": \"One or more validation errors occurred.\",\n    \"status\": 400,\n    \"traceId\": \"00-a4a0e3b32aced02cc8d66295637428d7-00d4ef6edd6f37fd-00\"\n}"
-            },
-            {
-              "name": "Error - Blank Body",
-              "originalRequest": {
-                "method": "POST",
-                "header": [],
-                "body": {
-                  "mode": "raw",
-                  "raw": "{}",
-                  "options": {
-                    "raw": {
-                      "language": "json"
-                    }
-                  }
-                },
-                "url": {
-                  "raw": "{{base_url}}/{{route}}/movies/:movieId",
-                  "host": ["{{base_url}}"],
-                  "path": ["{{route}}", "movies", ":movieId"],
-                  "variable": [
-                    {
-                      "key": "movieId",
-                      "value": "1"
-                    }
-                  ]
-                }
-              },
-              "status": "Bad Request",
-              "code": 400,
-              "_postman_previewlanguage": "json",
-              "header": [
-                {
-                  "key": "Content-Length",
-                  "value": "300"
-                },
-                {
-                  "key": "Content-Type",
-                  "value": "application/problem+json; charset=utf-8"
-                },
-                {
-                  "key": "Date",
-                  "value": "Sun, 12 May 2024 12:59:17 GMT"
-                },
-                {
-                  "key": "Server",
-                  "value": "Kestrel"
-                }
-              ],
-              "cookie": [],
-              "body": "{\n    \"errors\": {\n        \"Score\": [\n            \"The field Score must be between 1 and 10.\"\n        ],\n        \"Comment\": [\n            \"A review comment is required\"\n        ]\n    },\n    \"type\": \"https://tools.ietf.org/html/rfc9110#section-15.5.1\",\n    \"title\": \"One or more validation errors occurred.\",\n    \"status\": 400,\n    \"traceId\": \"00-a13cb0b9ec8d33bdaf962788723a8010-ba56f2a344e94233-00\"\n}"
-            },
-            {
-              "name": "Error - Movie Not Found",
-              "originalRequest": {
-                "method": "POST",
-                "header": [],
-                "body": {
-                  "mode": "raw",
-                  "raw": "{\n    \"score\": 8.0,\n    \"comment\": \"This movie was great!\"\n}",
-                  "options": {
-                    "raw": {
-                      "language": "json"
-                    }
-                  }
-                },
-                "url": {
-                  "raw": "{{base_url}}/{{route}}/movies/:movieId",
-                  "host": ["{{base_url}}"],
-                  "path": ["{{route}}", "movies", ":movieId"],
-                  "variable": [
-                    {
-                      "key": "movieId",
-                      "value": "10"
-                    }
-                  ]
-                }
-              },
-              "status": "Not Found",
-              "code": 404,
-              "_postman_previewlanguage": "json",
-              "header": [
-                {
-                  "key": "Content-Length",
-                  "value": "162"
-                },
-                {
-                  "key": "Content-Type",
-                  "value": "application/problem+json; charset=utf-8"
-                },
-                {
-                  "key": "Date",
-                  "value": "Sun, 12 May 2024 12:59:55 GMT"
-                },
-                {
-                  "key": "Server",
-                  "value": "Kestrel"
-                }
-              ],
-              "cookie": [],
-              "body": "{\n    \"type\": \"https://tools.ietf.org/html/rfc9110#section-15.5.5\",\n    \"title\": \"Not Found\",\n    \"status\": 404,\n    \"traceId\": \"00-d59c7023e782962a6063e93668ca3673-ca1de64e6e2b99cf-00\"\n}"
-            },
-            {
-              "name": "Create Review For Movie 2",
-              "originalRequest": {
-                "method": "POST",
-                "header": [],
-                "body": {
-                  "mode": "raw",
-                  "raw": "{\n    \"score\": 4.0,\n    \"comment\": \"This movie was below average!\"\n}",
-                  "options": {
-                    "raw": {
-                      "language": "json"
-                    }
-                  }
-                },
-                "url": {
-                  "raw": "{{base_url}}/{{route}}/movies/:movieId",
-                  "host": ["{{base_url}}"],
-                  "path": ["{{route}}", "movies", ":movieId"],
-                  "variable": [
-                    {
-                      "key": "movieId",
-                      "value": "2"
-                    }
-                  ]
-                }
-              },
-              "status": "Created",
-              "code": 201,
-              "_postman_previewlanguage": "json",
-              "header": [
-                {
-                  "key": "Content-Length",
-                  "value": "122"
-                },
-                {
-                  "key": "Content-Type",
-                  "value": "application/json; charset=utf-8"
-                },
-                {
-                  "key": "Date",
-                  "value": "Sun, 12 May 2024 13:37:31 GMT"
-                },
-                {
-                  "key": "Server",
-                  "value": "Kestrel"
-                },
-                {
-                  "key": "Location",
-                  "value": "https://localhost:7190/api/MovieReviews/6"
-                }
-              ],
-              "cookie": [],
-              "body": "{\n    \"id\": 6,\n    \"score\": 4,\n    \"comment\": \"This movie was below average!\",\n    \"reviewDate\": \"2024-05-12T23:37:31.686499+10:00\",\n    \"movieId\": 2\n}"
-            }
-          ]
-        },
-        {
-          "name": "Update Review For Movie",
-          "request": {
-            "method": "PUT",
-            "header": [],
-            "body": {
-              "mode": "raw",
-              "raw": "{\n    \"score\": 5.0,\n    \"comment\": \"UPDATED - This movie was okay!\"\n}",
-              "options": {
-                "raw": {
-                  "language": "json"
-                }
-              }
-            },
-            "url": {
-              "raw": "{{base_url}}/{{route}}/movies/:movieId/reviews/:reviewId",
-              "host": ["{{base_url}}"],
-              "path": [
-                "{{route}}",
-                "movies",
-                ":movieId",
-                "reviews",
-                ":reviewId"
-              ],
-              "variable": [
-                {
-                  "key": "movieId",
-                  "value": "1"
-                },
-                {
-                  "key": "reviewId",
-                  "value": "1"
-                }
-              ]
-            }
-          },
-          "response": [
-            {
-              "name": "Update Review For Movie",
-              "originalRequest": {
-                "method": "PUT",
-                "header": [],
-                "body": {
-                  "mode": "raw",
-                  "raw": "{\n    \"score\": 5.0,\n    \"comment\": \"UPDATED - This movie was okay!\"\n}",
-                  "options": {
-                    "raw": {
-                      "language": "json"
-                    }
-                  }
-                },
-                "url": {
-                  "raw": "{{base_url}}/{{route}}/movies/:movieId/reviews/:reviewId",
-                  "host": ["{{base_url}}"],
-                  "path": [
-                    "{{route}}",
-                    "movies",
-                    ":movieId",
-                    "reviews",
-                    ":reviewId"
-                  ],
-                  "variable": [
-                    {
-                      "key": "movieId",
-                      "value": "1"
-                    },
-                    {
-                      "key": "reviewId",
-                      "value": "1"
-                    }
-                  ]
-                }
-              },
-              "status": "No Content",
-              "code": 204,
-              "_postman_previewlanguage": "plain",
-              "header": [
-                {
-                  "key": "Date",
-                  "value": "Sun, 12 May 2024 13:11:58 GMT"
-                },
-                {
-                  "key": "Server",
-                  "value": "Kestrel"
-                }
-              ],
-              "cookie": [],
-              "body": null
-            }
-          ]
-        },
-        {
-          "name": "Partially Update Review For Movie",
-          "request": {
-            "method": "PATCH",
-            "header": [],
-            "body": {
-              "mode": "raw",
-              "raw": "[\n    {\n      \"op\": \"replace\",\n      \"path\": \"/comment\",\n      \"value\": \"PATCHED - This movie was excellent!\"\n    }\n]",
-              "options": {
-                "raw": {
-                  "language": "json"
-                }
-              }
-            },
-            "url": {
-              "raw": "{{base_url}}/{{route}}/movies/:movieId/reviews/:reviewId",
-              "host": ["{{base_url}}"],
-              "path": [
-                "{{route}}",
-                "movies",
-                ":movieId",
-                "reviews",
-                ":reviewId"
-              ],
-              "variable": [
-                {
-                  "key": "movieId",
-                  "value": "1"
-                },
-                {
-                  "key": "reviewId",
-                  "value": "1"
-                }
-              ]
-            }
-          },
-          "response": [
-            {
-              "name": "Partially Update Review For Movie Copy",
-              "originalRequest": {
-                "method": "PATCH",
-                "header": [],
-                "body": {
-                  "mode": "raw",
-                  "raw": "[\n    {\n      \"op\": \"replace\",\n      \"path\": \"/score\",\n      \"value\": 7.0\n    }\n]",
-                  "options": {
-                    "raw": {
-                      "language": "json"
-                    }
-                  }
-                },
-                "url": {
-                  "raw": "{{base_url}}/{{route}}/movies/:movieId/reviews/:reviewId",
-                  "host": ["{{base_url}}"],
-                  "path": [
-                    "{{route}}",
-                    "movies",
-                    ":movieId",
-                    "reviews",
-                    ":reviewId"
-                  ],
-                  "variable": [
-                    {
-                      "key": "movieId",
-                      "value": "1"
-                    },
-                    {
-                      "key": "reviewId",
-                      "value": "1"
-                    }
-                  ]
-                }
-              },
-              "status": "No Content",
-              "code": 204,
-              "_postman_previewlanguage": "plain",
-              "header": [
-                {
-                  "key": "Date",
-                  "value": "Sun, 12 May 2024 13:20:54 GMT"
-                },
-                {
-                  "key": "Server",
-                  "value": "Kestrel"
-                }
-              ],
-              "cookie": [],
-              "body": null
-            },
-            {
-              "name": "Partially Update Review For Movie Copy",
-              "originalRequest": {
-                "method": "PATCH",
-                "header": [],
-                "body": {
-                  "mode": "raw",
-                  "raw": "[\n    {\n      \"op\": \"replace\",\n      \"path\": \"/comment\",\n      \"value\": \"PATCHED - This movie was excellent!\"\n    }\n]",
-                  "options": {
-                    "raw": {
-                      "language": "json"
-                    }
-                  }
-                },
-                "url": {
-                  "raw": "{{base_url}}/{{route}}/movies/:movieId/reviews/:reviewId",
-                  "host": ["{{base_url}}"],
-                  "path": [
-                    "{{route}}",
-                    "movies",
-                    ":movieId",
-                    "reviews",
-                    ":reviewId"
-                  ],
-                  "variable": [
-                    {
-                      "key": "movieId",
-                      "value": "1"
-                    },
-                    {
-                      "key": "reviewId",
-                      "value": "1"
-                    }
-                  ]
-                }
-              },
-              "status": "No Content",
-              "code": 204,
-              "_postman_previewlanguage": "plain",
-              "header": [
-                {
-                  "key": "Date",
-                  "value": "Sun, 12 May 2024 13:21:30 GMT"
-                },
-                {
-                  "key": "Server",
-                  "value": "Kestrel"
-                }
-              ],
-              "cookie": [],
-              "body": null
-            }
-          ]
-        },
-        {
-          "name": "Delete Review By Id",
-          "request": {
-            "method": "DELETE",
-            "header": [],
-            "body": {
-              "mode": "raw",
-              "raw": "",
-              "options": {
-                "raw": {
-                  "language": "json"
-                }
-              }
-            },
-            "url": {
-              "raw": "{{base_url}}/{{route}}/movies/:movieId/reviews/:reviewId",
-              "host": ["{{base_url}}"],
-              "path": [
-                "{{route}}",
-                "movies",
-                ":movieId",
-                "reviews",
-                ":reviewId"
-              ],
-              "variable": [
-                {
-                  "key": "movieId",
-                  "value": "2"
-                },
-                {
-                  "key": "reviewId",
-                  "value": "7"
-                }
-              ]
-            }
-          },
-          "response": [
-            {
-              "name": "Delete Review By Id 7",
-              "originalRequest": {
-                "method": "DELETE",
-                "header": [],
-                "url": {
-                  "raw": "{{base_url}}/{{route}}/movies/:movieId/reviews/:reviewId",
-                  "host": ["{{base_url}}"],
-                  "path": [
-                    "{{route}}",
-                    "movies",
-                    ":movieId",
-                    "reviews",
-                    ":reviewId"
-                  ],
-                  "variable": [
-                    {
-                      "key": "movieId",
-                      "value": "2"
-                    },
-                    {
-                      "key": "reviewId",
-                      "value": "7"
-                    }
-                  ]
-                }
-              },
-              "status": "No Content",
-              "code": 204,
-              "_postman_previewlanguage": "plain",
-              "header": [
-                {
-                  "key": "Date",
-                  "value": "Sun, 12 May 2024 13:39:26 GMT"
-                },
-                {
-                  "key": "Server",
-                  "value": "Kestrel"
-                }
-              ],
-              "cookie": [],
-              "body": null
-            },
-            {
-              "name": "Error - Review Not Found",
-              "originalRequest": {
-                "method": "DELETE",
-                "header": [],
-                "body": {
-                  "mode": "raw",
-                  "raw": "",
-                  "options": {
-                    "raw": {
-                      "language": "json"
-                    }
-                  }
-                },
-                "url": {
-                  "raw": "{{base_url}}/{{route}}/movies/:movieId/reviews/:reviewId",
-                  "host": ["{{base_url}}"],
-                  "path": [
-                    "{{route}}",
-                    "movies",
-                    ":movieId",
-                    "reviews",
-                    ":reviewId"
-                  ],
-                  "variable": [
-                    {
-                      "key": "movieId",
-                      "value": "2"
-                    },
-                    {
-                      "key": "reviewId",
-                      "value": "7"
-                    }
-                  ]
-                }
-              },
-              "status": "Not Found",
-              "code": 404,
-              "_postman_previewlanguage": "json",
-              "header": [
-                {
-                  "key": "Content-Length",
-                  "value": "162"
-                },
-                {
-                  "key": "Content-Type",
-                  "value": "application/problem+json; charset=utf-8"
-                },
-                {
-                  "key": "Date",
-                  "value": "Sun, 12 May 2024 13:46:06 GMT"
-                },
-                {
-                  "key": "Server",
-                  "value": "Kestrel"
-                }
-              ],
-              "cookie": [],
-              "body": "{\n    \"type\": \"https://tools.ietf.org/html/rfc9110#section-15.5.5\",\n    \"title\": \"Not Found\",\n    \"status\": 404,\n    \"traceId\": \"00-feab3cfca2cc99e5c9b2c468bfb4d636-d60f32718a2d51e9-00\"\n}"
-            }
-          ]
-        },
-        {
-          "name": "Delete All Reviews For Movie Id",
-          "request": {
-            "method": "DELETE",
-            "header": [],
-            "url": {
-              "raw": "{{base_url}}/{{route}}/movies/:movieId",
-              "host": ["{{base_url}}"],
-              "path": ["{{route}}", "movies", ":movieId"],
-              "variable": [
-                {
-                  "key": "movieId",
-                  "value": "2"
-                }
-              ]
-            }
-          },
-          "response": [
-            {
-              "name": "Delete All Reviews For Movie Id 2",
-              "originalRequest": {
-                "method": "DELETE",
-                "header": [],
-                "url": {
-                  "raw": "{{base_url}}/{{route}}/movies/:movieId",
-                  "host": ["{{base_url}}"],
-                  "path": ["{{route}}", "movies", ":movieId"],
-                  "variable": [
-                    {
-                      "key": "movieId",
-                      "value": "2"
-                    }
-                  ]
-                }
-              },
-              "status": "No Content",
-              "code": 204,
-              "_postman_previewlanguage": "plain",
-              "header": [
-                {
-                  "key": "Date",
-                  "value": "Sun, 12 May 2024 13:40:22 GMT"
-                },
-                {
-                  "key": "Server",
-                  "value": "Kestrel"
-                }
-              ],
-              "cookie": [],
-              "body": null
-            }
-          ]
-        }
-      ],
-      "event": [
-        {
-          "listen": "prerequest",
-          "script": {
-            "type": "text/javascript",
-            "packages": {},
-            "exec": [
-              "pm.collectionVariables.set(\"route\", \"api/MovieReviews\");"
-            ]
-          }
-        },
-        {
-          "listen": "test",
-          "script": {
-            "type": "text/javascript",
-            "packages": {},
-            "exec": [""]
-          }
-        }
-      ]
-    }
-  ],
-  "event": [
-    {
-      "listen": "prerequest",
-      "script": {
-        "type": "text/javascript",
-        "packages": {},
-        "exec": [""]
-      }
-    },
-    {
-      "listen": "test",
-      "script": {
-        "type": "text/javascript",
-        "packages": {},
-        "exec": [""]
-      }
-    }
-  ],
-  "variable": [
-    {
-      "key": "route",
-      "value": "Auto-Generated: Do Not Modify"
-    },
-    {
-      "key": "base_url",
-      "value": "https://localhost:7190"
-    }
-  ]
+	"info": {
+		"_postman_id": "d25015a4-15be-4739-b2e2-84db010d9b05",
+		"name": "MovieHub",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "18076510"
+	},
+	"item": [
+		{
+			"name": "Movies",
+			"item": [
+				{
+					"name": "Get All Movies",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{moviehub_base_url}}/{{route}}",
+							"host": ["{{moviehub_base_url}}"],
+							"path": ["{{route}}"]
+						}
+					},
+					"response": [
+						{
+							"name": "Get All Movies",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{moviehub_base_url}}/{{route}}",
+									"host": ["{{moviehub_base_url}}"],
+									"path": ["{{route}}"]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Length",
+									"value": "7224"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 12 May 2024 11:20:32 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "Kestrel"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"id\": 1,\n        \"title\": \"Star Wars: The Phantom Menace (Episode I)\",\n        \"releaseDate\": \"1999-05-19T00:00:00\",\n        \"genre\": \"Action, Adventure, Fantasy, Live Action, Science Fiction\",\n        \"runTime\": 8160,\n        \"synopsis\": \"Experience the heroic action and unforgettable adventures of Star Wars: Episode I - The Phantom Menace. See the first fateful steps in the journey of Anakin Skywalker. Stranded on the desert planet Tatooine after rescuing young Queen Amidala from the impending invasion of Naboo, Jedi apprentice Obi-Wan Kenobi and his Jedi Master Qui-Gon Jinn discover nine-year-old Anakin, who is unusually strong in the Force. Anakin wins a thrilling Podrace and with it his freedom as he leaves his home to be trained as a Jedi. The heroes return to Naboo where Anakin and the Queen face massive invasion forces while the two Jedi contend with a deadly foe named Darth Maul. Only then do they realize the invasion is merely the first step in a sinister scheme by the re-emergent forces of darkness known as the Sith.\",\n        \"director\": \"George Lucas\",\n        \"rating\": \"PG\",\n        \"princessTheatreMovieId\": \"0120915\"\n    },\n    {\n        \"id\": 2,\n        \"title\": \"Star Wars: Attack of the Clones (Episode II)\",\n        \"releaseDate\": \"2002-05-16T00:00:00\",\n        \"genre\": \"Action, Adventure, Fantasy, Live Action, Science Fiction\",\n        \"runTime\": 8520,\n        \"synopsis\": \"Watch the seeds of Anakin Skywalker's transformation take root in Star Wars: Episode II - Attack of the Clones. Ten years after the invasion of Naboo, the galaxy is on the brink of civil war. Under the leadership of a renegade Jedi named Count Dooku, thousands of solar systems threaten to break away from the Galactic Republic. When an assassination attempt is made on Senator Padmé Amidala, the former Queen of Naboo, twenty-year-old Jedi apprentice Anakin Skywalker is assigned to protect her. In the course of his mission, Anakin discovers his love for Padmé as well as his own darker side. Soon, Anakin, Padmé, and Obi-Wan Kenobi are drawn into the heart of the Separatist movement and the beginning of the Clone Wars.\",\n        \"director\": \"George Lucas\",\n        \"rating\": \"PG-13\",\n        \"princessTheatreMovieId\": \"0121765\"\n    },\n    {\n        \"id\": 3,\n        \"title\": \"Star Wars: Revenge of the Sith (Episode III)\",\n        \"releaseDate\": \"2005-05-19T00:00:00\",\n        \"genre\": \"Action, Adventure, Fantasy, Live Action, Science Fiction\",\n        \"runTime\": 8399,\n        \"synopsis\": \"Discover the true power of the dark side in Star Wars: Episode III - Revenge of the Sith. Years after the onset of the Clone Wars, the noble Jedi Knights lead a massive clone army into a galaxy-wide battle against the Separatists. When the sinister Sith unveil a thousand-year-old plot to rule the galaxy, the Republic crumbles and from its ashes rises the evil Galactic Empire. Jedi hero Anakin Skywalker is seduced by the dark side of the Force to become the Emperor's new apprentice – Darth Vader. The Jedi are decimated, as Obi-Wan Kenobi and Jedi Master Yoda are forced into hiding.\",\n        \"director\": \"George Lucas\",\n        \"rating\": \"PG-13\",\n        \"princessTheatreMovieId\": \"0121766\"\n    },\n    {\n        \"id\": 4,\n        \"title\": \"Star Wars: A New Hope (Episode IV)\",\n        \"releaseDate\": \"1977-10-27T00:00:00\",\n        \"genre\": \"Action, Adventure, Fantasy, Live Action, Science Fiction\",\n        \"runTime\": 6300,\n        \"synopsis\": \"Luke Skywalker begins a journey that will change the galaxy in Star Wars: Episode IV - A New Hope. Nineteen years after the formation of the Empire, Luke is thrust into the struggle of the Rebel Alliance when he meets Obi-Wan Kenobi, who has lived for years in seclusion on the desert planet of Tatooine. Obi-Wan begins Luke's Jedi training as Luke joins him on a daring mission to rescue the beautiful Rebel leader Princess Leia from the clutches of Darth Vader and the evil Empire.\",\n        \"director\": \"George Lucas\",\n        \"rating\": \"PG\",\n        \"princessTheatreMovieId\": \"0076759\"\n    },\n    {\n        \"id\": 5,\n        \"title\": \"Star Wars: The Empire Strikes Back (Episode V)\",\n        \"releaseDate\": \"1980-08-07T00:00:00\",\n        \"genre\": \"Action, Adventure, Fantasy, Live Action, Science Fiction\",\n        \"runTime\": 7440,\n        \"synopsis\": \"After the destruction of the Death Star, Imperial forces continue to pursue the Rebels. After the Rebellion's defeat on the ice planet Hoth, Luke journeys to the planet Dagobah to train with Jedi Master Yoda, who has lived in hiding since the fall of the Republic. In an attempt to convert Luke to the dark side, Darth Vader lures young Skywalker into a trap in the Cloud City of Bespin.\",\n        \"director\": \"George Lucas\",\n        \"rating\": \"PG\",\n        \"princessTheatreMovieId\": \"0080684\"\n    },\n    {\n        \"id\": 6,\n        \"title\": \"Star Wars: Return of the Jedi (Episode VI)\",\n        \"releaseDate\": \"1983-10-27T00:00:00\",\n        \"genre\": \"Action, Adventure, Fantasy, Live Action, Science Fiction\",\n        \"runTime\": 7859,\n        \"synopsis\": \"After a quick trip back to Tatooine, Luke Skywalker, Leia Organa, and Han Solo are reunited and join up with the amassing rebel fleet to take down the evil Empire once and for all. But the Empire is plotting too. Emperor Palpatine commands his troops aboard his newly consturcted Death Star stationed above the forest moon of Endor, where the rebels - and some unlikely furry friends - make their stand against the Empire. While Luke Skywalker confronts Darth Vader on the Death Star once more, Han leads a team to take out a shield protecting the battle station so that the rebel fleet can destory it once more and finally put an end to the war.\",\n        \"director\": \"George Lucas\",\n        \"rating\": \"PG\",\n        \"princessTheatreMovieId\": \"0086190\"\n    },\n    {\n        \"id\": 7,\n        \"title\": \"Star Wars: The Force Awakens (Episode VII)\",\n        \"releaseDate\": \"2015-12-18T00:00:00\",\n        \"genre\": \"Action - Adventure, Science Fiction\",\n        \"runTime\": 8160,\n        \"synopsis\": \"Thirty years since the destruction of the second Death Star, the sinister First Order, commanded by the mysterious Snoke and apprentice Kylo Ren, rise from the ashes of the Empire. The Resistance, led by General Leia Organa, attempts to thwart the First Order's threat, but they're desperate for help. Rey, a desert scavenger, and Finn, an ex-stormtrooper, find themselves joining forces with Han Solo and Chewbacca in a desperate mission to return a BB-unit droid with a map to Luke Skywalker back to the Resistance.\",\n        \"director\": \"George Lucas\",\n        \"rating\": \"PG-13\",\n        \"princessTheatreMovieId\": \"2488496\"\n    },\n    {\n        \"id\": 8,\n        \"title\": \"Star Wars: The Last Jedi (Episode VIII)\",\n        \"releaseDate\": \"2017-12-13T00:00:00\",\n        \"genre\": \"Action - Adventure, Science Fiction\",\n        \"runTime\": 9000,\n        \"synopsis\": \"The Resistance is in desperate need of help when they find themselves impossibly pursued by the First Order. While Rey travels to a remote planet called Ahch-To to recruit Luke Skywalker to the Resistance, Finn and Rose, a mechanic, go on their own mission in the hopes of helping the Resistance finally escape the First Order. But everyone finds themselves on the salt-planet of Crait for a last stand.\",\n        \"director\": \"George Lucas\",\n        \"rating\": \"PG-13\",\n        \"princessTheatreMovieId\": \"2527336\"\n    },\n    {\n        \"id\": 9,\n        \"title\": \"Star Wars: The Rise of Skywalker (Episode IX)\",\n        \"releaseDate\": \"2019-12-18T00:00:00\",\n        \"genre\": \"Action - Adventure, Science Fiction\",\n        \"runTime\": 7992,\n        \"synopsis\": \"Lucasfilm and director J.J. Abrams join forces once  more to take viewers on an epic journey to a galaxy far, far away with Star Wars: The Rise of Skywalker, the riveting conclusion of the  landmark Skywalker saga, in which new legends will be born and the final battle for freedom is yet to come.\",\n        \"director\": \"George Lucas\",\n        \"rating\": \"PG-13\",\n        \"princessTheatreMovieId\": \"2527338\"\n    }\n]"
+						},
+						{
+							"name": "Get All Movies - With Average Scores",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{moviehub_base_url}}/{{route}}",
+									"host": ["{{moviehub_base_url}}"],
+									"path": ["{{route}}"]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Length",
+									"value": "7396"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 12 May 2024 14:57:23 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "Kestrel"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"id\": 1,\n        \"title\": \"Star Wars: The Phantom Menace (Episode I)\",\n        \"releaseDate\": \"1999-05-19T00:00:00\",\n        \"genre\": \"Action, Adventure, Fantasy, Live Action, Science Fiction\",\n        \"runTime\": 8160,\n        \"synopsis\": \"Experience the heroic action and unforgettable adventures of Star Wars: Episode I - The Phantom Menace. See the first fateful steps in the journey of Anakin Skywalker. Stranded on the desert planet Tatooine after rescuing young Queen Amidala from the impending invasion of Naboo, Jedi apprentice Obi-Wan Kenobi and his Jedi Master Qui-Gon Jinn discover nine-year-old Anakin, who is unusually strong in the Force. Anakin wins a thrilling Podrace and with it his freedom as he leaves his home to be trained as a Jedi. The heroes return to Naboo where Anakin and the Queen face massive invasion forces while the two Jedi contend with a deadly foe named Darth Maul. Only then do they realize the invasion is merely the first step in a sinister scheme by the re-emergent forces of darkness known as the Sith.\",\n        \"director\": \"George Lucas\",\n        \"rating\": \"PG\",\n        \"princessTheatreMovieId\": \"0120915\",\n        \"averageScore\": 7\n    },\n    {\n        \"id\": 2,\n        \"title\": \"Star Wars: Attack of the Clones (Episode II)\",\n        \"releaseDate\": \"2002-05-16T00:00:00\",\n        \"genre\": \"Action, Adventure, Fantasy, Live Action, Science Fiction\",\n        \"runTime\": 8520,\n        \"synopsis\": \"Watch the seeds of Anakin Skywalker's transformation take root in Star Wars: Episode II - Attack of the Clones. Ten years after the invasion of Naboo, the galaxy is on the brink of civil war. Under the leadership of a renegade Jedi named Count Dooku, thousands of solar systems threaten to break away from the Galactic Republic. When an assassination attempt is made on Senator Padmé Amidala, the former Queen of Naboo, twenty-year-old Jedi apprentice Anakin Skywalker is assigned to protect her. In the course of his mission, Anakin discovers his love for Padmé as well as his own darker side. Soon, Anakin, Padmé, and Obi-Wan Kenobi are drawn into the heart of the Separatist movement and the beginning of the Clone Wars.\",\n        \"director\": \"George Lucas\",\n        \"rating\": \"PG-13\",\n        \"princessTheatreMovieId\": \"0121765\",\n        \"averageScore\": 7.25\n    },\n    {\n        \"id\": 3,\n        \"title\": \"Star Wars: Revenge of the Sith (Episode III)\",\n        \"releaseDate\": \"2005-05-19T00:00:00\",\n        \"genre\": \"Action, Adventure, Fantasy, Live Action, Science Fiction\",\n        \"runTime\": 8399,\n        \"synopsis\": \"Discover the true power of the dark side in Star Wars: Episode III - Revenge of the Sith. Years after the onset of the Clone Wars, the noble Jedi Knights lead a massive clone army into a galaxy-wide battle against the Separatists. When the sinister Sith unveil a thousand-year-old plot to rule the galaxy, the Republic crumbles and from its ashes rises the evil Galactic Empire. Jedi hero Anakin Skywalker is seduced by the dark side of the Force to become the Emperor's new apprentice – Darth Vader. The Jedi are decimated, as Obi-Wan Kenobi and Jedi Master Yoda are forced into hiding.\",\n        \"director\": \"George Lucas\",\n        \"rating\": \"PG-13\",\n        \"princessTheatreMovieId\": \"0121766\",\n        \"averageScore\": 0\n    },\n    {\n        \"id\": 4,\n        \"title\": \"Star Wars: A New Hope (Episode IV)\",\n        \"releaseDate\": \"1977-10-27T00:00:00\",\n        \"genre\": \"Action, Adventure, Fantasy, Live Action, Science Fiction\",\n        \"runTime\": 6300,\n        \"synopsis\": \"Luke Skywalker begins a journey that will change the galaxy in Star Wars: Episode IV - A New Hope. Nineteen years after the formation of the Empire, Luke is thrust into the struggle of the Rebel Alliance when he meets Obi-Wan Kenobi, who has lived for years in seclusion on the desert planet of Tatooine. Obi-Wan begins Luke's Jedi training as Luke joins him on a daring mission to rescue the beautiful Rebel leader Princess Leia from the clutches of Darth Vader and the evil Empire.\",\n        \"director\": \"George Lucas\",\n        \"rating\": \"PG\",\n        \"princessTheatreMovieId\": \"0076759\",\n        \"averageScore\": 0\n    },\n    {\n        \"id\": 5,\n        \"title\": \"Star Wars: The Empire Strikes Back (Episode V)\",\n        \"releaseDate\": \"1980-08-07T00:00:00\",\n        \"genre\": \"Action, Adventure, Fantasy, Live Action, Science Fiction\",\n        \"runTime\": 7440,\n        \"synopsis\": \"After the destruction of the Death Star, Imperial forces continue to pursue the Rebels. After the Rebellion's defeat on the ice planet Hoth, Luke journeys to the planet Dagobah to train with Jedi Master Yoda, who has lived in hiding since the fall of the Republic. In an attempt to convert Luke to the dark side, Darth Vader lures young Skywalker into a trap in the Cloud City of Bespin.\",\n        \"director\": \"George Lucas\",\n        \"rating\": \"PG\",\n        \"princessTheatreMovieId\": \"0080684\",\n        \"averageScore\": 0\n    },\n    {\n        \"id\": 6,\n        \"title\": \"Star Wars: Return of the Jedi (Episode VI)\",\n        \"releaseDate\": \"1983-10-27T00:00:00\",\n        \"genre\": \"Action, Adventure, Fantasy, Live Action, Science Fiction\",\n        \"runTime\": 7859,\n        \"synopsis\": \"After a quick trip back to Tatooine, Luke Skywalker, Leia Organa, and Han Solo are reunited and join up with the amassing rebel fleet to take down the evil Empire once and for all. But the Empire is plotting too. Emperor Palpatine commands his troops aboard his newly consturcted Death Star stationed above the forest moon of Endor, where the rebels - and some unlikely furry friends - make their stand against the Empire. While Luke Skywalker confronts Darth Vader on the Death Star once more, Han leads a team to take out a shield protecting the battle station so that the rebel fleet can destory it once more and finally put an end to the war.\",\n        \"director\": \"George Lucas\",\n        \"rating\": \"PG\",\n        \"princessTheatreMovieId\": \"0086190\",\n        \"averageScore\": 0\n    },\n    {\n        \"id\": 7,\n        \"title\": \"Star Wars: The Force Awakens (Episode VII)\",\n        \"releaseDate\": \"2015-12-18T00:00:00\",\n        \"genre\": \"Action - Adventure, Science Fiction\",\n        \"runTime\": 8160,\n        \"synopsis\": \"Thirty years since the destruction of the second Death Star, the sinister First Order, commanded by the mysterious Snoke and apprentice Kylo Ren, rise from the ashes of the Empire. The Resistance, led by General Leia Organa, attempts to thwart the First Order's threat, but they're desperate for help. Rey, a desert scavenger, and Finn, an ex-stormtrooper, find themselves joining forces with Han Solo and Chewbacca in a desperate mission to return a BB-unit droid with a map to Luke Skywalker back to the Resistance.\",\n        \"director\": \"George Lucas\",\n        \"rating\": \"PG-13\",\n        \"princessTheatreMovieId\": \"2488496\",\n        \"averageScore\": 0\n    },\n    {\n        \"id\": 8,\n        \"title\": \"Star Wars: The Last Jedi (Episode VIII)\",\n        \"releaseDate\": \"2017-12-13T00:00:00\",\n        \"genre\": \"Action - Adventure, Science Fiction\",\n        \"runTime\": 9000,\n        \"synopsis\": \"The Resistance is in desperate need of help when they find themselves impossibly pursued by the First Order. While Rey travels to a remote planet called Ahch-To to recruit Luke Skywalker to the Resistance, Finn and Rose, a mechanic, go on their own mission in the hopes of helping the Resistance finally escape the First Order. But everyone finds themselves on the salt-planet of Crait for a last stand.\",\n        \"director\": \"George Lucas\",\n        \"rating\": \"PG-13\",\n        \"princessTheatreMovieId\": \"2527336\",\n        \"averageScore\": 0\n    },\n    {\n        \"id\": 9,\n        \"title\": \"Star Wars: The Rise of Skywalker (Episode IX)\",\n        \"releaseDate\": \"2019-12-18T00:00:00\",\n        \"genre\": \"Action - Adventure, Science Fiction\",\n        \"runTime\": 7992,\n        \"synopsis\": \"Lucasfilm and director J.J. Abrams join forces once  more to take viewers on an epic journey to a galaxy far, far away with Star Wars: The Rise of Skywalker, the riveting conclusion of the  landmark Skywalker saga, in which new legends will be born and the final battle for freedom is yet to come.\",\n        \"director\": \"George Lucas\",\n        \"rating\": \"PG-13\",\n        \"princessTheatreMovieId\": \"2527338\",\n        \"averageScore\": 0\n    }\n]"
+						}
+					]
+				},
+				{
+					"name": "Get All Movies Paginated",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{moviehub_base_url}}/{{route}}?pageNumber=1&pageSize=4",
+							"host": ["{{moviehub_base_url}}"],
+							"path": ["{{route}}"],
+							"query": [
+								{
+									"key": "pageNumber",
+									"value": "1"
+								},
+								{
+									"key": "pageSize",
+									"value": "4"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Get All Movies Paginated",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{moviehub_base_url}}/{{route}}?pageNumber=1&pageSize=4",
+									"host": ["{{moviehub_base_url}}"],
+									"path": ["{{route}}"],
+									"query": [
+										{
+											"key": "pageNumber",
+											"value": "1"
+										},
+										{
+											"key": "pageSize",
+											"value": "4"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Length",
+									"value": "3756"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 15 May 2024 00:23:12 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "Kestrel"
+								},
+								{
+									"key": "X-Pagination-TotalItemCount",
+									"value": "9"
+								},
+								{
+									"key": "X-Pagination-TotalPageCount",
+									"value": "3"
+								},
+								{
+									"key": "X-Pagination-PageSize",
+									"value": "4"
+								},
+								{
+									"key": "X-Pagination-CurrentPage",
+									"value": "1"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"id\": 1,\n        \"title\": \"Star Wars: The Phantom Menace (Episode I)\",\n        \"releaseDate\": \"1999-05-19T00:00:00\",\n        \"genre\": \"Action, Adventure, Fantasy, Live Action, Science Fiction\",\n        \"runTime\": 8160,\n        \"synopsis\": \"Experience the heroic action and unforgettable adventures of Star Wars: Episode I - The Phantom Menace. See the first fateful steps in the journey of Anakin Skywalker. Stranded on the desert planet Tatooine after rescuing young Queen Amidala from the impending invasion of Naboo, Jedi apprentice Obi-Wan Kenobi and his Jedi Master Qui-Gon Jinn discover nine-year-old Anakin, who is unusually strong in the Force. Anakin wins a thrilling Podrace and with it his freedom as he leaves his home to be trained as a Jedi. The heroes return to Naboo where Anakin and the Queen face massive invasion forces while the two Jedi contend with a deadly foe named Darth Maul. Only then do they realize the invasion is merely the first step in a sinister scheme by the re-emergent forces of darkness known as the Sith.\",\n        \"director\": \"George Lucas\",\n        \"rating\": \"PG\",\n        \"princessTheatreMovieId\": \"0120915\",\n        \"averageScore\": 7\n    },\n    {\n        \"id\": 2,\n        \"title\": \"Star Wars: Attack of the Clones (Episode II)\",\n        \"releaseDate\": \"2002-05-16T00:00:00\",\n        \"genre\": \"Action, Adventure, Fantasy, Live Action, Science Fiction\",\n        \"runTime\": 8520,\n        \"synopsis\": \"Watch the seeds of Anakin Skywalker's transformation take root in Star Wars: Episode II - Attack of the Clones. Ten years after the invasion of Naboo, the galaxy is on the brink of civil war. Under the leadership of a renegade Jedi named Count Dooku, thousands of solar systems threaten to break away from the Galactic Republic. When an assassination attempt is made on Senator Padmé Amidala, the former Queen of Naboo, twenty-year-old Jedi apprentice Anakin Skywalker is assigned to protect her. In the course of his mission, Anakin discovers his love for Padmé as well as his own darker side. Soon, Anakin, Padmé, and Obi-Wan Kenobi are drawn into the heart of the Separatist movement and the beginning of the Clone Wars.\",\n        \"director\": \"George Lucas\",\n        \"rating\": \"PG-13\",\n        \"princessTheatreMovieId\": \"0121765\",\n        \"averageScore\": 7.25\n    },\n    {\n        \"id\": 3,\n        \"title\": \"Star Wars: Revenge of the Sith (Episode III)\",\n        \"releaseDate\": \"2005-05-19T00:00:00\",\n        \"genre\": \"Action, Adventure, Fantasy, Live Action, Science Fiction\",\n        \"runTime\": 8399,\n        \"synopsis\": \"Discover the true power of the dark side in Star Wars: Episode III - Revenge of the Sith. Years after the onset of the Clone Wars, the noble Jedi Knights lead a massive clone army into a galaxy-wide battle against the Separatists. When the sinister Sith unveil a thousand-year-old plot to rule the galaxy, the Republic crumbles and from its ashes rises the evil Galactic Empire. Jedi hero Anakin Skywalker is seduced by the dark side of the Force to become the Emperor's new apprentice – Darth Vader. The Jedi are decimated, as Obi-Wan Kenobi and Jedi Master Yoda are forced into hiding.\",\n        \"director\": \"George Lucas\",\n        \"rating\": \"PG-13\",\n        \"princessTheatreMovieId\": \"0121766\",\n        \"averageScore\": 0\n    },\n    {\n        \"id\": 4,\n        \"title\": \"Star Wars: A New Hope (Episode IV)\",\n        \"releaseDate\": \"1977-10-27T00:00:00\",\n        \"genre\": \"Action, Adventure, Fantasy, Live Action, Science Fiction\",\n        \"runTime\": 6300,\n        \"synopsis\": \"Luke Skywalker begins a journey that will change the galaxy in Star Wars: Episode IV - A New Hope. Nineteen years after the formation of the Empire, Luke is thrust into the struggle of the Rebel Alliance when he meets Obi-Wan Kenobi, who has lived for years in seclusion on the desert planet of Tatooine. Obi-Wan begins Luke's Jedi training as Luke joins him on a daring mission to rescue the beautiful Rebel leader Princess Leia from the clutches of Darth Vader and the evil Empire.\",\n        \"director\": \"George Lucas\",\n        \"rating\": \"PG\",\n        \"princessTheatreMovieId\": \"0076759\",\n        \"averageScore\": 0\n    }\n]"
+						}
+					]
+				},
+				{
+					"name": "Search Movies By Genre",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{moviehub_base_url}}/{{route}}?genre=fantasy",
+							"host": ["{{moviehub_base_url}}"],
+							"path": ["{{route}}"],
+							"query": [
+								{
+									"key": "genre",
+									"value": "fantasy"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Search Movies By Genre \"Fantasy\"",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{moviehub_base_url}}/{{route}}?genre=fantasy",
+									"host": ["{{moviehub_base_url}}"],
+									"path": ["{{route}}"],
+									"query": [
+										{
+											"key": "genre",
+											"value": "fantasy"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Length",
+									"value": "5254"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 12 May 2024 11:20:45 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "Kestrel"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"id\": 1,\n        \"title\": \"Star Wars: The Phantom Menace (Episode I)\",\n        \"releaseDate\": \"1999-05-19T00:00:00\",\n        \"genre\": \"Action, Adventure, Fantasy, Live Action, Science Fiction\",\n        \"runTime\": 8160,\n        \"synopsis\": \"Experience the heroic action and unforgettable adventures of Star Wars: Episode I - The Phantom Menace. See the first fateful steps in the journey of Anakin Skywalker. Stranded on the desert planet Tatooine after rescuing young Queen Amidala from the impending invasion of Naboo, Jedi apprentice Obi-Wan Kenobi and his Jedi Master Qui-Gon Jinn discover nine-year-old Anakin, who is unusually strong in the Force. Anakin wins a thrilling Podrace and with it his freedom as he leaves his home to be trained as a Jedi. The heroes return to Naboo where Anakin and the Queen face massive invasion forces while the two Jedi contend with a deadly foe named Darth Maul. Only then do they realize the invasion is merely the first step in a sinister scheme by the re-emergent forces of darkness known as the Sith.\",\n        \"director\": \"George Lucas\",\n        \"rating\": \"PG\",\n        \"princessTheatreMovieId\": \"0120915\"\n    },\n    {\n        \"id\": 2,\n        \"title\": \"Star Wars: Attack of the Clones (Episode II)\",\n        \"releaseDate\": \"2002-05-16T00:00:00\",\n        \"genre\": \"Action, Adventure, Fantasy, Live Action, Science Fiction\",\n        \"runTime\": 8520,\n        \"synopsis\": \"Watch the seeds of Anakin Skywalker's transformation take root in Star Wars: Episode II - Attack of the Clones. Ten years after the invasion of Naboo, the galaxy is on the brink of civil war. Under the leadership of a renegade Jedi named Count Dooku, thousands of solar systems threaten to break away from the Galactic Republic. When an assassination attempt is made on Senator Padmé Amidala, the former Queen of Naboo, twenty-year-old Jedi apprentice Anakin Skywalker is assigned to protect her. In the course of his mission, Anakin discovers his love for Padmé as well as his own darker side. Soon, Anakin, Padmé, and Obi-Wan Kenobi are drawn into the heart of the Separatist movement and the beginning of the Clone Wars.\",\n        \"director\": \"George Lucas\",\n        \"rating\": \"PG-13\",\n        \"princessTheatreMovieId\": \"0121765\"\n    },\n    {\n        \"id\": 3,\n        \"title\": \"Star Wars: Revenge of the Sith (Episode III)\",\n        \"releaseDate\": \"2005-05-19T00:00:00\",\n        \"genre\": \"Action, Adventure, Fantasy, Live Action, Science Fiction\",\n        \"runTime\": 8399,\n        \"synopsis\": \"Discover the true power of the dark side in Star Wars: Episode III - Revenge of the Sith. Years after the onset of the Clone Wars, the noble Jedi Knights lead a massive clone army into a galaxy-wide battle against the Separatists. When the sinister Sith unveil a thousand-year-old plot to rule the galaxy, the Republic crumbles and from its ashes rises the evil Galactic Empire. Jedi hero Anakin Skywalker is seduced by the dark side of the Force to become the Emperor's new apprentice – Darth Vader. The Jedi are decimated, as Obi-Wan Kenobi and Jedi Master Yoda are forced into hiding.\",\n        \"director\": \"George Lucas\",\n        \"rating\": \"PG-13\",\n        \"princessTheatreMovieId\": \"0121766\"\n    },\n    {\n        \"id\": 4,\n        \"title\": \"Star Wars: A New Hope (Episode IV)\",\n        \"releaseDate\": \"1977-10-27T00:00:00\",\n        \"genre\": \"Action, Adventure, Fantasy, Live Action, Science Fiction\",\n        \"runTime\": 6300,\n        \"synopsis\": \"Luke Skywalker begins a journey that will change the galaxy in Star Wars: Episode IV - A New Hope. Nineteen years after the formation of the Empire, Luke is thrust into the struggle of the Rebel Alliance when he meets Obi-Wan Kenobi, who has lived for years in seclusion on the desert planet of Tatooine. Obi-Wan begins Luke's Jedi training as Luke joins him on a daring mission to rescue the beautiful Rebel leader Princess Leia from the clutches of Darth Vader and the evil Empire.\",\n        \"director\": \"George Lucas\",\n        \"rating\": \"PG\",\n        \"princessTheatreMovieId\": \"0076759\"\n    },\n    {\n        \"id\": 5,\n        \"title\": \"Star Wars: The Empire Strikes Back (Episode V)\",\n        \"releaseDate\": \"1980-08-07T00:00:00\",\n        \"genre\": \"Action, Adventure, Fantasy, Live Action, Science Fiction\",\n        \"runTime\": 7440,\n        \"synopsis\": \"After the destruction of the Death Star, Imperial forces continue to pursue the Rebels. After the Rebellion's defeat on the ice planet Hoth, Luke journeys to the planet Dagobah to train with Jedi Master Yoda, who has lived in hiding since the fall of the Republic. In an attempt to convert Luke to the dark side, Darth Vader lures young Skywalker into a trap in the Cloud City of Bespin.\",\n        \"director\": \"George Lucas\",\n        \"rating\": \"PG\",\n        \"princessTheatreMovieId\": \"0080684\"\n    },\n    {\n        \"id\": 6,\n        \"title\": \"Star Wars: Return of the Jedi (Episode VI)\",\n        \"releaseDate\": \"1983-10-27T00:00:00\",\n        \"genre\": \"Action, Adventure, Fantasy, Live Action, Science Fiction\",\n        \"runTime\": 7859,\n        \"synopsis\": \"After a quick trip back to Tatooine, Luke Skywalker, Leia Organa, and Han Solo are reunited and join up with the amassing rebel fleet to take down the evil Empire once and for all. But the Empire is plotting too. Emperor Palpatine commands his troops aboard his newly consturcted Death Star stationed above the forest moon of Endor, where the rebels - and some unlikely furry friends - make their stand against the Empire. While Luke Skywalker confronts Darth Vader on the Death Star once more, Han leads a team to take out a shield protecting the battle station so that the rebel fleet can destory it once more and finally put an end to the war.\",\n        \"director\": \"George Lucas\",\n        \"rating\": \"PG\",\n        \"princessTheatreMovieId\": \"0086190\"\n    }\n]"
+						}
+					]
+				},
+				{
+					"name": "Search Movies By Title",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{moviehub_base_url}}/{{route}}?title=clones",
+							"host": ["{{moviehub_base_url}}"],
+							"path": ["{{route}}"],
+							"query": [
+								{
+									"key": "title",
+									"value": "clones"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Search Movies By Title \"Clones\"",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{moviehub_base_url}}/{{route}}?title=clones",
+									"host": ["{{moviehub_base_url}}"],
+									"path": ["{{route}}"],
+									"query": [
+										{
+											"key": "title",
+											"value": "clones"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Length",
+									"value": "1001"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 12 May 2024 11:21:08 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "Kestrel"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"id\": 2,\n        \"title\": \"Star Wars: Attack of the Clones (Episode II)\",\n        \"releaseDate\": \"2002-05-16T00:00:00\",\n        \"genre\": \"Action, Adventure, Fantasy, Live Action, Science Fiction\",\n        \"runTime\": 8520,\n        \"synopsis\": \"Watch the seeds of Anakin Skywalker's transformation take root in Star Wars: Episode II - Attack of the Clones. Ten years after the invasion of Naboo, the galaxy is on the brink of civil war. Under the leadership of a renegade Jedi named Count Dooku, thousands of solar systems threaten to break away from the Galactic Republic. When an assassination attempt is made on Senator Padmé Amidala, the former Queen of Naboo, twenty-year-old Jedi apprentice Anakin Skywalker is assigned to protect her. In the course of his mission, Anakin discovers his love for Padmé as well as his own darker side. Soon, Anakin, Padmé, and Obi-Wan Kenobi are drawn into the heart of the Separatist movement and the beginning of the Clone Wars.\",\n        \"director\": \"George Lucas\",\n        \"rating\": \"PG-13\",\n        \"princessTheatreMovieId\": \"0121765\"\n    }\n]"
+						}
+					]
+				},
+				{
+					"name": "Search Movies By Title/Genre",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{moviehub_base_url}}/{{route}}?title=clones&genre=fantasy",
+							"host": ["{{moviehub_base_url}}"],
+							"path": ["{{route}}"],
+							"query": [
+								{
+									"key": "title",
+									"value": "clones"
+								},
+								{
+									"key": "genre",
+									"value": "fantasy"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Search Movies By Title/Genre \"Clones/Fantasy\"",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{moviehub_base_url}}/{{route}}?title=clones&genre=fantasy",
+									"host": ["{{moviehub_base_url}}"],
+									"path": ["{{route}}"],
+									"query": [
+										{
+											"key": "title",
+											"value": "clones"
+										},
+										{
+											"key": "genre",
+											"value": "fantasy"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Length",
+									"value": "1001"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 12 May 2024 11:21:23 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "Kestrel"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"id\": 2,\n        \"title\": \"Star Wars: Attack of the Clones (Episode II)\",\n        \"releaseDate\": \"2002-05-16T00:00:00\",\n        \"genre\": \"Action, Adventure, Fantasy, Live Action, Science Fiction\",\n        \"runTime\": 8520,\n        \"synopsis\": \"Watch the seeds of Anakin Skywalker's transformation take root in Star Wars: Episode II - Attack of the Clones. Ten years after the invasion of Naboo, the galaxy is on the brink of civil war. Under the leadership of a renegade Jedi named Count Dooku, thousands of solar systems threaten to break away from the Galactic Republic. When an assassination attempt is made on Senator Padmé Amidala, the former Queen of Naboo, twenty-year-old Jedi apprentice Anakin Skywalker is assigned to protect her. In the course of his mission, Anakin discovers his love for Padmé as well as his own darker side. Soon, Anakin, Padmé, and Obi-Wan Kenobi are drawn into the heart of the Separatist movement and the beginning of the Clone Wars.\",\n        \"director\": \"George Lucas\",\n        \"rating\": \"PG-13\",\n        \"princessTheatreMovieId\": \"0121765\"\n    }\n]"
+						}
+					]
+				},
+				{
+					"name": "Get Movie By Id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{moviehub_base_url}}/{{route}}/:movieId",
+							"host": ["{{moviehub_base_url}}"],
+							"path": ["{{route}}", ":movieId"],
+							"variable": [
+								{
+									"key": "movieId",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Get Movie By Id 1",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{moviehub_base_url}}/{{route}}/:movieId",
+									"host": ["{{moviehub_base_url}}"],
+									"path": ["{{route}}", ":movieId"],
+									"variable": [
+										{
+											"key": "movieId",
+											"value": "1"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Length",
+									"value": "1070"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 12 May 2024 11:21:49 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "Kestrel"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": 1,\n    \"title\": \"Star Wars: The Phantom Menace (Episode I)\",\n    \"releaseDate\": \"1999-05-19T00:00:00\",\n    \"genre\": \"Action, Adventure, Fantasy, Live Action, Science Fiction\",\n    \"runTime\": 8160,\n    \"synopsis\": \"Experience the heroic action and unforgettable adventures of Star Wars: Episode I - The Phantom Menace. See the first fateful steps in the journey of Anakin Skywalker. Stranded on the desert planet Tatooine after rescuing young Queen Amidala from the impending invasion of Naboo, Jedi apprentice Obi-Wan Kenobi and his Jedi Master Qui-Gon Jinn discover nine-year-old Anakin, who is unusually strong in the Force. Anakin wins a thrilling Podrace and with it his freedom as he leaves his home to be trained as a Jedi. The heroes return to Naboo where Anakin and the Queen face massive invasion forces while the two Jedi contend with a deadly foe named Darth Maul. Only then do they realize the invasion is merely the first step in a sinister scheme by the re-emergent forces of darkness known as the Sith.\",\n    \"director\": \"George Lucas\",\n    \"rating\": \"PG\",\n    \"princessTheatreMovieId\": \"0120915\"\n}"
+						},
+						{
+							"name": "Error - Movie Not Found",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{moviehub_base_url}}/{{route}}/:movieId",
+									"host": ["{{moviehub_base_url}}"],
+									"path": ["{{route}}", ":movieId"],
+									"variable": [
+										{
+											"key": "movieId",
+											"value": "10"
+										}
+									]
+								}
+							},
+							"status": "Not Found",
+							"code": 404,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Length",
+									"value": "162"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/problem+json; charset=utf-8"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 12 May 2024 12:57:50 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "Kestrel"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"type\": \"https://tools.ietf.org/html/rfc9110#section-15.5.5\",\n    \"title\": \"Not Found\",\n    \"status\": 404,\n    \"traceId\": \"00-38f2048ce42c7acc00d782291ab132f2-0a17cef93022b506-00\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Get Movie By Id With Details",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{moviehub_base_url}}/{{route}}/:movieId?details=true",
+							"host": ["{{moviehub_base_url}}"],
+							"path": ["{{route}}", ":movieId"],
+							"query": [
+								{
+									"key": "details",
+									"value": "true"
+								}
+							],
+							"variable": [
+								{
+									"key": "movieId",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Get Movie By Id 1 With Details",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{moviehub_base_url}}/{{route}}/:movieId?details=true",
+									"host": ["{{moviehub_base_url}}"],
+									"path": ["{{route}}", ":movieId"],
+									"query": [
+										{
+											"key": "details",
+											"value": "true"
+										}
+									],
+									"variable": [
+										{
+											"key": "movieId",
+											"value": "1"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Length",
+									"value": "1712"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 12 May 2024 11:22:07 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "Kestrel"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": 1,\n    \"title\": \"Star Wars: The Phantom Menace (Episode I)\",\n    \"releaseDate\": \"1999-05-19T00:00:00\",\n    \"genre\": \"Action, Adventure, Fantasy, Live Action, Science Fiction\",\n    \"runTime\": 8160,\n    \"synopsis\": \"Experience the heroic action and unforgettable adventures of Star Wars: Episode I - The Phantom Menace. See the first fateful steps in the journey of Anakin Skywalker. Stranded on the desert planet Tatooine after rescuing young Queen Amidala from the impending invasion of Naboo, Jedi apprentice Obi-Wan Kenobi and his Jedi Master Qui-Gon Jinn discover nine-year-old Anakin, who is unusually strong in the Force. Anakin wins a thrilling Podrace and with it his freedom as he leaves his home to be trained as a Jedi. The heroes return to Naboo where Anakin and the Queen face massive invasion forces while the two Jedi contend with a deadly foe named Darth Maul. Only then do they realize the invasion is merely the first step in a sinister scheme by the re-emergent forces of darkness known as the Sith.\",\n    \"director\": \"George Lucas\",\n    \"rating\": \"PG\",\n    \"princessTheatreMovieId\": \"0120915\",\n    \"movieCinemas\": [\n        {\n            \"id\": 1,\n            \"showTime\": \"2024-12-31T00:00:00\",\n            \"ticketPrice\": 24.5,\n            \"cinemaName\": \"Cinemarvel\"\n        },\n        {\n            \"id\": 2,\n            \"showTime\": \"2024-12-31T00:00:00\",\n            \"ticketPrice\": 22.75,\n            \"cinemaName\": \"Moviemania\"\n        },\n        {\n            \"id\": 3,\n            \"showTime\": \"2024-12-31T00:00:00\",\n            \"ticketPrice\": 20,\n            \"cinemaName\": \"BigScreen Bliss\"\n        },\n        {\n            \"id\": 4,\n            \"showTime\": \"2024-12-31T00:00:00\",\n            \"ticketPrice\": 21.5,\n            \"cinemaName\": \"CineNova\"\n        },\n        {\n            \"id\": 5,\n            \"showTime\": \"2024-12-31T00:00:00\",\n            \"ticketPrice\": 22.25,\n            \"cinemaName\": \"Cinema Royale\"\n        },\n        {\n            \"id\": 6,\n            \"showTime\": \"2024-12-31T00:00:00\",\n            \"ticketPrice\": 23.75,\n            \"cinemaName\": \"Flicker Factory\"\n        },\n        {\n            \"id\": 7,\n            \"showTime\": \"2024-12-31T00:00:00\",\n            \"ticketPrice\": 22.75,\n            \"cinemaName\": \"CineSpectra\"\n        }\n    ]\n}"
+						},
+						{
+							"name": "Error - Movie Not Found",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{moviehub_base_url}}/{{route}}/:movieId?details=true",
+									"host": ["{{moviehub_base_url}}"],
+									"path": ["{{route}}", ":movieId"],
+									"query": [
+										{
+											"key": "details",
+											"value": "true"
+										}
+									],
+									"variable": [
+										{
+											"key": "movieId",
+											"value": "10"
+										}
+									]
+								}
+							},
+							"status": "Not Found",
+							"code": 404,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Length",
+									"value": "162"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/problem+json; charset=utf-8"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 12 May 2024 12:58:20 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "Kestrel"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"type\": \"https://tools.ietf.org/html/rfc9110#section-15.5.5\",\n    \"title\": \"Not Found\",\n    \"status\": 404,\n    \"traceId\": \"00-dd90c75095ed79a3e46152c0d5094a74-036202ba922fff07-00\"\n}"
+						},
+						{
+							"name": "Get Movie By Id 2 With Average Score",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{moviehub_base_url}}/{{route}}/:movieId?details=true",
+									"host": ["{{moviehub_base_url}}"],
+									"path": ["{{route}}", ":movieId"],
+									"query": [
+										{
+											"key": "details",
+											"value": "true"
+										}
+									],
+									"variable": [
+										{
+											"key": "movieId",
+											"value": "2"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Length",
+									"value": "1666"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 12 May 2024 14:54:58 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "Kestrel"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": 2,\n    \"title\": \"Star Wars: Attack of the Clones (Episode II)\",\n    \"releaseDate\": \"2002-05-16T00:00:00\",\n    \"genre\": \"Action, Adventure, Fantasy, Live Action, Science Fiction\",\n    \"runTime\": 8520,\n    \"synopsis\": \"Watch the seeds of Anakin Skywalker's transformation take root in Star Wars: Episode II - Attack of the Clones. Ten years after the invasion of Naboo, the galaxy is on the brink of civil war. Under the leadership of a renegade Jedi named Count Dooku, thousands of solar systems threaten to break away from the Galactic Republic. When an assassination attempt is made on Senator Padmé Amidala, the former Queen of Naboo, twenty-year-old Jedi apprentice Anakin Skywalker is assigned to protect her. In the course of his mission, Anakin discovers his love for Padmé as well as his own darker side. Soon, Anakin, Padmé, and Obi-Wan Kenobi are drawn into the heart of the Separatist movement and the beginning of the Clone Wars.\",\n    \"director\": \"George Lucas\",\n    \"rating\": \"PG-13\",\n    \"princessTheatreMovieId\": \"0121765\",\n    \"averageScore\": 7.25,\n    \"movieCinemas\": [\n        {\n            \"id\": 8,\n            \"showTime\": \"2024-12-31T00:00:00\",\n            \"ticketPrice\": 26.25,\n            \"cinemaName\": \"Cinemarvel\"\n        },\n        {\n            \"id\": 9,\n            \"showTime\": \"2024-12-31T00:00:00\",\n            \"ticketPrice\": 21.75,\n            \"cinemaName\": \"Moviemania\"\n        },\n        {\n            \"id\": 10,\n            \"showTime\": \"2024-12-31T00:00:00\",\n            \"ticketPrice\": 25.5,\n            \"cinemaName\": \"BigScreen Bliss\"\n        },\n        {\n            \"id\": 11,\n            \"showTime\": \"2024-12-31T00:00:00\",\n            \"ticketPrice\": 27.75,\n            \"cinemaName\": \"CineNova\"\n        },\n        {\n            \"id\": 12,\n            \"showTime\": \"2024-12-31T00:00:00\",\n            \"ticketPrice\": 22.5,\n            \"cinemaName\": \"Cinema Royale\"\n        },\n        {\n            \"id\": 13,\n            \"showTime\": \"2024-12-31T00:00:00\",\n            \"ticketPrice\": 29.75,\n            \"cinemaName\": \"Flicker Factory\"\n        },\n        {\n            \"id\": 14,\n            \"showTime\": \"2024-12-31T00:00:00\",\n            \"ticketPrice\": 23,\n            \"cinemaName\": \"CineSpectra\"\n        }\n    ]\n}"
+						},
+						{
+							"name": "Get Movie By Id With Princes Theatre Details",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{moviehub_base_url}}/{{route}}/:movieId?details=true",
+									"host": ["{{moviehub_base_url}}"],
+									"path": ["{{route}}", ":movieId"],
+									"query": [
+										{
+											"key": "details",
+											"value": "true"
+										}
+									],
+									"variable": [
+										{
+											"key": "movieId",
+											"value": "1"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Length",
+									"value": "1777"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 12 May 2024 17:07:23 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "Kestrel"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"filmWorldPrice\": 27.2,\n    \"cinemaWorldPrice\": 26.4,\n    \"id\": 1,\n    \"title\": \"Star Wars: The Phantom Menace (Episode I)\",\n    \"releaseDate\": \"1999-05-19T00:00:00\",\n    \"genre\": \"Action, Adventure, Fantasy, Live Action, Science Fiction\",\n    \"runTime\": 8160,\n    \"synopsis\": \"Experience the heroic action and unforgettable adventures of Star Wars: Episode I - The Phantom Menace. See the first fateful steps in the journey of Anakin Skywalker. Stranded on the desert planet Tatooine after rescuing young Queen Amidala from the impending invasion of Naboo, Jedi apprentice Obi-Wan Kenobi and his Jedi Master Qui-Gon Jinn discover nine-year-old Anakin, who is unusually strong in the Force. Anakin wins a thrilling Podrace and with it his freedom as he leaves his home to be trained as a Jedi. The heroes return to Naboo where Anakin and the Queen face massive invasion forces while the two Jedi contend with a deadly foe named Darth Maul. Only then do they realize the invasion is merely the first step in a sinister scheme by the re-emergent forces of darkness known as the Sith.\",\n    \"director\": \"George Lucas\",\n    \"rating\": \"PG\",\n    \"princessTheatreMovieId\": \"0120915\",\n    \"averageScore\": 7,\n    \"movieCinemas\": [\n        {\n            \"id\": 1,\n            \"showTime\": \"2024-12-31T00:00:00\",\n            \"ticketPrice\": 24.5,\n            \"cinemaName\": \"Cinemarvel\"\n        },\n        {\n            \"id\": 2,\n            \"showTime\": \"2024-12-31T00:00:00\",\n            \"ticketPrice\": 22.75,\n            \"cinemaName\": \"Moviemania\"\n        },\n        {\n            \"id\": 3,\n            \"showTime\": \"2024-12-31T00:00:00\",\n            \"ticketPrice\": 20,\n            \"cinemaName\": \"BigScreen Bliss\"\n        },\n        {\n            \"id\": 4,\n            \"showTime\": \"2024-12-31T00:00:00\",\n            \"ticketPrice\": 21.5,\n            \"cinemaName\": \"CineNova\"\n        },\n        {\n            \"id\": 5,\n            \"showTime\": \"2024-12-31T00:00:00\",\n            \"ticketPrice\": 22.25,\n            \"cinemaName\": \"Cinema Royale\"\n        },\n        {\n            \"id\": 6,\n            \"showTime\": \"2024-12-31T00:00:00\",\n            \"ticketPrice\": 23.75,\n            \"cinemaName\": \"Flicker Factory\"\n        },\n        {\n            \"id\": 7,\n            \"showTime\": \"2024-12-31T00:00:00\",\n            \"ticketPrice\": 22.75,\n            \"cinemaName\": \"CineSpectra\"\n        }\n    ]\n}"
+						}
+					]
+				}
+			],
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"type": "text/javascript",
+						"packages": {},
+						"exec": ["pm.collectionVariables.set(\"route\", \"api/Movies\");"]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"packages": {},
+						"exec": [""]
+					}
+				}
+			]
+		},
+		{
+			"name": "MovieReviews",
+			"item": [
+				{
+					"name": "Get Review By Id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{moviehub_base_url}}/{{route}}/:reviewId",
+							"host": ["{{moviehub_base_url}}"],
+							"path": ["{{route}}", ":reviewId"],
+							"variable": [
+								{
+									"key": "reviewId",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Get Review By Id 1",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{moviehub_base_url}}/{{route}}/:reviewId",
+									"host": ["{{moviehub_base_url}}"],
+									"path": ["{{route}}", ":reviewId"],
+									"variable": [
+										{
+											"key": "reviewId",
+											"value": "1"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Length",
+									"value": "108"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 12 May 2024 12:46:21 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "Kestrel"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": 1,\n    \"score\": 8,\n    \"comment\": \"This movie was great!\",\n    \"reviewDate\": \"2024-05-12T22:44:50.947256\",\n    \"movieId\": 1\n}"
+						},
+						{
+							"name": "Error - Movie Not Found",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{moviehub_base_url}}/{{route}}/:reviewId",
+									"host": ["{{moviehub_base_url}}"],
+									"path": ["{{route}}", ":reviewId"],
+									"variable": [
+										{
+											"key": "reviewId",
+											"value": "20"
+										}
+									]
+								}
+							},
+							"status": "Not Found",
+							"code": 404,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Length",
+									"value": "162"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/problem+json; charset=utf-8"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 12 May 2024 12:57:35 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "Kestrel"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"type\": \"https://tools.ietf.org/html/rfc9110#section-15.5.5\",\n    \"title\": \"Not Found\",\n    \"status\": 404,\n    \"traceId\": \"00-d0993c321ea84521a625130204526b1b-f02f2ea9b72dcc0f-00\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Get Reviews By Movie Id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{moviehub_base_url}}/{{route}}/movies/:movieId",
+							"host": ["{{moviehub_base_url}}"],
+							"path": ["{{route}}", "movies", ":movieId"],
+							"variable": [
+								{
+									"key": "movieId",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Get Reviews By Movie Id 1",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{moviehub_base_url}}/{{route}}/movies/:movieId",
+									"host": ["{{moviehub_base_url}}"],
+									"path": ["{{route}}", "movies", ":movieId"],
+									"variable": [
+										{
+											"key": "movieId",
+											"value": "1"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Length",
+									"value": "110"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 12 May 2024 12:46:40 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "Kestrel"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"id\": 1,\n        \"score\": 8,\n        \"comment\": \"This movie was great!\",\n        \"reviewDate\": \"2024-05-12T22:44:50.947256\",\n        \"movieId\": 1\n    }\n]"
+						},
+						{
+							"name": "Error - Movie Not Found",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{moviehub_base_url}}/{{route}}/movies/:movieId",
+									"host": ["{{moviehub_base_url}}"],
+									"path": ["{{route}}", "movies", ":movieId"],
+									"variable": [
+										{
+											"key": "movieId",
+											"value": "10"
+										}
+									]
+								}
+							},
+							"status": "Not Found",
+							"code": 404,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Length",
+									"value": "162"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/problem+json; charset=utf-8"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 12 May 2024 12:57:07 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "Kestrel"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"type\": \"https://tools.ietf.org/html/rfc9110#section-15.5.5\",\n    \"title\": \"Not Found\",\n    \"status\": 404,\n    \"traceId\": \"00-cdf048d65d2347803d028a5507f3c2cc-2d1d7b134a29beec-00\"\n}"
+						},
+						{
+							"name": "UPDATED - Get Reviews By Movie Id 1",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{moviehub_base_url}}/{{route}}/movies/:movieId",
+									"host": ["{{moviehub_base_url}}"],
+									"path": ["{{route}}", "movies", ":movieId"],
+									"variable": [
+										{
+											"key": "movieId",
+											"value": "1"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Length",
+									"value": "119"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 12 May 2024 13:12:29 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "Kestrel"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"id\": 1,\n        \"score\": 5,\n        \"comment\": \"UPDATED - This movie was okay!\",\n        \"reviewDate\": \"2024-05-12T22:44:50.947256\",\n        \"movieId\": 1\n    }\n]"
+						},
+						{
+							"name": "PATCHED - Get Reviews By Movie Id",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{moviehub_base_url}}/{{route}}/movies/:movieId",
+									"host": ["{{moviehub_base_url}}"],
+									"path": ["{{route}}", "movies", ":movieId"],
+									"variable": [
+										{
+											"key": "movieId",
+											"value": "1"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Length",
+									"value": "124"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 12 May 2024 13:21:37 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "Kestrel"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"id\": 1,\n        \"score\": 7,\n        \"comment\": \"PATCHED - This movie was excellent!\",\n        \"reviewDate\": \"2024-05-12T22:44:50.947256\",\n        \"movieId\": 1\n    }\n]"
+						},
+						{
+							"name": "Get Reviews By Movie Id 2",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{moviehub_base_url}}/{{route}}/movies/:movieId",
+									"host": ["{{moviehub_base_url}}"],
+									"path": ["{{route}}", "movies", ":movieId"],
+									"variable": [
+										{
+											"key": "movieId",
+											"value": "2"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Length",
+									"value": "443"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 12 May 2024 13:39:02 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "Kestrel"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"id\": 3,\n        \"score\": 8,\n        \"comment\": \"This movie was great!\",\n        \"reviewDate\": \"2024-05-12T23:35:59.021152\",\n        \"movieId\": 2\n    },\n    {\n        \"id\": 4,\n        \"score\": 7,\n        \"comment\": \"This movie was fine!\",\n        \"reviewDate\": \"2024-05-12T23:36:11.617238\",\n        \"movieId\": 2\n    },\n    {\n        \"id\": 5,\n        \"score\": 6,\n        \"comment\": \"This movie was okay!\",\n        \"reviewDate\": \"2024-05-12T23:36:18.171018\",\n        \"movieId\": 2\n    },\n    {\n        \"id\": 7,\n        \"score\": 4,\n        \"comment\": \"This movie was below average!\",\n        \"reviewDate\": \"2024-05-12T23:38:43.282181\",\n        \"movieId\": 2\n    }\n]"
+						},
+						{
+							"name": "ALL DELETED - Get Reviews By Movie Id",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{moviehub_base_url}}/{{route}}/movies/:movieId",
+									"host": ["{{moviehub_base_url}}"],
+									"path": ["{{route}}", "movies", ":movieId"],
+									"variable": [
+										{
+											"key": "movieId",
+											"value": "2"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Length",
+									"value": "2"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 12 May 2024 13:45:12 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "Kestrel"
+								}
+							],
+							"cookie": [],
+							"body": "[]"
+						}
+					]
+				},
+				{
+					"name": "Create Review For Movie",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"score\": 8.0,\n    \"comment\": \"This movie was excellent!\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{moviehub_base_url}}/{{route}}/movies/:movieId",
+							"host": ["{{moviehub_base_url}}"],
+							"path": ["{{route}}", "movies", ":movieId"],
+							"variable": [
+								{
+									"key": "movieId",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Create Reviews For Movie 1",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"score\": 8.0,\n    \"comment\": \"This movie was great!\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{moviehub_base_url}}/{{route}}/movies/:movieId",
+									"host": ["{{moviehub_base_url}}"],
+									"path": ["{{route}}", "movies", ":movieId"],
+									"variable": [
+										{
+											"key": "movieId",
+											"value": "1"
+										}
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Length",
+									"value": "114"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 12 May 2024 12:44:51 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "Kestrel"
+								},
+								{
+									"key": "Location",
+									"value": "https://localhost:7190/api/MovieReviews/1"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": 1,\n    \"score\": 8,\n    \"comment\": \"This movie was great!\",\n    \"reviewDate\": \"2024-05-12T22:44:50.947256+10:00\",\n    \"movieId\": 1\n}"
+						},
+						{
+							"name": "Error - Movie Not Found",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"score\": 8.0,\n    \"comment\": \"This movie was great!\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{moviehub_base_url}}/{{route}}/movies/:movieId",
+									"host": ["{{moviehub_base_url}}"],
+									"path": ["{{route}}", "movies", ":movieId"],
+									"variable": [
+										{
+											"key": "movieId",
+											"value": "10"
+										}
+									]
+								}
+							},
+							"status": "Not Found",
+							"code": 404,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Length",
+									"value": "162"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/problem+json; charset=utf-8"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 12 May 2024 12:59:55 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "Kestrel"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"type\": \"https://tools.ietf.org/html/rfc9110#section-15.5.5\",\n    \"title\": \"Not Found\",\n    \"status\": 404,\n    \"traceId\": \"00-d59c7023e782962a6063e93668ca3673-ca1de64e6e2b99cf-00\"\n}"
+						},
+						{
+							"name": "Error - Comment",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"score\": 8.0\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{moviehub_base_url}}/{{route}}/movies/:movieId",
+									"host": ["{{moviehub_base_url}}"],
+									"path": ["{{route}}", "movies", ":movieId"],
+									"variable": [
+										{
+											"key": "movieId",
+											"value": "1"
+										}
+									]
+								}
+							},
+							"status": "Bad Request",
+							"code": 400,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Length",
+									"value": "246"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/problem+json; charset=utf-8"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 12 May 2024 12:51:55 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "Kestrel"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"errors\": {\n        \"Comment\": [\n            \"A review comment is required\"\n        ]\n    },\n    \"type\": \"https://tools.ietf.org/html/rfc9110#section-15.5.1\",\n    \"title\": \"One or more validation errors occurred.\",\n    \"status\": 400,\n    \"traceId\": \"00-d46824f2035fa262eec7c44d0e904692-e40a38af6f009c95-00\"\n}"
+						},
+						{
+							"name": "Error - Score",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"comment\": \"This movie was great!\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{moviehub_base_url}}/{{route}}/movies/:movieId",
+									"host": ["{{moviehub_base_url}}"],
+									"path": ["{{route}}", "movies", ":movieId"],
+									"variable": [
+										{
+											"key": "movieId",
+											"value": "1"
+										}
+									]
+								}
+							},
+							"status": "Bad Request",
+							"code": 400,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Length",
+									"value": "257"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/problem+json; charset=utf-8"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 12 May 2024 12:55:54 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "Kestrel"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"errors\": {\n        \"Score\": [\n            \"The field Score must be between 1 and 10.\"\n        ]\n    },\n    \"type\": \"https://tools.ietf.org/html/rfc9110#section-15.5.1\",\n    \"title\": \"One or more validation errors occurred.\",\n    \"status\": 400,\n    \"traceId\": \"00-a4a0e3b32aced02cc8d66295637428d7-00d4ef6edd6f37fd-00\"\n}"
+						},
+						{
+							"name": "Error - Blank Body",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{moviehub_base_url}}/{{route}}/movies/:movieId",
+									"host": ["{{moviehub_base_url}}"],
+									"path": ["{{route}}", "movies", ":movieId"],
+									"variable": [
+										{
+											"key": "movieId",
+											"value": "1"
+										}
+									]
+								}
+							},
+							"status": "Bad Request",
+							"code": 400,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Length",
+									"value": "300"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/problem+json; charset=utf-8"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 12 May 2024 12:59:17 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "Kestrel"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"errors\": {\n        \"Score\": [\n            \"The field Score must be between 1 and 10.\"\n        ],\n        \"Comment\": [\n            \"A review comment is required\"\n        ]\n    },\n    \"type\": \"https://tools.ietf.org/html/rfc9110#section-15.5.1\",\n    \"title\": \"One or more validation errors occurred.\",\n    \"status\": 400,\n    \"traceId\": \"00-a13cb0b9ec8d33bdaf962788723a8010-ba56f2a344e94233-00\"\n}"
+						},
+						{
+							"name": "Create Review For Movie 2",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"score\": 4.0,\n    \"comment\": \"This movie was below average!\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{moviehub_base_url}}/{{route}}/movies/:movieId",
+									"host": ["{{moviehub_base_url}}"],
+									"path": ["{{route}}", "movies", ":movieId"],
+									"variable": [
+										{
+											"key": "movieId",
+											"value": "2"
+										}
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Length",
+									"value": "122"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 12 May 2024 13:37:31 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "Kestrel"
+								},
+								{
+									"key": "Location",
+									"value": "https://localhost:7190/api/MovieReviews/6"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": 6,\n    \"score\": 4,\n    \"comment\": \"This movie was below average!\",\n    \"reviewDate\": \"2024-05-12T23:37:31.686499+10:00\",\n    \"movieId\": 2\n}"
+						}
+					]
+				},
+				{
+					"name": "Update Review For Movie",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"score\": 5.0,\n    \"comment\": \"UPDATED - This movie was okay!\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{moviehub_base_url}}/{{route}}/movies/:movieId/reviews/:reviewId",
+							"host": ["{{moviehub_base_url}}"],
+							"path": [
+								"{{route}}",
+								"movies",
+								":movieId",
+								"reviews",
+								":reviewId"
+							],
+							"variable": [
+								{
+									"key": "movieId",
+									"value": "1"
+								},
+								{
+									"key": "reviewId",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Update Review For Movie",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"score\": 5.0,\n    \"comment\": \"UPDATED - This movie was okay!\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{moviehub_base_url}}/{{route}}/movies/:movieId/reviews/:reviewId",
+									"host": ["{{moviehub_base_url}}"],
+									"path": [
+										"{{route}}",
+										"movies",
+										":movieId",
+										"reviews",
+										":reviewId"
+									],
+									"variable": [
+										{
+											"key": "movieId",
+											"value": "1"
+										},
+										{
+											"key": "reviewId",
+											"value": "1"
+										}
+									]
+								}
+							},
+							"status": "No Content",
+							"code": 204,
+							"_postman_previewlanguage": "plain",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Sun, 12 May 2024 13:11:58 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "Kestrel"
+								}
+							],
+							"cookie": [],
+							"body": null
+						}
+					]
+				},
+				{
+					"name": "Partially Update Review For Movie",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "[\n    {\n      \"op\": \"replace\",\n      \"path\": \"/comment\",\n      \"value\": \"PATCHED - This movie was excellent!\"\n    }\n]",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{moviehub_base_url}}/{{route}}/movies/:movieId/reviews/:reviewId",
+							"host": ["{{moviehub_base_url}}"],
+							"path": [
+								"{{route}}",
+								"movies",
+								":movieId",
+								"reviews",
+								":reviewId"
+							],
+							"variable": [
+								{
+									"key": "movieId",
+									"value": "1"
+								},
+								{
+									"key": "reviewId",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Partially Update Review For Movie Copy",
+							"originalRequest": {
+								"method": "PATCH",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "[\n    {\n      \"op\": \"replace\",\n      \"path\": \"/score\",\n      \"value\": 7.0\n    }\n]",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{moviehub_base_url}}/{{route}}/movies/:movieId/reviews/:reviewId",
+									"host": ["{{moviehub_base_url}}"],
+									"path": [
+										"{{route}}",
+										"movies",
+										":movieId",
+										"reviews",
+										":reviewId"
+									],
+									"variable": [
+										{
+											"key": "movieId",
+											"value": "1"
+										},
+										{
+											"key": "reviewId",
+											"value": "1"
+										}
+									]
+								}
+							},
+							"status": "No Content",
+							"code": 204,
+							"_postman_previewlanguage": "plain",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Sun, 12 May 2024 13:20:54 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "Kestrel"
+								}
+							],
+							"cookie": [],
+							"body": null
+						},
+						{
+							"name": "Partially Update Review For Movie Copy",
+							"originalRequest": {
+								"method": "PATCH",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "[\n    {\n      \"op\": \"replace\",\n      \"path\": \"/comment\",\n      \"value\": \"PATCHED - This movie was excellent!\"\n    }\n]",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{moviehub_base_url}}/{{route}}/movies/:movieId/reviews/:reviewId",
+									"host": ["{{moviehub_base_url}}"],
+									"path": [
+										"{{route}}",
+										"movies",
+										":movieId",
+										"reviews",
+										":reviewId"
+									],
+									"variable": [
+										{
+											"key": "movieId",
+											"value": "1"
+										},
+										{
+											"key": "reviewId",
+											"value": "1"
+										}
+									]
+								}
+							},
+							"status": "No Content",
+							"code": 204,
+							"_postman_previewlanguage": "plain",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Sun, 12 May 2024 13:21:30 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "Kestrel"
+								}
+							],
+							"cookie": [],
+							"body": null
+						}
+					]
+				},
+				{
+					"name": "Delete Review By Id",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{moviehub_base_url}}/{{route}}/movies/:movieId/reviews/:reviewId",
+							"host": ["{{moviehub_base_url}}"],
+							"path": [
+								"{{route}}",
+								"movies",
+								":movieId",
+								"reviews",
+								":reviewId"
+							],
+							"variable": [
+								{
+									"key": "movieId",
+									"value": "2"
+								},
+								{
+									"key": "reviewId",
+									"value": "7"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Delete Review By Id 7",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{moviehub_base_url}}/{{route}}/movies/:movieId/reviews/:reviewId",
+									"host": ["{{moviehub_base_url}}"],
+									"path": [
+										"{{route}}",
+										"movies",
+										":movieId",
+										"reviews",
+										":reviewId"
+									],
+									"variable": [
+										{
+											"key": "movieId",
+											"value": "2"
+										},
+										{
+											"key": "reviewId",
+											"value": "7"
+										}
+									]
+								}
+							},
+							"status": "No Content",
+							"code": 204,
+							"_postman_previewlanguage": "plain",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Sun, 12 May 2024 13:39:26 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "Kestrel"
+								}
+							],
+							"cookie": [],
+							"body": null
+						},
+						{
+							"name": "Error - Review Not Found",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{moviehub_base_url}}/{{route}}/movies/:movieId/reviews/:reviewId",
+									"host": ["{{moviehub_base_url}}"],
+									"path": [
+										"{{route}}",
+										"movies",
+										":movieId",
+										"reviews",
+										":reviewId"
+									],
+									"variable": [
+										{
+											"key": "movieId",
+											"value": "2"
+										},
+										{
+											"key": "reviewId",
+											"value": "7"
+										}
+									]
+								}
+							},
+							"status": "Not Found",
+							"code": 404,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Length",
+									"value": "162"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/problem+json; charset=utf-8"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 12 May 2024 13:46:06 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "Kestrel"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"type\": \"https://tools.ietf.org/html/rfc9110#section-15.5.5\",\n    \"title\": \"Not Found\",\n    \"status\": 404,\n    \"traceId\": \"00-feab3cfca2cc99e5c9b2c468bfb4d636-d60f32718a2d51e9-00\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Delete All Reviews For Movie Id",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{moviehub_base_url}}/{{route}}/movies/:movieId",
+							"host": ["{{moviehub_base_url}}"],
+							"path": ["{{route}}", "movies", ":movieId"],
+							"variable": [
+								{
+									"key": "movieId",
+									"value": "2"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Delete All Reviews For Movie Id 2",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{moviehub_base_url}}/{{route}}/movies/:movieId",
+									"host": ["{{moviehub_base_url}}"],
+									"path": ["{{route}}", "movies", ":movieId"],
+									"variable": [
+										{
+											"key": "movieId",
+											"value": "2"
+										}
+									]
+								}
+							},
+							"status": "No Content",
+							"code": 204,
+							"_postman_previewlanguage": "plain",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Sun, 12 May 2024 13:40:22 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "Kestrel"
+								}
+							],
+							"cookie": [],
+							"body": null
+						}
+					]
+				}
+			],
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"type": "text/javascript",
+						"packages": {},
+						"exec": [
+							"pm.collectionVariables.set(\"route\", \"api/MovieReviews\");"
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"packages": {},
+						"exec": [""]
+					}
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [""]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [""]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "route",
+			"value": "Auto-Generated: Do Not Modify"
+		},
+		{
+			"key": "moviehub_base_url",
+			"value": "https://localhost:7190"
+		}
+	]
 }

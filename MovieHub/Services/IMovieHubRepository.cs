@@ -1,11 +1,16 @@
 using MovieHub.Entities;
+using MovieHub.Models;
 
 namespace MovieHub.Services;
 
 public interface IMovieHubRepository
 {
-    Task<IEnumerable<Movie>> GetMoviesAsync();
-    Task<IEnumerable<Movie>> GetMoviesAsync(string? title, string? genre);
+    Task<(IEnumerable<Movie>, PaginationMetadata)> GetMoviesAsync(
+        string? title, 
+        string? genre, 
+        int pageNumber,
+        int pageSize
+    );
     Task<Movie?> GetMovieAsync(int id, bool details);
     Task<MovieReview?> GetReviewAsync(int id);
     Task<IEnumerable<MovieReview>> GetReviewsByMovieAsync(int movieId);
@@ -14,5 +19,4 @@ public interface IMovieHubRepository
     void DeleteReviewsByMovieAsync(IEnumerable<MovieReview> movieReviews);
     Task<bool> MovieExistsAsync(int id);
     Task<bool> SaveChangesAsync();
-
 }

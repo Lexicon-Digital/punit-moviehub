@@ -15,14 +15,24 @@ public class MoviesController(IMovieHubRepository repository, IMapper mapper, IP
     private readonly IPrincesTheatreService _princesTheatreService =
         princesTheatreService ?? throw new ArgumentNullException(nameof(princesTheatreService));
 
+    private const int MaxMoviesPageSize = 10;
+
     [HttpGet]
     public async Task<ActionResult<IEnumerable<MovieDto>>> GetMovies(
         [FromQuery(Name = "title")] string? title,
-        [FromQuery(Name = "genre")] string? genre
+        [FromQuery(Name = "genre")] string? genre,
+        [FromQuery(Name = "pageNumber")] int pageNumber = 1,
+        [FromQuery(Name = "pageSize")] int pageSize = MaxMoviesPageSize
     )
     {
-        var movieEntities = await _movieHubRepository.GetMoviesAsync(title, genre);
+        pageSize = Math.Min(pageSize, MaxMoviesPageSize);
+        var (movieEntities, paginationMetadata) = await _movieHubRepository.GetMoviesAsync(title, genre, pageNumber, pageSize);
         var movies = _mapper.Map<IEnumerable<MovieWithoutDetailsDto>>(movieEntities);
+
+        Response.Headers.Append("X-Pagination-TotalItemCount", paginationMetadata.TotalItemCount.ToString());
+        Response.Headers.Append("X-Pagination-TotalPageCount", paginationMetadata.TotalPageCount.ToString());
+        Response.Headers.Append("X-Pagination-PageSize", pageSize.ToString());
+        Response.Headers.Append("X-Pagination-CurrentPage", pageNumber.ToString());
 
         return Ok(movies);
     }

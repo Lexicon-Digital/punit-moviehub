@@ -26,7 +26,7 @@ dotnet restore
 ```
 
 ### Add configuration
-Add your Princess Theatre API key to the [MovieHub/appsettings.json](MovieHub/appsettings.json) configuration file in the `princesTheatreAPIKey` property, as shown below.
+Add your Princess Theatre API key to the [MovieHub/appsettings.json](MovieHub/appsettings.json) configuration file in the `PrincessTheatre.APIKey` property, as shown below.
 
 ![Add Princess Theatre API Key](screenshot-app-settings.png)
 
@@ -42,7 +42,8 @@ dotnet ef database update
 ```
 
 ### Seeding the database
-There is no need to manually seed the database. The database will be automatically seeded using the script [moviehub-db-data-seed.sql](./MovieHub/Scripts/moviehub-db-data-seed.sql) when the application is run the first time.
+Before running the application, copy the [moviehub-db-data-seed.sql](https://github.com/Lexicon-Digital/bench-dotnet-training/blob/master/moviehub-api-implementation-task/db/moviehub-db-data-seed.sql) file into the [./MovieHub/Scripts](./MovieHub/Scripts) folder.
+There is no need to manually seed the database. The database will be automatically seeded using the script upon running the application for the first time.
 
 ### Run the application
 Run the application using the command (running from the `./MovieHub` directory, **not** the base directory)

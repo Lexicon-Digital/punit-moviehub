@@ -1,4 +1,3 @@
-using Microsoft.AspNetCore.StaticFiles;
 using Microsoft.EntityFrameworkCore;
 using MovieHub.DbContexts;
 using MovieHub.Services;
@@ -14,15 +13,14 @@ var builder = WebApplication.CreateBuilder(args);
 
 builder.Host.UseSerilog();
 
+builder.Services.AddMemoryCache();
 builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
-builder.Services.AddSingleton<FileExtensionContentTypeProvider>();
 
 builder.Services.AddDbContext<MovieHubContext>(dbContextOptions => 
     dbContextOptions.UseSqlite(builder.Configuration["ConnectionStrings:MovieHubConnectionString"])
 );
-
 
 builder.Services.AddScoped<IMovieHubRepository, MovieHubRepository>();
 

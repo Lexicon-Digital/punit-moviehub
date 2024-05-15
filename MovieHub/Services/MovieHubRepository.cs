@@ -2,6 +2,7 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Internal;
 using MovieHub.DbContexts;
 using MovieHub.Entities;
+using MovieHub.Models;
 
 namespace MovieHub.Services;
 
@@ -9,18 +10,12 @@ public class MovieHubRepository(MovieHubContext context) : IMovieHubRepository
 {
     private readonly MovieHubContext _context = context ?? throw new ArgumentNullException(nameof(context));
 
-    public async Task<IEnumerable<Movie>> GetMoviesAsync()
-    {
-        return await _context.Movies.Include(movie => movie.MovieReviews).ToListAsync();
-    }
-
-    public async Task<IEnumerable<Movie>> GetMoviesAsync(string? title, string? genre)
-    {
-        if (string.IsNullOrEmpty(title) && string.IsNullOrWhiteSpace(genre))
-        {
-            return await GetMoviesAsync();
-        }
-
+    public async Task<(IEnumerable<Movie>, PaginationMetadata)> GetMoviesAsync(
+        string? title, 
+        string? genre,
+        int pageNumber, 
+        int pageSize
+    ) {
         var collection = _context.Movies.Include(movie => movie.MovieReviews) as IQueryable<Movie>;
 
         if (!string.IsNullOrWhiteSpace(title))
@@ -35,7 +30,16 @@ public class MovieHubRepository(MovieHubContext context) : IMovieHubRepository
             collection = collection.Where(movie => movie.Genre.ToLower().Contains(genre.ToLower()));
         }
 
-        return await collection.ToListAsync();
+        var totalItemCount = await collection.CountAsync();
+        
+        var paginationMetadata = new PaginationMetadata(totalItemCount, pageSize);
+
+        var movies = await collection
+            .Skip(pageSize * (pageNumber - 1))
+            .Take(pageSize)
+            .ToListAsync();
+        
+        return (movies, paginationMetadata);
     }
 
     public async Task<Movie?> GetMovieAsync(int id, bool details)
