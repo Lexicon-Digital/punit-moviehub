@@ -1,4 +1,5 @@
 using Microsoft.EntityFrameworkCore;
+using Microsoft.IdentityModel.Tokens;
 using MovieHub.DbContexts;
 using MovieHub.Services;
 using Serilog;
@@ -26,6 +27,21 @@ builder.Services.AddScoped<IMovieHubRepository, MovieHubRepository>();
 
 builder.Services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
 
+builder.Services.AddAuthentication("Bearer").AddJwtBearer(options =>
+{
+    options.TokenValidationParameters = new TokenValidationParameters
+    {
+        ValidateIssuer = true,
+        ValidateAudience = true,
+        ValidateIssuerSigningKey = true,
+        ValidIssuer = builder.Configuration["Authentication:Issuer"] ?? throw new ArgumentNullException(nameof(builder.Configuration)),
+        ValidAudience = builder.Configuration["Authentication:Audience"] ?? throw new ArgumentNullException(nameof(builder.Configuration)),
+        IssuerSigningKey = new SymmetricSecurityKey(
+            Convert.FromBase64String(builder.Configuration["Authentication:SecretKey"] ?? throw new ArgumentNullException(nameof(builder.Configuration)))
+        )
+    };
+});
+
 builder.Services.AddTransient<IPrincesTheatreService, PrincesTheatreService>();
 
 builder.Services.AddHttpClient();
@@ -42,7 +58,7 @@ var app = builder.Build();
 if (app.Environment.IsDevelopment())
 {
     app.UseSwagger();
-    app.UseSwaggerUI();
+    app.UseSwaggerUI(options => options.EnableTryItOutByDefault());
 }
 else
 {
@@ -52,6 +68,8 @@ else
 app.UseHttpsRedirection();
 
 app.UseRouting();
+
+app.UseAuthentication();
 
 app.UseAuthorization();
 
@@ -82,7 +100,7 @@ static void SeedDatabase(IHost app)
         "moviehub-db-data-seed.sql"
     );
 
-    if (!File.Exists(sqlFile)) return;
+    if (!File.Exists(sqlFile)) throw new FileNotFoundException(sqlFile);
     
     var sql = File.ReadAllText(sqlFile);
     context.Database.ExecuteSqlRaw(sql);

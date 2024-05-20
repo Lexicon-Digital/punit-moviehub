@@ -59,13 +59,23 @@ dotnet run --launch-profile http
 
 ### Testing with Swagger
 - Go to [https://localhost:7190/swagger](https://localhost:7190/swagger) or [https://localhost:5030/swagger](https://localhost:5030/swagger) (port numbers specified in [launchSettings.json](./MovieHub/Properties/launchSettings.json)).
+- Authenticate using the `/api/Authentication/authenticate` endpoint (any username/password will do).
 - Test each endpoint.
 
 ### Testing with Postman
 - Download and import the [MovieHub.postman_collection.json](./MovieHub.postman_collection.json) Postman collection file into Postman.
+- Authenticate using the `/api/Authentication/authenticate` endpoint (any username/password will do).
 - Test each endpoint in the collection.
 - **Note**: The postman collection uses `HTTPS` by default.
 - You may need to turn off SSL verification in Postman settings.
 ![Turn off SSL Verification in Postman](screenshot-postman-ssl-verification.png)
 - To run in `HTTP` mode, change the variable `base_url` in **collection variables** (not environment variables) to `http://localhost:5030`. Do not modify any other variable.
 
+### Some helpful commands
+The commands below help generate a JWT using the CLI to use with Postman or any other request. **Note** this is not necessary because the Postman collection already comes with a Login endpoint.
+```shell
+dotnet user-jwts create --help # Get help on creating JWTs
+dotnet user-jwts create --issuer https://localhost:7190 --audience MovieHubAPI # Create a JWT token
+dotnet user-jwts key --issuer https://localhost:7190 --audience moviehubapi # Create a signing key
+dotnet user-jwts list # List all the JWT schemes and audiences
+```

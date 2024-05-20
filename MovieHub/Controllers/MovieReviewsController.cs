@@ -1,4 +1,5 @@
 using AutoMapper;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.JsonPatch;
 using Microsoft.AspNetCore.Mvc;
 using MovieHub.Entities;
@@ -8,6 +9,7 @@ using MovieHub.Services;
 namespace MovieHub.Controllers;
 
 [ApiController]
+[Authorize]
 [Route("api/[controller]")]
 public class MovieReviewsController(IMovieHubRepository repository, IMapper mapper) : ControllerBase
 {
@@ -19,10 +21,7 @@ public class MovieReviewsController(IMovieHubRepository repository, IMapper mapp
     {
         var movieExists = await _movieHubRepository.MovieExistsAsync(movieId);
 
-        if (!movieExists)
-        {
-            return NotFound();
-        }
+        if (!movieExists) return NotFound();
         
         var movieReviewEntities = await _movieHubRepository.GetReviewsByMovieAsync(movieId);
         var movieReviews = _mapper.Map<IEnumerable<MovieReviewDto>>(movieReviewEntities);
@@ -35,10 +34,7 @@ public class MovieReviewsController(IMovieHubRepository repository, IMapper mapp
     {
         var movieReviewEntity = await _movieHubRepository.GetReviewAsync(reviewId);
 
-        if (movieReviewEntity == null)
-        {
-            return NotFound();
-        }
+        if (movieReviewEntity == null) return NotFound();
         
         var movieReview = _mapper.Map<MovieReviewDto>(movieReviewEntity);
         
@@ -50,17 +46,11 @@ public class MovieReviewsController(IMovieHubRepository repository, IMapper mapp
         int movieId,
         [FromBody] MovieReviewCreationDto movieReview
     ) {
-        if (!ModelState.IsValid)
-        {
-            return BadRequest();
-        }
+        if (!ModelState.IsValid) return BadRequest();
 
         var movieExists = await _movieHubRepository.MovieExistsAsync(movieId);
 
-        if (!movieExists)
-        {
-            return NotFound();
-        }
+        if (!movieExists) return NotFound();
 
         var finalMovieReview = _mapper.Map<MovieReview>(movieReview);
 
@@ -82,24 +72,15 @@ public class MovieReviewsController(IMovieHubRepository repository, IMapper mapp
         int reviewId,
         [FromBody] MovieReviewUpdateDto movieReview
     ) {
-        if (!ModelState.IsValid)
-        {
-            return BadRequest();
-        }
+        if (!ModelState.IsValid) return BadRequest();
 
         var movieExists = await _movieHubRepository.MovieExistsAsync(movieId);
 
-        if (!movieExists)
-        {
-            return NotFound();
-        }
+        if (!movieExists) return NotFound();
 
         var movieReviewEntity = await _movieHubRepository.GetReviewAsync(reviewId);
 
-        if (movieReviewEntity == null)
-        {
-            return NotFound();
-        }
+        if (movieReviewEntity == null) return NotFound();
 
         _mapper.Map(movieReview, movieReviewEntity);
 
@@ -114,33 +95,21 @@ public class MovieReviewsController(IMovieHubRepository repository, IMapper mapp
         int reviewId,
         [FromBody] JsonPatchDocument<MovieReviewUpdateDto> patchDocument
     ) {
-        if (!ModelState.IsValid)
-        {
-            return BadRequest();
-        }
+        if (!ModelState.IsValid) return BadRequest();
 
         var movieExists = await _movieHubRepository.MovieExistsAsync(movieId);
 
-        if (!movieExists)
-        {
-            return NotFound();
-        }
+        if (!movieExists) return NotFound();
 
         var movieReviewEntity = await _movieHubRepository.GetReviewAsync(reviewId);
 
-        if (movieReviewEntity == null)
-        {
-            return NotFound();
-        }
+        if (movieReviewEntity == null) return NotFound();
 
         var movieReviewToPatch = _mapper.Map<MovieReviewUpdateDto>(movieReviewEntity);
         
         patchDocument.ApplyTo(movieReviewToPatch, ModelState);
 
-        if (!ModelState.IsValid || !TryValidateModel(movieReviewToPatch))
-        {
-            return BadRequest(ModelState);
-        }
+        if (!ModelState.IsValid || !TryValidateModel(movieReviewToPatch)) return BadRequest(ModelState);
 
         _mapper.Map(movieReviewToPatch, movieReviewEntity);
         await _movieHubRepository.SaveChangesAsync();
@@ -153,17 +122,11 @@ public class MovieReviewsController(IMovieHubRepository repository, IMapper mapp
     {
         var movieExists = await _movieHubRepository.MovieExistsAsync(movieId);
     
-        if (!movieExists)
-        {
-            return NotFound();
-        }
+        if (!movieExists) return NotFound();
 
         var movieReviewEntity = await _movieHubRepository.GetReviewAsync(reviewId);
     
-        if (movieReviewEntity == null)
-        {
-            return NotFound();
-        }
+        if (movieReviewEntity == null) return NotFound();
         
         _movieHubRepository.DeleteReviewAsync(movieReviewEntity);
         await _movieHubRepository.SaveChangesAsync();
@@ -176,10 +139,7 @@ public class MovieReviewsController(IMovieHubRepository repository, IMapper mapp
     {
         var movieExists = await _movieHubRepository.MovieExistsAsync(movieId);
     
-        if (!movieExists)
-        {
-            return NotFound();
-        }
+        if (!movieExists) return NotFound();
 
         var movieReviews = await _movieHubRepository.GetReviewsByMovieAsync(movieId);
 

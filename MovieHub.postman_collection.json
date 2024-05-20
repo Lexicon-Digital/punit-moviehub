@@ -16,8 +16,12 @@
 						"header": [],
 						"url": {
 							"raw": "{{moviehub_base_url}}/{{route}}",
-							"host": ["{{moviehub_base_url}}"],
-							"path": ["{{route}}"]
+							"host": [
+								"{{moviehub_base_url}}"
+							],
+							"path": [
+								"{{route}}"
+							]
 						}
 					},
 					"response": [
@@ -28,8 +32,12 @@
 								"header": [],
 								"url": {
 									"raw": "{{moviehub_base_url}}/{{route}}",
-									"host": ["{{moviehub_base_url}}"],
-									"path": ["{{route}}"]
+									"host": [
+										"{{moviehub_base_url}}"
+									],
+									"path": [
+										"{{route}}"
+									]
 								}
 							},
 							"status": "OK",
@@ -63,8 +71,12 @@
 								"header": [],
 								"url": {
 									"raw": "{{moviehub_base_url}}/{{route}}",
-									"host": ["{{moviehub_base_url}}"],
-									"path": ["{{route}}"]
+									"host": [
+										"{{moviehub_base_url}}"
+									],
+									"path": [
+										"{{route}}"
+									]
 								}
 							},
 							"status": "OK",
@@ -100,8 +112,12 @@
 						"header": [],
 						"url": {
 							"raw": "{{moviehub_base_url}}/{{route}}?pageNumber=1&pageSize=4",
-							"host": ["{{moviehub_base_url}}"],
-							"path": ["{{route}}"],
+							"host": [
+								"{{moviehub_base_url}}"
+							],
+							"path": [
+								"{{route}}"
+							],
 							"query": [
 								{
 									"key": "pageNumber",
@@ -122,8 +138,12 @@
 								"header": [],
 								"url": {
 									"raw": "{{moviehub_base_url}}/{{route}}?pageNumber=1&pageSize=4",
-									"host": ["{{moviehub_base_url}}"],
-									"path": ["{{route}}"],
+									"host": [
+										"{{moviehub_base_url}}"
+									],
+									"path": [
+										"{{route}}"
+									],
 									"query": [
 										{
 											"key": "pageNumber",
@@ -185,8 +205,12 @@
 						"header": [],
 						"url": {
 							"raw": "{{moviehub_base_url}}/{{route}}?genre=fantasy",
-							"host": ["{{moviehub_base_url}}"],
-							"path": ["{{route}}"],
+							"host": [
+								"{{moviehub_base_url}}"
+							],
+							"path": [
+								"{{route}}"
+							],
 							"query": [
 								{
 									"key": "genre",
@@ -203,8 +227,12 @@
 								"header": [],
 								"url": {
 									"raw": "{{moviehub_base_url}}/{{route}}?genre=fantasy",
-									"host": ["{{moviehub_base_url}}"],
-									"path": ["{{route}}"],
+									"host": [
+										"{{moviehub_base_url}}"
+									],
+									"path": [
+										"{{route}}"
+									],
 									"query": [
 										{
 											"key": "genre",
@@ -246,8 +274,12 @@
 						"header": [],
 						"url": {
 							"raw": "{{moviehub_base_url}}/{{route}}?title=clones",
-							"host": ["{{moviehub_base_url}}"],
-							"path": ["{{route}}"],
+							"host": [
+								"{{moviehub_base_url}}"
+							],
+							"path": [
+								"{{route}}"
+							],
 							"query": [
 								{
 									"key": "title",
@@ -264,8 +296,12 @@
 								"header": [],
 								"url": {
 									"raw": "{{moviehub_base_url}}/{{route}}?title=clones",
-									"host": ["{{moviehub_base_url}}"],
-									"path": ["{{route}}"],
+									"host": [
+										"{{moviehub_base_url}}"
+									],
+									"path": [
+										"{{route}}"
+									],
 									"query": [
 										{
 											"key": "title",
@@ -307,8 +343,12 @@
 						"header": [],
 						"url": {
 							"raw": "{{moviehub_base_url}}/{{route}}?title=clones&genre=fantasy",
-							"host": ["{{moviehub_base_url}}"],
-							"path": ["{{route}}"],
+							"host": [
+								"{{moviehub_base_url}}"
+							],
+							"path": [
+								"{{route}}"
+							],
 							"query": [
 								{
 									"key": "title",
@@ -329,8 +369,12 @@
 								"header": [],
 								"url": {
 									"raw": "{{moviehub_base_url}}/{{route}}?title=clones&genre=fantasy",
-									"host": ["{{moviehub_base_url}}"],
-									"path": ["{{route}}"],
+									"host": [
+										"{{moviehub_base_url}}"
+									],
+									"path": [
+										"{{route}}"
+									],
 									"query": [
 										{
 											"key": "title",
@@ -376,8 +420,13 @@
 						"header": [],
 						"url": {
 							"raw": "{{moviehub_base_url}}/{{route}}/:movieId",
-							"host": ["{{moviehub_base_url}}"],
-							"path": ["{{route}}", ":movieId"],
+							"host": [
+								"{{moviehub_base_url}}"
+							],
+							"path": [
+								"{{route}}",
+								":movieId"
+							],
 							"variable": [
 								{
 									"key": "movieId",
@@ -394,8 +443,13 @@
 								"header": [],
 								"url": {
 									"raw": "{{moviehub_base_url}}/{{route}}/:movieId",
-									"host": ["{{moviehub_base_url}}"],
-									"path": ["{{route}}", ":movieId"],
+									"host": [
+										"{{moviehub_base_url}}"
+									],
+									"path": [
+										"{{route}}",
+										":movieId"
+									],
 									"variable": [
 										{
 											"key": "movieId",
@@ -435,8 +489,13 @@
 								"header": [],
 								"url": {
 									"raw": "{{moviehub_base_url}}/{{route}}/:movieId",
-									"host": ["{{moviehub_base_url}}"],
-									"path": ["{{route}}", ":movieId"],
+									"host": [
+										"{{moviehub_base_url}}"
+									],
+									"path": [
+										"{{route}}",
+										":movieId"
+									],
 									"variable": [
 										{
 											"key": "movieId",
@@ -478,8 +537,13 @@
 						"header": [],
 						"url": {
 							"raw": "{{moviehub_base_url}}/{{route}}/:movieId?details=true",
-							"host": ["{{moviehub_base_url}}"],
-							"path": ["{{route}}", ":movieId"],
+							"host": [
+								"{{moviehub_base_url}}"
+							],
+							"path": [
+								"{{route}}",
+								":movieId"
+							],
 							"query": [
 								{
 									"key": "details",
@@ -502,8 +566,13 @@
 								"header": [],
 								"url": {
 									"raw": "{{moviehub_base_url}}/{{route}}/:movieId?details=true",
-									"host": ["{{moviehub_base_url}}"],
-									"path": ["{{route}}", ":movieId"],
+									"host": [
+										"{{moviehub_base_url}}"
+									],
+									"path": [
+										"{{route}}",
+										":movieId"
+									],
 									"query": [
 										{
 											"key": "details",
@@ -549,8 +618,13 @@
 								"header": [],
 								"url": {
 									"raw": "{{moviehub_base_url}}/{{route}}/:movieId?details=true",
-									"host": ["{{moviehub_base_url}}"],
-									"path": ["{{route}}", ":movieId"],
+									"host": [
+										"{{moviehub_base_url}}"
+									],
+									"path": [
+										"{{route}}",
+										":movieId"
+									],
 									"query": [
 										{
 											"key": "details",
@@ -596,8 +670,13 @@
 								"header": [],
 								"url": {
 									"raw": "{{moviehub_base_url}}/{{route}}/:movieId?details=true",
-									"host": ["{{moviehub_base_url}}"],
-									"path": ["{{route}}", ":movieId"],
+									"host": [
+										"{{moviehub_base_url}}"
+									],
+									"path": [
+										"{{route}}",
+										":movieId"
+									],
 									"query": [
 										{
 											"key": "details",
@@ -643,8 +722,13 @@
 								"header": [],
 								"url": {
 									"raw": "{{moviehub_base_url}}/{{route}}/:movieId?details=true",
-									"host": ["{{moviehub_base_url}}"],
-									"path": ["{{route}}", ":movieId"],
+									"host": [
+										"{{moviehub_base_url}}"
+									],
+									"path": [
+										"{{route}}",
+										":movieId"
+									],
 									"query": [
 										{
 											"key": "details",
@@ -692,7 +776,9 @@
 					"script": {
 						"type": "text/javascript",
 						"packages": {},
-						"exec": ["pm.collectionVariables.set(\"route\", \"api/Movies\");"]
+						"exec": [
+							"pm.collectionVariables.set(\"route\", \"api/Movies\");"
+						]
 					}
 				},
 				{
@@ -700,7 +786,9 @@
 					"script": {
 						"type": "text/javascript",
 						"packages": {},
-						"exec": [""]
+						"exec": [
+							""
+						]
 					}
 				}
 			]
@@ -715,8 +803,13 @@
 						"header": [],
 						"url": {
 							"raw": "{{moviehub_base_url}}/{{route}}/:reviewId",
-							"host": ["{{moviehub_base_url}}"],
-							"path": ["{{route}}", ":reviewId"],
+							"host": [
+								"{{moviehub_base_url}}"
+							],
+							"path": [
+								"{{route}}",
+								":reviewId"
+							],
 							"variable": [
 								{
 									"key": "reviewId",
@@ -733,8 +826,13 @@
 								"header": [],
 								"url": {
 									"raw": "{{moviehub_base_url}}/{{route}}/:reviewId",
-									"host": ["{{moviehub_base_url}}"],
-									"path": ["{{route}}", ":reviewId"],
+									"host": [
+										"{{moviehub_base_url}}"
+									],
+									"path": [
+										"{{route}}",
+										":reviewId"
+									],
 									"variable": [
 										{
 											"key": "reviewId",
@@ -774,8 +872,13 @@
 								"header": [],
 								"url": {
 									"raw": "{{moviehub_base_url}}/{{route}}/:reviewId",
-									"host": ["{{moviehub_base_url}}"],
-									"path": ["{{route}}", ":reviewId"],
+									"host": [
+										"{{moviehub_base_url}}"
+									],
+									"path": [
+										"{{route}}",
+										":reviewId"
+									],
 									"variable": [
 										{
 											"key": "reviewId",
@@ -817,8 +920,14 @@
 						"header": [],
 						"url": {
 							"raw": "{{moviehub_base_url}}/{{route}}/movies/:movieId",
-							"host": ["{{moviehub_base_url}}"],
-							"path": ["{{route}}", "movies", ":movieId"],
+							"host": [
+								"{{moviehub_base_url}}"
+							],
+							"path": [
+								"{{route}}",
+								"movies",
+								":movieId"
+							],
 							"variable": [
 								{
 									"key": "movieId",
@@ -835,8 +944,14 @@
 								"header": [],
 								"url": {
 									"raw": "{{moviehub_base_url}}/{{route}}/movies/:movieId",
-									"host": ["{{moviehub_base_url}}"],
-									"path": ["{{route}}", "movies", ":movieId"],
+									"host": [
+										"{{moviehub_base_url}}"
+									],
+									"path": [
+										"{{route}}",
+										"movies",
+										":movieId"
+									],
 									"variable": [
 										{
 											"key": "movieId",
@@ -876,8 +991,14 @@
 								"header": [],
 								"url": {
 									"raw": "{{moviehub_base_url}}/{{route}}/movies/:movieId",
-									"host": ["{{moviehub_base_url}}"],
-									"path": ["{{route}}", "movies", ":movieId"],
+									"host": [
+										"{{moviehub_base_url}}"
+									],
+									"path": [
+										"{{route}}",
+										"movies",
+										":movieId"
+									],
 									"variable": [
 										{
 											"key": "movieId",
@@ -917,8 +1038,14 @@
 								"header": [],
 								"url": {
 									"raw": "{{moviehub_base_url}}/{{route}}/movies/:movieId",
-									"host": ["{{moviehub_base_url}}"],
-									"path": ["{{route}}", "movies", ":movieId"],
+									"host": [
+										"{{moviehub_base_url}}"
+									],
+									"path": [
+										"{{route}}",
+										"movies",
+										":movieId"
+									],
 									"variable": [
 										{
 											"key": "movieId",
@@ -958,8 +1085,14 @@
 								"header": [],
 								"url": {
 									"raw": "{{moviehub_base_url}}/{{route}}/movies/:movieId",
-									"host": ["{{moviehub_base_url}}"],
-									"path": ["{{route}}", "movies", ":movieId"],
+									"host": [
+										"{{moviehub_base_url}}"
+									],
+									"path": [
+										"{{route}}",
+										"movies",
+										":movieId"
+									],
 									"variable": [
 										{
 											"key": "movieId",
@@ -999,8 +1132,14 @@
 								"header": [],
 								"url": {
 									"raw": "{{moviehub_base_url}}/{{route}}/movies/:movieId",
-									"host": ["{{moviehub_base_url}}"],
-									"path": ["{{route}}", "movies", ":movieId"],
+									"host": [
+										"{{moviehub_base_url}}"
+									],
+									"path": [
+										"{{route}}",
+										"movies",
+										":movieId"
+									],
 									"variable": [
 										{
 											"key": "movieId",
@@ -1040,8 +1179,14 @@
 								"header": [],
 								"url": {
 									"raw": "{{moviehub_base_url}}/{{route}}/movies/:movieId",
-									"host": ["{{moviehub_base_url}}"],
-									"path": ["{{route}}", "movies", ":movieId"],
+									"host": [
+										"{{moviehub_base_url}}"
+									],
+									"path": [
+										"{{route}}",
+										"movies",
+										":movieId"
+									],
 									"variable": [
 										{
 											"key": "movieId",
@@ -1092,8 +1237,14 @@
 						},
 						"url": {
 							"raw": "{{moviehub_base_url}}/{{route}}/movies/:movieId",
-							"host": ["{{moviehub_base_url}}"],
-							"path": ["{{route}}", "movies", ":movieId"],
+							"host": [
+								"{{moviehub_base_url}}"
+							],
+							"path": [
+								"{{route}}",
+								"movies",
+								":movieId"
+							],
 							"variable": [
 								{
 									"key": "movieId",
@@ -1119,8 +1270,14 @@
 								},
 								"url": {
 									"raw": "{{moviehub_base_url}}/{{route}}/movies/:movieId",
-									"host": ["{{moviehub_base_url}}"],
-									"path": ["{{route}}", "movies", ":movieId"],
+									"host": [
+										"{{moviehub_base_url}}"
+									],
+									"path": [
+										"{{route}}",
+										"movies",
+										":movieId"
+									],
 									"variable": [
 										{
 											"key": "movieId",
@@ -1173,8 +1330,14 @@
 								},
 								"url": {
 									"raw": "{{moviehub_base_url}}/{{route}}/movies/:movieId",
-									"host": ["{{moviehub_base_url}}"],
-									"path": ["{{route}}", "movies", ":movieId"],
+									"host": [
+										"{{moviehub_base_url}}"
+									],
+									"path": [
+										"{{route}}",
+										"movies",
+										":movieId"
+									],
 									"variable": [
 										{
 											"key": "movieId",
@@ -1223,8 +1386,14 @@
 								},
 								"url": {
 									"raw": "{{moviehub_base_url}}/{{route}}/movies/:movieId",
-									"host": ["{{moviehub_base_url}}"],
-									"path": ["{{route}}", "movies", ":movieId"],
+									"host": [
+										"{{moviehub_base_url}}"
+									],
+									"path": [
+										"{{route}}",
+										"movies",
+										":movieId"
+									],
 									"variable": [
 										{
 											"key": "movieId",
@@ -1273,8 +1442,14 @@
 								},
 								"url": {
 									"raw": "{{moviehub_base_url}}/{{route}}/movies/:movieId",
-									"host": ["{{moviehub_base_url}}"],
-									"path": ["{{route}}", "movies", ":movieId"],
+									"host": [
+										"{{moviehub_base_url}}"
+									],
+									"path": [
+										"{{route}}",
+										"movies",
+										":movieId"
+									],
 									"variable": [
 										{
 											"key": "movieId",
@@ -1323,8 +1498,14 @@
 								},
 								"url": {
 									"raw": "{{moviehub_base_url}}/{{route}}/movies/:movieId",
-									"host": ["{{moviehub_base_url}}"],
-									"path": ["{{route}}", "movies", ":movieId"],
+									"host": [
+										"{{moviehub_base_url}}"
+									],
+									"path": [
+										"{{route}}",
+										"movies",
+										":movieId"
+									],
 									"variable": [
 										{
 											"key": "movieId",
@@ -1373,8 +1554,14 @@
 								},
 								"url": {
 									"raw": "{{moviehub_base_url}}/{{route}}/movies/:movieId",
-									"host": ["{{moviehub_base_url}}"],
-									"path": ["{{route}}", "movies", ":movieId"],
+									"host": [
+										"{{moviehub_base_url}}"
+									],
+									"path": [
+										"{{route}}",
+										"movies",
+										":movieId"
+									],
 									"variable": [
 										{
 											"key": "movieId",
@@ -1429,7 +1616,9 @@
 						},
 						"url": {
 							"raw": "{{moviehub_base_url}}/{{route}}/movies/:movieId/reviews/:reviewId",
-							"host": ["{{moviehub_base_url}}"],
+							"host": [
+								"{{moviehub_base_url}}"
+							],
 							"path": [
 								"{{route}}",
 								"movies",
@@ -1466,7 +1655,9 @@
 								},
 								"url": {
 									"raw": "{{moviehub_base_url}}/{{route}}/movies/:movieId/reviews/:reviewId",
-									"host": ["{{moviehub_base_url}}"],
+									"host": [
+										"{{moviehub_base_url}}"
+									],
 									"path": [
 										"{{route}}",
 										"movies",
@@ -1520,7 +1711,9 @@
 						},
 						"url": {
 							"raw": "{{moviehub_base_url}}/{{route}}/movies/:movieId/reviews/:reviewId",
-							"host": ["{{moviehub_base_url}}"],
+							"host": [
+								"{{moviehub_base_url}}"
+							],
 							"path": [
 								"{{route}}",
 								"movies",
@@ -1557,7 +1750,9 @@
 								},
 								"url": {
 									"raw": "{{moviehub_base_url}}/{{route}}/movies/:movieId/reviews/:reviewId",
-									"host": ["{{moviehub_base_url}}"],
+									"host": [
+										"{{moviehub_base_url}}"
+									],
 									"path": [
 										"{{route}}",
 										"movies",
@@ -1609,7 +1804,9 @@
 								},
 								"url": {
 									"raw": "{{moviehub_base_url}}/{{route}}/movies/:movieId/reviews/:reviewId",
-									"host": ["{{moviehub_base_url}}"],
+									"host": [
+										"{{moviehub_base_url}}"
+									],
 									"path": [
 										"{{route}}",
 										"movies",
@@ -1663,7 +1860,9 @@
 						},
 						"url": {
 							"raw": "{{moviehub_base_url}}/{{route}}/movies/:movieId/reviews/:reviewId",
-							"host": ["{{moviehub_base_url}}"],
+							"host": [
+								"{{moviehub_base_url}}"
+							],
 							"path": [
 								"{{route}}",
 								"movies",
@@ -1691,7 +1890,9 @@
 								"header": [],
 								"url": {
 									"raw": "{{moviehub_base_url}}/{{route}}/movies/:movieId/reviews/:reviewId",
-									"host": ["{{moviehub_base_url}}"],
+									"host": [
+										"{{moviehub_base_url}}"
+									],
 									"path": [
 										"{{route}}",
 										"movies",
@@ -1743,7 +1944,9 @@
 								},
 								"url": {
 									"raw": "{{moviehub_base_url}}/{{route}}/movies/:movieId/reviews/:reviewId",
-									"host": ["{{moviehub_base_url}}"],
+									"host": [
+										"{{moviehub_base_url}}"
+									],
 									"path": [
 										"{{route}}",
 										"movies",
@@ -1796,8 +1999,14 @@
 						"header": [],
 						"url": {
 							"raw": "{{moviehub_base_url}}/{{route}}/movies/:movieId",
-							"host": ["{{moviehub_base_url}}"],
-							"path": ["{{route}}", "movies", ":movieId"],
+							"host": [
+								"{{moviehub_base_url}}"
+							],
+							"path": [
+								"{{route}}",
+								"movies",
+								":movieId"
+							],
 							"variable": [
 								{
 									"key": "movieId",
@@ -1814,8 +2023,14 @@
 								"header": [],
 								"url": {
 									"raw": "{{moviehub_base_url}}/{{route}}/movies/:movieId",
-									"host": ["{{moviehub_base_url}}"],
-									"path": ["{{route}}", "movies", ":movieId"],
+									"host": [
+										"{{moviehub_base_url}}"
+									],
+									"path": [
+										"{{route}}",
+										"movies",
+										":movieId"
+									],
 									"variable": [
 										{
 											"key": "movieId",
@@ -1859,19 +2074,102 @@
 					"script": {
 						"type": "text/javascript",
 						"packages": {},
-						"exec": [""]
+						"exec": [
+							""
+						]
+					}
+				}
+			]
+		},
+		{
+			"name": "Auth",
+			"item": [
+				{
+					"name": "Login",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.collectionVariables.set('moviehub_auth_token', pm.response.text())"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"username\": \"any_username@test.com\",\n    \"password\": \"any_password\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{moviehub_base_url}}/{{route}}/authenticate",
+							"host": [
+								"{{moviehub_base_url}}"
+							],
+							"path": [
+								"{{route}}",
+								"authenticate"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"auth": {
+				"type": "noauth"
+			},
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"type": "text/javascript",
+						"packages": {},
+						"exec": [
+							"pm.collectionVariables.set(\"route\", \"api/Authentication\");"
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"packages": {},
+						"exec": [
+							""
+						]
 					}
 				}
 			]
 		}
 	],
+	"auth": {
+		"type": "bearer",
+		"bearer": [
+			{
+				"key": "token",
+				"value": "{{moviehub_auth_token}}",
+				"type": "string"
+			}
+		]
+	},
 	"event": [
 		{
 			"listen": "prerequest",
 			"script": {
 				"type": "text/javascript",
 				"packages": {},
-				"exec": [""]
+				"exec": [
+					""
+				]
 			}
 		},
 		{
@@ -1879,7 +2177,9 @@
 			"script": {
 				"type": "text/javascript",
 				"packages": {},
-				"exec": [""]
+				"exec": [
+					""
+				]
 			}
 		}
 	],
@@ -1891,6 +2191,11 @@
 		{
 			"key": "moviehub_base_url",
 			"value": "https://localhost:7190"
+		},
+		{
+			"key": "moviehub_auth_token",
+			"value": "",
+			"type": "string"
 		}
 	]
 }

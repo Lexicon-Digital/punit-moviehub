@@ -1,4 +1,5 @@
 using AutoMapper;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using MovieHub.Models;
 using MovieHub.Models.PrincesTheatre;
@@ -7,6 +8,7 @@ using MovieHub.Services;
 namespace MovieHub.Controllers;
 
 [ApiController]
+[Authorize]
 [Route("api/[controller]")]
 public class MoviesController(IMovieHubRepository repository, IMapper mapper, IPrincesTheatreService princesTheatreService) : ControllerBase
 {
@@ -45,11 +47,8 @@ public class MoviesController(IMovieHubRepository repository, IMapper mapper, IP
     {
         var movieEntity = await _movieHubRepository.GetMovieAsync(movieId, details);
 
-        if (movieEntity == null)
-        {
-            return NotFound();
-        }
-
+        if (movieEntity == null) return NotFound();
+        
         if (details)
         {
             try
@@ -68,15 +67,9 @@ public class MoviesController(IMovieHubRepository repository, IMapper mapper, IP
                     .Movies
                     .FirstOrDefault(movie => movie.ID.MovieId == movieEntity.PrincessTheatreMovieId);
 
-                if (cinemaworldMovie == null)
-                {
-                    throw new ArgumentNullException(nameof(cinemaworldMovie));
-                }
+                if (cinemaworldMovie == null) throw new ArgumentNullException(nameof(cinemaworldMovie));
                 
-                if (filmworldMovie == null)
-                {
-                    throw new ArgumentNullException(nameof(filmworldMovie));
-                }
+                if (filmworldMovie == null) throw new ArgumentNullException(nameof(filmworldMovie));
                 
                 var movie = _mapper.Map<MovieWithPrincesTheatrePricesDto>(movieEntity);
                 
