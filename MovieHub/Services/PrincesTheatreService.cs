@@ -29,9 +29,7 @@ public class PrincesTheatreService(IHttpClientFactory httpClientFactory, IConfig
         
         var content = await response.Content.ReadFromJsonAsync<PrincesTheatreResponse>();
 
-        var cacheEntryOptions = new MemoryCacheEntryOptions().SetAbsoluteExpiration(TimeSpan.FromHours(1));
-
-        memoryCache.Set(cacheKey, content, cacheEntryOptions);
+        memoryCache.Set(cacheKey, content, new MemoryCacheEntryOptions().SetAbsoluteExpiration(TimeSpan.FromHours(1)));
         
         return content;
     }

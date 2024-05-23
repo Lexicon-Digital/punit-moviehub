@@ -69,13 +69,22 @@ dotnet run --launch-profile http
 - **Note**: The postman collection uses `HTTPS` by default.
 - You may need to turn off SSL verification in Postman settings.
 ![Turn off SSL Verification in Postman](screenshot-postman-ssl-verification.png)
-- To run in `HTTP` mode, change the variable `base_url` in **collection variables** (not environment variables) to `http://localhost:5030`. Do not modify any other variable.
+- To run in `HTTP` mode, change the variable `base_url` in **collection variables** (not environment variables) to `http://localhost:5030`.
+- Currently the only supported API version is v1.0. This can be set in the `moviehub_api_version` collection variable.
+- Do not modify the variables that are marked with `Auto-Generated: Do Not Modify`.
 
 ### Some helpful commands
 The commands below help generate a JWT using the CLI to use with Postman or any other request. **Note** this is not necessary because the Postman collection already comes with a Login endpoint.
 ```shell
-dotnet user-jwts create --help # Get help on creating JWTs
-dotnet user-jwts create --issuer https://localhost:7190 --audience MovieHubAPI # Create a JWT token
-dotnet user-jwts key --issuer https://localhost:7190 --audience moviehubapi # Create a signing key
-dotnet user-jwts list # List all the JWT schemes and audiences
+# Get help on creating JWTs
+dotnet user-jwts create --help   
+
+# Create a JWT token
+dotnet user-jwts create --issuer https://localhost:7190 --audience MovieHubAPI
+
+# Create a signing key
+dotnet user-jwts key --issuer https://localhost:7190 --audience MovieHubAPI
+
+# List all the JWT schemes and audiences
+dotnet user-jwts list
 ```

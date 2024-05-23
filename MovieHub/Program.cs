@@ -1,5 +1,8 @@
+using Asp.Versioning;
+using Asp.Versioning.ApiExplorer;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
+using Microsoft.OpenApi.Models;
 using MovieHub.DbContexts;
 using MovieHub.Services;
 using Serilog;
@@ -42,6 +45,54 @@ builder.Services.AddAuthentication("Bearer").AddJwtBearer(options =>
     };
 });
 
+builder.Services.AddApiVersioning(setupAction =>
+{
+    setupAction.ReportApiVersions = true;
+    setupAction.AssumeDefaultVersionWhenUnspecified = true;
+    setupAction.DefaultApiVersion = new ApiVersion(1,0);
+}).AddMvc().AddApiExplorer(setupAction =>
+{
+    setupAction.SubstituteApiVersionInUrl = true;
+});
+
+var apiVersionDescriptionProvider =
+    builder.Services.BuildServiceProvider().GetRequiredService<IApiVersionDescriptionProvider>();
+
+builder.Services.AddSwaggerGen(setupAction =>
+{
+    foreach (var description in apiVersionDescriptionProvider.ApiVersionDescriptions)
+    {
+        setupAction.SwaggerDoc(description.GroupName, new()
+        {
+            Title = "Movie Hub API",
+            Version = description.ApiVersion.ToString(),
+            Description = "Through this API, you can get access to movies and reviews in MovieHub"
+        });
+    }
+    
+    setupAction.AddSecurityDefinition("MovieHubAPIBearerAuth", new()
+    {
+        Type = SecuritySchemeType.Http,
+        Scheme = "Bearer",
+        Description = "Input a valid token to the access the API"
+    });
+    
+    setupAction.AddSecurityRequirement(new OpenApiSecurityRequirement
+    {
+        {
+            new OpenApiSecurityScheme
+            {
+                Reference = new OpenApiReference
+                {
+                    Type = ReferenceType.SecurityScheme,
+                    Id = "MovieHubAPIBearerAuth"
+                }
+            },
+            new List<string>()
+        }
+    });
+});
+
 builder.Services.AddTransient<IPrincesTheatreService, PrincesTheatreService>();
 
 builder.Services.AddHttpClient();
@@ -58,12 +109,17 @@ var app = builder.Build();
 if (app.Environment.IsDevelopment())
 {
     app.UseSwagger();
-    app.UseSwaggerUI(options => options.EnableTryItOutByDefault());
+    app.UseSwaggerUI(setupAction =>
+    {
+        var descriptions = app.DescribeApiVersions();
+        foreach (var description in descriptions)
+        {
+            setupAction.SwaggerEndpoint($"/swagger/{description.GroupName}/swagger.json", description.GroupName.ToUpperInvariant());
+        }
+        setupAction.EnableTryItOutByDefault();
+    });
 }
-else
-{
-    app.UseExceptionHandler();
-}
+else app.UseExceptionHandler();
 
 app.UseHttpsRedirection();
 

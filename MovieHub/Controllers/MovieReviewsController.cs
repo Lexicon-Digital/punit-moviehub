@@ -1,3 +1,5 @@
+using System.Net.Mime;
+using Asp.Versioning;
 using AutoMapper;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.JsonPatch;
@@ -10,7 +12,9 @@ namespace MovieHub.Controllers;
 
 [ApiController]
 [Authorize]
-[Route("api/[controller]")]
+[Route("api/v{version:apiVersion}/[controller]")]
+[ApiVersion(1)]
+[Produces("application/json")]
 public class MovieReviewsController(IMovieHubRepository repository, IMapper mapper) : ControllerBase
 {
     private readonly IMovieHubRepository _movieHubRepository = repository  ?? throw new ArgumentNullException(nameof(repository));

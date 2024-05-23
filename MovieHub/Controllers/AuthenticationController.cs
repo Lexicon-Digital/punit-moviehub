@@ -1,31 +1,35 @@
 using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
+using Asp.Versioning;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.IdentityModel.Tokens;
 
 namespace MovieHub.Controllers;
 
-[Route("api/[controller]")]
+[Route("api/v{version:apiVersion}/[controller]")]
 [ApiController]
+[ApiVersion(1)]
 public class AuthenticationController(IConfiguration configuration) : ControllerBase
 {
     private readonly IConfiguration _configuration = configuration ?? throw new ArgumentNullException(nameof(configuration));
 
-    public class AuthenticationRequestBody
+    public class AuthenticationRequestBody(string? username, string? password)
     {
-        public string? Username { get; set; }
-        public string? Password { get; set; }
+        public string? Username { get; } = username;
+        public string? Password { get; } = password;
     }
 
     private class MovieHubUser(int userId, string username, string firstname, string lastname)
     {
-        public int UserId { get; set; } = userId;
+        public int UserId { get; } = userId;
         public string Username { get; set; } = username;
-        public string FirstName { get; set; } = firstname;
-        public string LastName { get; set; } = lastname;
+        public string FirstName { get; } = firstname;
+        public string LastName { get; } = lastname;
     }
 
     [HttpPost("authenticate")]
+    [Produces("text/plain")]
+    [Consumes("application/json")]
     public ActionResult<string> Authenticate([FromBody] AuthenticationRequestBody requestBody)
     {
         var secretKey = _configuration["Authentication:SecretKey"] ??

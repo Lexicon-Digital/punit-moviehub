@@ -770,6 +770,7 @@
 					]
 				}
 			],
+			"description": "**Movie Routes**\n\nWith these routes, you can:\n\n- Get all movies in the database\n    \n- Paginate movies using query params\n    \n- Search movies by genre, title or a combination of both\n    \n- Get a movie by id\n    \n- Get a movie by id but include additional details (e.g. Princess Theatre prices)",
 			"event": [
 				{
 					"listen": "prerequest",
@@ -777,7 +778,7 @@
 						"type": "text/javascript",
 						"packages": {},
 						"exec": [
-							"pm.collectionVariables.set(\"route\", \"api/Movies\");"
+							"pm.collectionVariables.set(\"route\", \"api/v{{moviehub_api_version}}/Movies\");"
 						]
 					}
 				},
@@ -2058,6 +2059,7 @@
 					]
 				}
 			],
+			"description": "**Movie Reviews Routes**\n\nWith these routes, you can:\n\n- Get a movie review by id\n    \n- Get all the movie reviews for a particular movie\n    \n- Create a new review for a movie\n    \n- Update an existing review for a movie (PUT request)\n    \n- Partially update an existing review for a movie (PATCH request)\n    \n- Delete a review by id\n    \n- Delete all reviews for a particular movie",
 			"event": [
 				{
 					"listen": "prerequest",
@@ -2065,7 +2067,7 @@
 						"type": "text/javascript",
 						"packages": {},
 						"exec": [
-							"pm.collectionVariables.set(\"route\", \"api/MovieReviews\");"
+							"pm.collectionVariables.set(\"route\", \"api/v{{moviehub_api_version}}/MovieReviews\");"
 						]
 					}
 				},
@@ -2124,6 +2126,7 @@
 					"response": []
 				}
 			],
+			"description": "**Authentication routes**\n\nWith these routes, you can:\n\n- Login with a username and password in a JSON body",
 			"auth": {
 				"type": "noauth"
 			},
@@ -2134,7 +2137,7 @@
 						"type": "text/javascript",
 						"packages": {},
 						"exec": [
-							"pm.collectionVariables.set(\"route\", \"api/Authentication\");"
+							"pm.collectionVariables.set(\"route\", \"api/v{{moviehub_api_version}}/Authentication\");"
 						]
 					}
 				},
@@ -2185,16 +2188,21 @@
 	],
 	"variable": [
 		{
-			"key": "route",
-			"value": "Auto-Generated: Do Not Modify"
-		},
-		{
 			"key": "moviehub_base_url",
 			"value": "https://localhost:7190"
 		},
 		{
+			"key": "moviehub_api_version",
+			"value": "1",
+			"type": "string"
+		},
+		{
+			"key": "route",
+			"value": "Auto-Generated: Do Not Modify"
+		},
+		{
 			"key": "moviehub_auth_token",
-			"value": "",
+			"value": "Auto-Generated: Do Not Modify",
 			"type": "string"
 		}
 	]
