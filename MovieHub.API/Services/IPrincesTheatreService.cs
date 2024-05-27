@@ -1,4 +1,3 @@
-using MovieHub.Models;
 using MovieHub.Models.PrincesTheatre;
 
 namespace MovieHub.Services;

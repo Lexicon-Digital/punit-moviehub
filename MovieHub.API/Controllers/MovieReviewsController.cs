@@ -1,4 +1,3 @@
-using System.Net.Mime;
 using Asp.Versioning;
 using AutoMapper;
 using Microsoft.AspNetCore.Authorization;
@@ -66,7 +65,7 @@ public class MovieReviewsController(IMovieHubRepository repository, IMapper mapp
         
         return CreatedAtRoute("GetReviewById", new
         {
-            id = createdMovieReview.Id
+            reviewId = createdMovieReview.Id
         }, createdMovieReview);
     }
     

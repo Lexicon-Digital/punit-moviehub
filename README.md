@@ -26,7 +26,7 @@ dotnet restore
 ```
 
 ### Add configuration
-Add your Princess Theatre API key to the [MovieHub/appsettings.json](MovieHub/appsettings.json) configuration file in the `PrincessTheatre.APIKey` property, as shown below.
+Add your Princess Theatre API key to the [MovieHub.API/appsettings.json](MovieHub.API/appsettings.json) configuration file in the `PrincessTheatre.APIKey` property, as shown below.
 
 ![Add Princess Theatre API Key](screenshot-app-settings.png)
 
@@ -35,18 +35,18 @@ Add your Princess Theatre API key to the [MovieHub/appsettings.json](MovieHub/ap
 The API uses SQLite database, which will be automatically generated upon running migrations.
 
 ### Run migrations
-To run migrations in the [./MovieHub/Migrations](./MovieHub/Migrations) folder, use the command:
+To run migrations in the [./MovieHub.API/Migrations](./MovieHub.API/Migrations) folder, use the command:
 
 ```shell
 dotnet ef database update
 ```
 
 ### Seeding the database
-Before running the application, copy the [moviehub-db-data-seed.sql](https://github.com/Lexicon-Digital/bench-dotnet-training/blob/master/moviehub-api-implementation-task/db/moviehub-db-data-seed.sql) file into the [./MovieHub/Scripts](./MovieHub/Scripts) folder.
+Before running the application, copy the [moviehub-db-data-seed.sql](https://github.com/Lexicon-Digital/bench-dotnet-training/blob/master/moviehub-api-implementation-task/db/moviehub-db-data-seed.sql) file into the [./MovieHub.API/Scripts](./MovieHub.API/Scripts) folder.
 There is no need to manually seed the database. The database will be automatically seeded using the script upon running the application for the first time.
 
 ### Run the application
-Run the application using the command (running from the `./MovieHub` directory, **not** the base directory)
+Run the application using the command (running from the `./MovieHub.API` directory)
 ```shell
 dotnet run --launch-profile https
 ```
@@ -58,7 +58,7 @@ dotnet run --launch-profile http
 
 
 ### Testing with Swagger
-- Go to [https://localhost:7190/swagger](https://localhost:7190/swagger) or [https://localhost:5030/swagger](https://localhost:5030/swagger) (port numbers specified in [launchSettings.json](./MovieHub/Properties/launchSettings.json)).
+- Go to [https://localhost:7190/swagger](https://localhost:7190/swagger) or [https://localhost:5030/swagger](https://localhost:5030/swagger) (port numbers specified in [launchSettings.json](./MovieHub.API/Properties/launchSettings.json)).
 - Authenticate using the `/api/Authentication/authenticate` endpoint (any username/password will do).
 - Test each endpoint.
 

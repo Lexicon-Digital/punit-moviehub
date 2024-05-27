@@ -13,23 +13,23 @@ public class MovieCinema(
 ) {
     [Key]
     [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
-    public int Id { get; set; }
+    public int Id { get; init; }
 
     [Required]
     [Precision(3)]
-    public DateTime ShowTime { get; set; } = showTime;
+    public DateTime ShowTime { get; init; } = showTime;
     
     [Required]
     [Precision(4,2)]
-    public decimal TicketPrice { get; set; } = ticketPrice;
+    public decimal TicketPrice { get; init; } = ticketPrice;
     
     [ForeignKey("MovieId")]
-    public Movie? Movie { get; set; }
+    public Movie? Movie { get; init; }
 
-    public int MovieId { get; set; } = movieId;
+    public int MovieId { get; init; } = movieId;
     
     [ForeignKey("CinemaId")]
-    public Cinema? Cinema { get; set; }
+    public Cinema? Cinema { get; init; }
 
-    public int CinemaId { get; set; } = cinemaId;
+    public int CinemaId { get; init; } = cinemaId;
 }

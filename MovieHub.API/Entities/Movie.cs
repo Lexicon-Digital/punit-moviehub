@@ -17,40 +17,40 @@ public class Movie(
 ) {
     [Key]
     [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
-    public int Id { get; set; }
+    public int Id { get; init; }
     
     [Required]
     [MaxLength(128)]
-    public string Title { get; set; } = title;
+    public string Title { get; init; } = title;
 
     [Required]
     [Precision(3)]
-    public DateTime ReleaseDate { get; set; } = releaseDate;
+    public DateTime ReleaseDate { get; init; } = releaseDate;
 
     [Required]
     [MaxLength(64)]
-    public string Genre { get; set; } = genre;
+    public string Genre { get; init; } = genre;
     
     [Required]
-    public int RunTime { get; set; } = runTime;
+    public int RunTime { get; init; } = runTime;
     
     [Required]
-    [MaxLength]
-    public string Synopsis { get; set; } = synopsis;
+    [MaxLength(1024)]
+    public string Synopsis { get; init; } = synopsis;
     
     [Required]
     [MaxLength(64)]
-    public string Director { get; set; } = director;
+    public string Director { get; init; } = director;
     
     [Required]
     [MaxLength(8)]
-    public string Rating { get; set; } = rating;
+    public string Rating { get; init; } = rating;
     
     [Required]
     [MaxLength(16)]
-    public string PrincessTheatreMovieId { get; set; } = princessTheatreMovieId;
+    public string PrincessTheatreMovieId { get; init; } = princessTheatreMovieId;
 
-    public ICollection<MovieCinema> MovieCinemas { get; set; } = new List<MovieCinema>();
+    public ICollection<MovieCinema> MovieCinemas { get; init; } = new List<MovieCinema>();
     
-    public ICollection<MovieReview> MovieReviews { get; set; } = new List<MovieReview>();
+    public ICollection<MovieReview> MovieReviews { get; init; } = new List<MovieReview>();
 }

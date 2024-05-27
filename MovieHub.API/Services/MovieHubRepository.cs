@@ -1,5 +1,4 @@
 using Microsoft.EntityFrameworkCore;
-using Microsoft.EntityFrameworkCore.Internal;
 using MovieHub.DbContexts;
 using MovieHub.Entities;
 using MovieHub.Models;

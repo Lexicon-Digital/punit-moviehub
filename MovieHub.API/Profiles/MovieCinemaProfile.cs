@@ -1,6 +1,8 @@
 using AutoMapper;
 using MovieHub.Entities;
-using MovieHub.Models;
+using MovieHub.Models.MovieCinema;
+
+namespace MovieHub.Profiles;
 
 public class MovieCinemaProfile : Profile
 {
@@ -11,7 +13,7 @@ public class MovieCinemaProfile : Profile
                 destination => destination.CinemaName, 
                 options => options.MapFrom(
                     source => source.Cinema!.Name
-                    )
-                );
+                )
+            );
     }
 }

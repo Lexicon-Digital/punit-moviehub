@@ -2,7 +2,7 @@ using MovieHub.Models;
 
 namespace MovieHub.Utils;
 
-public class Average
+public static class Average
 {
     public static decimal GetAverage(ICollection<MovieReviewDto> movieReviews)
     {

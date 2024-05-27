@@ -5,6 +5,7 @@
         <Nullable>enable</Nullable>
         <ImplicitUsings>enable</ImplicitUsings>
       <UserSecretsId>804cea31-d64d-4abd-992b-bcc76a9fae24</UserSecretsId>
+      <RootNamespace>MovieHub</RootNamespace>
   </PropertyGroup>
 
     <ItemGroup>
