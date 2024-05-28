@@ -1,6 +1,9 @@
 using AutoMapper;
 using MovieHub.Entities;
 using MovieHub.Models;
+using MovieHub.Models.Movie;
+
+namespace MovieHub.Profiles;
 
 public class MovieProfile : Profile
 {

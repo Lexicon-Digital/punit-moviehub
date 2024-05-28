@@ -1,4 +1,4 @@
-using MovieHub.Models;
+using MovieHub.Models.MovieReview;
 
 namespace MovieHub.Utils;
 

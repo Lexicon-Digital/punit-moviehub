@@ -1,5 +1,6 @@
 using MovieHub.Entities;
 using MovieHub.Models;
+using MovieHub.Models.MovieReview;
 
 namespace MovieHub.Tests.TestFactory;
 
@@ -53,7 +54,7 @@ public static class MovieReviewsFactory
     {
         return failed ? null : new MovieReviewUpdateDto
         {
-            Score = review.Score,
+            Score = review.Score
         };
     }
     

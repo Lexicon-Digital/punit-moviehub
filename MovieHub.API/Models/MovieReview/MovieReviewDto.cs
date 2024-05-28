@@ -1,5 +1,4 @@
-using MovieHub.Entities;
-namespace MovieHub.Models;
+namespace MovieHub.Models.MovieReview;
 
 public class MovieReviewDto
 {

@@ -5,6 +5,7 @@ using Microsoft.AspNetCore.Mvc;
 using Moq;
 using MovieHub.Controllers;
 using MovieHub.Models;
+using MovieHub.Models.Movie;
 using MovieHub.Models.PrincesTheatre;
 using MovieHub.Services;
 using MovieHub.Tests.TestFactory;

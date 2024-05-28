@@ -1,6 +1,6 @@
 using System.ComponentModel.DataAnnotations;
 
-namespace MovieHub.Models;
+namespace MovieHub.Models.MovieReview;
 
 public class MovieReviewCreationDto
 {

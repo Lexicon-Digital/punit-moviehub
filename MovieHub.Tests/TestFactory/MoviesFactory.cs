@@ -1,5 +1,6 @@
 using MovieHub.Entities;
 using MovieHub.Models;
+using MovieHub.Models.Movie;
 using MovieHub.Models.PrincesTheatre;
 
 namespace MovieHub.Tests.TestFactory;
@@ -110,7 +111,7 @@ public static class MoviesFactory
         }
     };
     
-    private static readonly IEnumerable<MovieWithoutDetailsDto> MockMoviesWithoutDetails = new List<MovieWithoutDetailsDto>()
+    private static readonly IEnumerable<MovieWithoutDetailsDto> MockMoviesWithoutDetails = new List<MovieWithoutDetailsDto>
     {
         new()
         {

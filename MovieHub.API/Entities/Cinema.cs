@@ -10,15 +10,15 @@ public class Cinema(
 ) {
     [Key]
     [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
-    public int Id { get; set; }
+    public int Id { get; init; }
     
     [Required]
     [MaxLength(128)]
-    public string Name { get; set; } = name;
+    public string Name { get; init; } = name;
     
     [Required]
-    [MaxLength]
+    [MaxLength(512)]
     public string Location { get; set; } = location;
 
-    public ICollection<MovieCinema> MovieCinemas { get; set; } = new List<MovieCinema>();
+    public ICollection<MovieCinema> MovieCinemas { get; init; } = new List<MovieCinema>();
 }

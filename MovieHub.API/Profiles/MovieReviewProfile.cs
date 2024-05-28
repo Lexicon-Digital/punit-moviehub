@@ -1,6 +1,7 @@
 using AutoMapper;
 using MovieHub.Entities;
 using MovieHub.Models;
+using MovieHub.Models.MovieReview;
 
 namespace MovieHub.Profiles;
 

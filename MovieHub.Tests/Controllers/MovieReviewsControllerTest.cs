@@ -10,6 +10,7 @@ using Moq;
 using MovieHub.Controllers;
 using MovieHub.Entities;
 using MovieHub.Models;
+using MovieHub.Models.MovieReview;
 using MovieHub.Services;
 using MovieHub.Tests.TestFactory;
 
@@ -185,7 +186,7 @@ public class MovieReviewsControllerTest
         const int movieId = 1;
         const int reviewId = 1;
 
-        var patchDocument = new JsonPatchDocument<MovieReviewUpdateDto>()
+        var patchDocument = new JsonPatchDocument<MovieReviewUpdateDto>
         {
             Operations =
             {

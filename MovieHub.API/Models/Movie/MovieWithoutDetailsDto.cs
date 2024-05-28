@@ -1,6 +1,7 @@
+using MovieHub.Models.MovieReview;
 using Newtonsoft.Json;
 
-namespace MovieHub.Models;
+namespace MovieHub.Models.Movie;
 
 public class MovieWithoutDetailsDto
 {
