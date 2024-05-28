@@ -29,7 +29,7 @@ public class PrincesTheatreDto
                     _ => throw new ArgumentOutOfRangeException(nameof(provider))
                 };
 
-                return new Id()
+                return new Id
                 {
                     ProviderAcronym = ProviderAcronym,
                     Provider = provider,

@@ -81,7 +81,7 @@ public class MoviesController(IMovieHubRepository repository, IMapper mapper, IP
                 
                 return Ok(movie);
             }
-            catch (Exception ex)
+            catch
             {
                 var movie = _mapper.Map<MovieDto>(movieEntity);
                 return Ok(movie);

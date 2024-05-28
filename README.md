@@ -73,6 +73,14 @@ dotnet run --launch-profile http
 - Currently the only supported API version is v1.0. This can be set in the `moviehub_api_version` collection variable.
 - Do not modify the variables that are marked with `Auto-Generated: Do Not Modify`.
 
+### Testing with XUnit
+
+Run the following command in the command line:
+
+```shell
+dotnet test
+```
+
 ### Some helpful commands
 The commands below help generate a JWT using the CLI to use with Postman or any other request. **Note** this is not necessary because the Postman collection already comes with a Login endpoint.
 ```shell
@@ -87,4 +95,7 @@ dotnet user-jwts key --issuer https://localhost:7190 --audience MovieHubAPI
 
 # List all the JWT schemes and audiences
 dotnet user-jwts list
+
+# Create test project in MovieHub.Tests
+dotnet new xunit
 ```

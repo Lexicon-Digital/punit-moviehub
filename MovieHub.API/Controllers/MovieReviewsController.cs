@@ -138,7 +138,7 @@ public class MovieReviewsController(IMovieHubRepository repository, IMapper mapp
     }
     
     [HttpDelete("movies/{movieId:int}")]
-    public async Task<ActionResult> DeleteAllReviewsForMovie(int movieId, int reviewId)
+    public async Task<ActionResult> DeleteAllReviewsForMovie(int movieId)
     {
         var movieExists = await _movieHubRepository.MovieExistsAsync(movieId);
     
