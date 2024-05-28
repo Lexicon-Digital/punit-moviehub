@@ -65,13 +65,48 @@ public class PrincesTheatreServiceTest
         };
         
         SetupSendAsync(responseMessage);
-        SetupMemoryCacheGet();
-        SetupMemoryCacheSet();
+        SetupMemoryCache(true);
         
         var response = await _service.GetPrincesTheatreMovies(MovieProvider.Filmworld);
 
         Assert.NotNull(response);
         Assert.Equal("Film World", response.Provider);
+    }
+    
+    [Fact]
+    public async Task GetPrincesTheatreMovies_Retries_OnTransientError()
+    {
+        var princesTheatreResponse = _cacheStore["GetPrincesTheatreMovies/Filmworld"];
+        
+        var transientResponse = new HttpResponseMessage(HttpStatusCode.InternalServerError);
+        var responseContent = JsonConvert.SerializeObject(princesTheatreResponse);
+        var responseMessage = new HttpResponseMessage(HttpStatusCode.OK)
+        {
+            Content = new StringContent(responseContent, Encoding.UTF8, "application/json")
+        };
+        
+        _mockHttpMessageHandler.Protected()
+            .SetupSequence<Task<HttpResponseMessage>>(
+                "SendAsync",
+                ItExpr.IsAny<HttpRequestMessage>(),
+                ItExpr.IsAny<CancellationToken>()
+            )
+            .ReturnsAsync(transientResponse)
+            .ReturnsAsync(transientResponse)
+            .ReturnsAsync(responseMessage);
+        
+        SetupMemoryCache(false);
+        
+        var response = await _service.GetPrincesTheatreMovies(MovieProvider.Filmworld);
+
+        Assert.NotNull(response);
+        Assert.Equal("Film World", response.Provider);
+        _mockHttpMessageHandler.Protected().Verify(
+            "SendAsync",
+            Times.Exactly(3),
+            ItExpr.IsAny<HttpRequestMessage>(),
+            ItExpr.IsAny<CancellationToken>()
+        );
     }
     
     private class MockHttpClientFactory(HttpClient client) : IHttpClientFactory
@@ -84,7 +119,6 @@ public class PrincesTheatreServiceTest
 
     private void SetupSendAsync(HttpResponseMessage responseMessage)
     {
-        
         _mockHttpMessageHandler.Protected()
             .Setup<Task<HttpResponseMessage>>(
                 "SendAsync",
@@ -94,9 +128,9 @@ public class PrincesTheatreServiceTest
             .ReturnsAsync(responseMessage);
     }
 
-    private void SetupMemoryCacheGet()
+    private void SetupMemoryCache(bool success)
     {
-        _mockMemoryCache.Setup(x => x.CreateEntry(It.IsAny<object>())).Returns((object key) =>
+        _mockMemoryCache.Setup(cache => cache.CreateEntry(It.IsAny<object>())).Returns((object key) =>
         {
             var mockEntry = new Mock<ICacheEntry>();
             mockEntry.SetupAllProperties();
@@ -105,15 +139,12 @@ public class PrincesTheatreServiceTest
 
             return mockEntry.Object;
         });
-    }
-
-    private void SetupMemoryCacheSet()
-    {
+        
         _mockMemoryCache.Setup(cache => cache.TryGetValue(It.IsAny<object>(), out It.Ref<object>.IsAny!))
             .Returns((object key, out object value) =>
             {
-                value = (_cacheStore.TryGetValue(key, out var cachedValue) ? cachedValue : null) ?? "";
-                return true;
+                value = (_cacheStore.TryGetValue(key, out var cachedValue) ? cachedValue : null)!;
+                return success;
             });
     }
 }
