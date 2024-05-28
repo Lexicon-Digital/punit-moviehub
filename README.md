@@ -32,6 +32,8 @@ Add your Princess Theatre API key to the [MovieHub.API/appsettings.json](MovieHu
 
 
 ### Configure the database
+Before running the application, copy the [moviehub-db-data-seed.sql](https://github.com/Lexicon-Digital/bench-dotnet-training/blob/master/moviehub-api-implementation-task/db/moviehub-db-data-seed.sql) file into the [./MovieHub.API/Scripts](./MovieHub.API/Scripts) folder.
+
 The API uses SQLite database, which will be automatically generated upon running migrations.
 
 ### Run migrations
@@ -42,7 +44,6 @@ dotnet ef database update
 ```
 
 ### Seeding the database
-Before running the application, copy the [moviehub-db-data-seed.sql](https://github.com/Lexicon-Digital/bench-dotnet-training/blob/master/moviehub-api-implementation-task/db/moviehub-db-data-seed.sql) file into the [./MovieHub.API/Scripts](./MovieHub.API/Scripts) folder.
 There is no need to manually seed the database. The database will be automatically seeded using the script upon running the application for the first time.
 
 ### Run the application
@@ -95,7 +96,4 @@ dotnet user-jwts key --issuer https://localhost:7190 --audience MovieHubAPI
 
 # List all the JWT schemes and audiences
 dotnet user-jwts list
-
-# Create test project in MovieHub.Tests
-dotnet new xunit
 ```
