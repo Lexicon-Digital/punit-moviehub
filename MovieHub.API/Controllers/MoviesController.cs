@@ -2,7 +2,6 @@ using Asp.Versioning;
 using AutoMapper;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
-using MovieHub.Models;
 using MovieHub.Models.Movie;
 using MovieHub.Models.PrincesTheatre;
 using MovieHub.Services;

@@ -15,7 +15,7 @@ Start by cloning the repository to your local machine. To do this, run:
 
 ```shell
 git clone https://github.com/PunitDharmadhikariLexicon/MovieHub
-cd MovieHub/MovieHub
+cd MovieHub/MovieHub.API
 ```
 
 ### Install dependencies

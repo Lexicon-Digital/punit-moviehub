@@ -9,7 +9,6 @@ using Microsoft.AspNetCore.Mvc.ModelBinding.Validation;
 using Moq;
 using MovieHub.Controllers;
 using MovieHub.Entities;
-using MovieHub.Models;
 using MovieHub.Models.MovieReview;
 using MovieHub.Services;
 using MovieHub.Tests.TestFactory;
@@ -77,6 +76,18 @@ public class MovieReviewsControllerTest
         var returnedMovieReviews = Assert.IsType<List<MovieReviewDto>>(okResult.Value);
         
         Assert.Equal(2, returnedMovieReviews.Count);
+    }
+    
+    [Fact]
+    public async void GetReviewsByMovie_Returns_NotFound_Result_When_Movie_Not_Found()
+    {
+        const int movieId = 9999;
+        
+        _mockRepository.Setup(repository => repository.MovieExistsAsync(movieId)).ReturnsAsync(false);
+
+        var result = await _movieReviewsController.GetReviewsByMovie(movieId);
+    
+        Assert.IsType<NotFoundResult>(result.Result);
     }
     
     [Fact]

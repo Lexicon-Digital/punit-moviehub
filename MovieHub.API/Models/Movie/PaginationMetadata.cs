@@ -1,4 +1,4 @@
-namespace MovieHub.Models;
+namespace MovieHub.Models.Movie;
 
 public class PaginationMetadata(int totalItemCount, int pageSize)
 {

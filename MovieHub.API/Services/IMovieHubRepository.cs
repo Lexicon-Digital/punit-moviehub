@@ -1,5 +1,5 @@
 using MovieHub.Entities;
-using MovieHub.Models;
+using MovieHub.Models.Movie;
 
 namespace MovieHub.Services;
 
