@@ -21,9 +21,9 @@ public static class MovieReviewsFactory
         return MockMovieReviewsDto;
     }
     
-    public static MovieReviewDto? GetMockMovieReviewDto(bool nullResponse = false)
+    public static MovieReviewDto? GetMockMovieReviewDto(int reviewId)
     {
-        return nullResponse ? null : MockMovieReviewsDto.First();
+        return MockMovieReviewsDto.FirstOrDefault(review => review.Id == reviewId);
     }
 
     public static MovieReview? CreateReviewForMovie(int movieId, MovieReviewCreationDto review, bool failed = false)

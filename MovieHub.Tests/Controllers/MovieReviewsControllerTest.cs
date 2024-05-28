@@ -95,7 +95,7 @@ public class MovieReviewsControllerTest
     {
         const int reviewId = 1;
         var movieReviewEntity = MovieReviewsFactory.GetMockMovieReviewEntity(reviewId);
-        var movieReviewDto = MovieReviewsFactory.GetMockMovieReviewDto();
+        var movieReviewDto = MovieReviewsFactory.GetMockMovieReviewDto(reviewId);
     
         _mockRepository.Setup(repository => repository.GetReviewAsync(reviewId))
             .ReturnsAsync(movieReviewEntity);
