@@ -18,6 +18,8 @@
 *.db
 *.db-*
 
+MovieHub.API/Scripts/*.sql
+
 # User-specific files (MonoDevelop/Xamarin Studio)
 *.userprefs
 

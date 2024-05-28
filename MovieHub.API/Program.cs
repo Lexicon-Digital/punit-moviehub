@@ -4,6 +4,7 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi.Models;
 using MovieHub.DbContexts;
+using MovieHub.Scripts;
 using MovieHub.Services;
 using Serilog;
 
@@ -55,8 +56,10 @@ builder.Services.AddApiVersioning(setupAction =>
     setupAction.SubstituteApiVersionInUrl = true;
 });
 
-var apiVersionDescriptionProvider =
-    builder.Services.BuildServiceProvider().GetRequiredService<IApiVersionDescriptionProvider>();
+var apiVersionDescriptionProvider = builder
+    .Services
+    .BuildServiceProvider()
+    .GetRequiredService<IApiVersionDescriptionProvider>();
 
 builder.Services.AddSwaggerGen(setupAction =>
 {
@@ -134,30 +137,6 @@ app.UseEndpoints(endpoints =>
     endpoints.MapControllers();
 });
 
-SeedDatabase(app);
+DbSetup.SeedDatabase(app);
 
 app.Run();
-
-return;
-
-
-static void SeedDatabase(IHost app)
-{
-    using var scope = app.Services.CreateScope();
-    var services = scope.ServiceProvider;
-    var context = services.GetRequiredService<MovieHubContext>();
-    context.Database.EnsureCreated();
-
-    if (context.Movies.Any() || context.Cinemas.Any() || context.MovieCinemas.Any()) return;
-
-    var sqlFile = Path.Combine(
-        Directory.GetCurrentDirectory(),
-        "Scripts",
-        "moviehub-db-data-seed.sql"
-    );
-
-    if (!File.Exists(sqlFile)) throw new FileNotFoundException(sqlFile);
-    
-    var sql = File.ReadAllText(sqlFile);
-    context.Database.ExecuteSqlRaw(sql);
-}
