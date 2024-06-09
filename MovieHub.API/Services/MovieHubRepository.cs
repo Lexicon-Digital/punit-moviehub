@@ -92,6 +92,34 @@ public class MovieHubRepository(MovieHubContext context) : IMovieHubRepository
         return await _context.Movies.AnyAsync(movie => movie.Id == id);
     }
 
+    public async Task<Dictionary<string, object>?> RunQuery(string query)
+    {
+        var command = _context.Database.GetDbConnection().CreateCommand();
+        command.CommandText = query;
+        await _context.Database.OpenConnectionAsync();
+
+        await using var result = await command.ExecuteReaderAsync();
+        
+        var entities = new List<Dictionary<string, object?>>();
+        while (await result.ReadAsync())
+        {
+            var entity = new Dictionary<string, object?>();
+            for (var i = 0; i < result.FieldCount; i++)
+            {
+                entity.Add(result.GetName(i), result.IsDBNull(i) ? null : result.GetValue(i));
+            }
+            entities.Add(entity);
+        }
+
+        var finalResult = new Dictionary<string, object>
+        {
+            { "_query", query },
+            { "data", entities }
+        };
+
+        return finalResult;
+    }
+
     public async Task<bool> SaveChangesAsync()
     {
         return await _context.SaveChangesAsync() >= 0;

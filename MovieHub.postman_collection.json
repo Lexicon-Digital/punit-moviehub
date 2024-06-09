@@ -1930,6 +1930,305 @@
           }
         }
       ]
+    },
+    {
+      "name": "Chatbot",
+      "item": [
+        {
+          "name": "Query",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "exec": [""],
+                "type": "text/javascript",
+                "packages": {}
+              }
+            }
+          ],
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"query\": \"Which movie has the highest reviews?\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{moviehub_base_url}}/{{route}}",
+              "host": ["{{moviehub_base_url}}"],
+              "path": ["{{route}}"]
+            }
+          },
+          "response": [
+            {
+              "name": "Query - By Genre",
+              "originalRequest": {
+                "method": "POST",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n    \"query\": \"Find all movies that are of the fantasy genre. Be mindful that genres are stored as a single string separated by commas\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{moviehub_base_url}}/{{route}}",
+                  "host": ["{{moviehub_base_url}}"],
+                  "path": ["{{route}}"]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Content-Length",
+                  "value": "5270"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "Date",
+                  "value": "Sun, 09 Jun 2024 11:47:32 GMT"
+                },
+                {
+                  "key": "Server",
+                  "value": "Kestrel"
+                },
+                {
+                  "key": "api-supported-versions",
+                  "value": "1.0"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"_query\": \"SELECT * FROM Movie WHERE Genre LIKE '%Fantasy%';\",\n    \"data\": [\n        {\n            \"Id\": 1,\n            \"Title\": \"Star Wars: The Phantom Menace (Episode I)\",\n            \"ReleaseDate\": \"1999-05-19\",\n            \"Genre\": \"Action, Adventure, Fantasy, Live Action, Science Fiction\",\n            \"RunTime\": 8160,\n            \"Synopsis\": \"Experience the heroic action and unforgettable adventures of Star Wars: Episode I - The Phantom Menace. See the first fateful steps in the journey of Anakin Skywalker. Stranded on the desert planet Tatooine after rescuing young Queen Amidala from the impending invasion of Naboo, Jedi apprentice Obi-Wan Kenobi and his Jedi Master Qui-Gon Jinn discover nine-year-old Anakin, who is unusually strong in the Force. Anakin wins a thrilling Podrace and with it his freedom as he leaves his home to be trained as a Jedi. The heroes return to Naboo where Anakin and the Queen face massive invasion forces while the two Jedi contend with a deadly foe named Darth Maul. Only then do they realize the invasion is merely the first step in a sinister scheme by the re-emergent forces of darkness known as the Sith.\",\n            \"Director\": \"George Lucas\",\n            \"Rating\": \"PG\",\n            \"PrincessTheatreMovieId\": \"0120915\"\n        },\n        {\n            \"Id\": 2,\n            \"Title\": \"Star Wars: Attack of the Clones (Episode II)\",\n            \"ReleaseDate\": \"2002-05-16\",\n            \"Genre\": \"Action, Adventure, Fantasy, Live Action, Science Fiction\",\n            \"RunTime\": 8520,\n            \"Synopsis\": \"Watch the seeds of Anakin Skywalker's transformation take root in Star Wars: Episode II - Attack of the Clones. Ten years after the invasion of Naboo, the galaxy is on the brink of civil war. Under the leadership of a renegade Jedi named Count Dooku, thousands of solar systems threaten to break away from the Galactic Republic. When an assassination attempt is made on Senator Padmé Amidala, the former Queen of Naboo, twenty-year-old Jedi apprentice Anakin Skywalker is assigned to protect her. In the course of his mission, Anakin discovers his love for Padmé as well as his own darker side. Soon, Anakin, Padmé, and Obi-Wan Kenobi are drawn into the heart of the Separatist movement and the beginning of the Clone Wars.\",\n            \"Director\": \"George Lucas\",\n            \"Rating\": \"PG-13\",\n            \"PrincessTheatreMovieId\": \"0121765\"\n        },\n        {\n            \"Id\": 3,\n            \"Title\": \"Star Wars: Revenge of the Sith (Episode III)\",\n            \"ReleaseDate\": \"2005-05-19\",\n            \"Genre\": \"Action, Adventure, Fantasy, Live Action, Science Fiction\",\n            \"RunTime\": 8399,\n            \"Synopsis\": \"Discover the true power of the dark side in Star Wars: Episode III - Revenge of the Sith. Years after the onset of the Clone Wars, the noble Jedi Knights lead a massive clone army into a galaxy-wide battle against the Separatists. When the sinister Sith unveil a thousand-year-old plot to rule the galaxy, the Republic crumbles and from its ashes rises the evil Galactic Empire. Jedi hero Anakin Skywalker is seduced by the dark side of the Force to become the Emperor's new apprentice – Darth Vader. The Jedi are decimated, as Obi-Wan Kenobi and Jedi Master Yoda are forced into hiding.\",\n            \"Director\": \"George Lucas\",\n            \"Rating\": \"PG-13\",\n            \"PrincessTheatreMovieId\": \"0121766\"\n        },\n        {\n            \"Id\": 4,\n            \"Title\": \"Star Wars: A New Hope (Episode IV)\",\n            \"ReleaseDate\": \"1977-10-27\",\n            \"Genre\": \"Action, Adventure, Fantasy, Live Action, Science Fiction\",\n            \"RunTime\": 6300,\n            \"Synopsis\": \"Luke Skywalker begins a journey that will change the galaxy in Star Wars: Episode IV - A New Hope. Nineteen years after the formation of the Empire, Luke is thrust into the struggle of the Rebel Alliance when he meets Obi-Wan Kenobi, who has lived for years in seclusion on the desert planet of Tatooine. Obi-Wan begins Luke's Jedi training as Luke joins him on a daring mission to rescue the beautiful Rebel leader Princess Leia from the clutches of Darth Vader and the evil Empire.\",\n            \"Director\": \"George Lucas\",\n            \"Rating\": \"PG\",\n            \"PrincessTheatreMovieId\": \"0076759\"\n        },\n        {\n            \"Id\": 5,\n            \"Title\": \"Star Wars: The Empire Strikes Back (Episode V)\",\n            \"ReleaseDate\": \"1980-08-07\",\n            \"Genre\": \"Action, Adventure, Fantasy, Live Action, Science Fiction\",\n            \"RunTime\": 7440,\n            \"Synopsis\": \"After the destruction of the Death Star, Imperial forces continue to pursue the Rebels. After the Rebellion's defeat on the ice planet Hoth, Luke journeys to the planet Dagobah to train with Jedi Master Yoda, who has lived in hiding since the fall of the Republic. In an attempt to convert Luke to the dark side, Darth Vader lures young Skywalker into a trap in the Cloud City of Bespin.\",\n            \"Director\": \"George Lucas\",\n            \"Rating\": \"PG\",\n            \"PrincessTheatreMovieId\": \"0080684\"\n        },\n        {\n            \"Id\": 6,\n            \"Title\": \"Star Wars: Return of the Jedi (Episode VI)\",\n            \"ReleaseDate\": \"1983-10-27\",\n            \"Genre\": \"Action, Adventure, Fantasy, Live Action, Science Fiction\",\n            \"RunTime\": 7859,\n            \"Synopsis\": \"After a quick trip back to Tatooine, Luke Skywalker, Leia Organa, and Han Solo are reunited and join up with the amassing rebel fleet to take down the evil Empire once and for all. But the Empire is plotting too. Emperor Palpatine commands his troops aboard his newly consturcted Death Star stationed above the forest moon of Endor, where the rebels - and some unlikely furry friends - make their stand against the Empire. While Luke Skywalker confronts Darth Vader on the Death Star once more, Han leads a team to take out a shield protecting the battle station so that the rebel fleet can destory it once more and finally put an end to the war.\",\n            \"Director\": \"George Lucas\",\n            \"Rating\": \"PG\",\n            \"PrincessTheatreMovieId\": \"0086190\"\n        }\n    ]\n}"
+            },
+            {
+              "name": "Query - Average Ticket Price",
+              "originalRequest": {
+                "method": "POST",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n    \"query\": \"Find me the average ticket price.\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{moviehub_base_url}}/{{route}}",
+                  "host": ["{{moviehub_base_url}}"],
+                  "path": ["{{route}}"]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Content-Length",
+                  "value": "103"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "Date",
+                  "value": "Sun, 09 Jun 2024 11:48:05 GMT"
+                },
+                {
+                  "key": "Server",
+                  "value": "Kestrel"
+                },
+                {
+                  "key": "api-supported-versions",
+                  "value": "1.0"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"_query\": \"SELECT AVG(TicketPrice) FROM MovieCinema;\",\n    \"data\": [\n        {\n            \"AVG(TicketPrice)\": 24.484126984126984\n        }\n    ]\n}"
+            },
+            {
+              "name": "Query - Cheapest Ticket Price",
+              "originalRequest": {
+                "method": "POST",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n    \"query\": \"Find me the cheapest ticket price.\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{moviehub_base_url}}/{{route}}",
+                  "host": ["{{moviehub_base_url}}"],
+                  "path": ["{{route}}"]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Content-Length",
+                  "value": "91"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "Date",
+                  "value": "Sun, 09 Jun 2024 11:48:16 GMT"
+                },
+                {
+                  "key": "Server",
+                  "value": "Kestrel"
+                },
+                {
+                  "key": "api-supported-versions",
+                  "value": "1.0"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"_query\": \"SELECT MIN(TicketPrice) FROM MovieCinema;\",\n    \"data\": [\n        {\n            \"MIN(TicketPrice)\": \"20.0\"\n        }\n    ]\n}"
+            },
+            {
+              "name": "Query - Highest Movie Reviews",
+              "originalRequest": {
+                "method": "POST",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n    \"query\": \"Fetch me the movie reviews for the movie with the highest reviews\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{moviehub_base_url}}/{{route}}",
+                  "host": ["{{moviehub_base_url}}"],
+                  "path": ["{{route}}"]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Content-Length",
+                  "value": "739"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "Date",
+                  "value": "Sun, 09 Jun 2024 11:48:55 GMT"
+                },
+                {
+                  "key": "Server",
+                  "value": "Kestrel"
+                },
+                {
+                  "key": "api-supported-versions",
+                  "value": "1.0"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"_query\": \"SELECT MovieReview.*\\nFROM MovieReview\\nJOIN (\\n    SELECT MovieId, COUNT(*) as ReviewCount\\n    FROM MovieReview\\n    GROUP BY MovieId\\n    ORDER BY ReviewCount DESC \\n    LIMIT 1\\n) AS MostReviewedMovie\\nON MovieReview.MovieId = MostReviewedMovie.MovieId;\",\n    \"data\": [\n        {\n            \"Id\": 1,\n            \"Score\": \"8.0\",\n            \"Comment\": \"This movie was excellent!\",\n            \"ReviewDate\": \"2024-06-09 21:37:59.090868\",\n            \"MovieId\": 1\n        },\n        {\n            \"Id\": 2,\n            \"Score\": \"8.0\",\n            \"Comment\": \"This movie was excellent!\",\n            \"ReviewDate\": \"2024-06-09 21:38:01.526634\",\n            \"MovieId\": 1\n        },\n        {\n            \"Id\": 3,\n            \"Score\": \"8.0\",\n            \"Comment\": \"This movie was excellent!\",\n            \"ReviewDate\": \"2024-06-09 21:38:03.079473\",\n            \"MovieId\": 1\n        },\n        {\n            \"Id\": 4,\n            \"Score\": \"8.0\",\n            \"Comment\": \"This movie was excellent!\",\n            \"ReviewDate\": \"2024-06-09 21:38:04.655957\",\n            \"MovieId\": 1\n        }\n    ]\n}"
+            },
+            {
+              "name": "Query - Highest Reviews",
+              "originalRequest": {
+                "method": "POST",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n    \"query\": \"Which movie has the highest reviews?\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{moviehub_base_url}}/{{route}}",
+                  "host": ["{{moviehub_base_url}}"],
+                  "path": ["{{route}}"]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Content-Length",
+                  "value": "282"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "Date",
+                  "value": "Sun, 09 Jun 2024 11:50:42 GMT"
+                },
+                {
+                  "key": "Server",
+                  "value": "Kestrel"
+                },
+                {
+                  "key": "api-supported-versions",
+                  "value": "1.0"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"_query\": \"SELECT Movie.Title, MAX(MovieReview.Score) as Highest_Review\\nFROM Movie\\nINNER JOIN MovieReview ON Movie.Id = MovieReview.MovieId\\nGROUP BY Movie.Title\\nORDER BY Highest_Review DESC;\",\n    \"data\": [\n        {\n            \"Title\": \"Star Wars: The Phantom Menace (Episode I)\",\n            \"Highest_Review\": \"8.0\"\n        }\n    ]\n}"
+            }
+          ]
+        }
+      ],
+      "description": "**Authentication routes**\n\nWith these routes, you can:\n\n- Login with a username and password in a JSON body",
+      "event": [
+        {
+          "listen": "prerequest",
+          "script": {
+            "type": "text/javascript",
+            "packages": {},
+            "exec": [
+              "pm.collectionVariables.set(\"route\", \"api/v{{moviehub_api_version}}/Chatbot\");"
+            ]
+          }
+        },
+        {
+          "listen": "test",
+          "script": {
+            "type": "text/javascript",
+            "packages": {},
+            "exec": [""]
+          }
+        }
+      ]
     }
   ],
   "auth": {

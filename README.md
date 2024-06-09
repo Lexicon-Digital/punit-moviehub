@@ -30,6 +30,7 @@ Add your Princess Theatre API key to the [MovieHub.API/appsettings.json](MovieHu
 
 ![Add Princess Theatre API Key](screenshot-app-settings.png)
 
+Also add your [OpenAI API Key](https://platform.openai.com/settings/profile?tab=api-keys) to the same configuration file to enable the use of the `/Chatbot/query` endpoint.
 
 ### Configure the database
 Before running the application, copy the [moviehub-db-data-seed.sql](https://github.com/Lexicon-Digital/bench-dotnet-training/blob/master/moviehub-api-implementation-task/db/moviehub-db-data-seed.sql) file into the [./MovieHub.API/Scripts](./MovieHub.API/Scripts) folder.

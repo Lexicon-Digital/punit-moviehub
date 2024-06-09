@@ -1,3 +1,4 @@
+using System.IO.Abstractions;
 using Asp.Versioning;
 using Asp.Versioning.ApiExplorer;
 using Microsoft.EntityFrameworkCore;
@@ -65,7 +66,7 @@ builder.Services.AddSwaggerGen(setupAction =>
 {
     foreach (var description in apiVersionDescriptionProvider.ApiVersionDescriptions)
     {
-        setupAction.SwaggerDoc(description.GroupName, new()
+        setupAction.SwaggerDoc(description.GroupName, new OpenApiInfo
         {
             Title = "Movie Hub API",
             Version = description.ApiVersion.ToString(),
@@ -97,6 +98,10 @@ builder.Services.AddSwaggerGen(setupAction =>
 });
 
 builder.Services.AddTransient<IPrincesTheatreService, PrincesTheatreService>();
+
+builder.Services.AddTransient<IChatGptService, ChatGptService>();
+
+builder.Services.AddSingleton<IFileSystem, FileSystem>();
 
 builder.Services.AddHttpClient();
 

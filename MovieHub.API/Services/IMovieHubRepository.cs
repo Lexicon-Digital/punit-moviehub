@@ -18,5 +18,6 @@ public interface IMovieHubRepository
     void DeleteReviewAsync(MovieReview movieReview);
     void DeleteReviewsByMovieAsync(IEnumerable<MovieReview> movieReviews);
     Task<bool> MovieExistsAsync(int id);
+    Task<Dictionary<string, object>?> RunQuery(string query);
     Task<bool> SaveChangesAsync();
 }

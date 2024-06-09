@@ -7,6 +7,7 @@ using Moq;
 using Moq.Protected;
 using MovieHub.Models.PrincesTheatre;
 using MovieHub.Services;
+using MovieHub.Tests.Helpers;
 using Newtonsoft.Json;
 
 namespace MovieHub.Tests.Services;
@@ -14,9 +15,9 @@ namespace MovieHub.Tests.Services;
 public class PrincesTheatreServiceTest
 {
     private readonly Mock<IMemoryCache> _mockMemoryCache;
-    private readonly Mock<HttpMessageHandler> _mockHttpMessageHandler;
     private readonly PrincesTheatreService _service;
     private readonly Dictionary<object, object?> _cacheStore;
+    private readonly MockHttpClientConfigurator _mockHttpClientConfigurator;
 
     public PrincesTheatreServiceTest()
     {
@@ -28,7 +29,6 @@ public class PrincesTheatreServiceTest
             }
         };
         _mockMemoryCache = new Mock<IMemoryCache>();
-        _mockHttpMessageHandler = new Mock<HttpMessageHandler>();
         
         var mockConfiguration = new Mock<IConfiguration>();
         var mockHttpClientFactory = new Mock<IHttpClientFactory>();
@@ -36,17 +36,14 @@ public class PrincesTheatreServiceTest
         mockConfiguration.Setup(configuration => configuration["PrincessTheatre:APIKey"]).Returns("x-api-key-1234");
         mockConfiguration.Setup(configuration => configuration["PrincessTheatre:URL"]).Returns("https://mock-princess-theatre.url/");
 
-        var httpClient = new HttpClient(_mockHttpMessageHandler.Object)
-        {
-            BaseAddress = new Uri(mockConfiguration.Object["PrincessTheatre:URL"] ?? string.Empty)
-        };
+        _mockHttpClientConfigurator = new MockHttpClientConfigurator(mockConfiguration.Object["PrincessTheatre:URL"] ?? string.Empty);
         
-        mockHttpClientFactory.Setup(factory => factory.CreateClient(It.IsAny<string>())).Returns(httpClient);
+        mockHttpClientFactory.Setup(factory => factory.CreateClient(It.IsAny<string>())).Returns(_mockHttpClientConfigurator.MockHttpClient);
 
         var httpClientFactory = new ServiceCollection()
             .AddHttpClient("PrincesTheatreClient")
             .Services
-            .AddSingleton<IHttpClientFactory>(new MockHttpClientFactory(httpClient))
+            .AddSingleton<IHttpClientFactory>(_mockHttpClientConfigurator.HttpClientFactory)
             .BuildServiceProvider()
             .GetRequiredService<IHttpClientFactory>();
 
@@ -58,13 +55,7 @@ public class PrincesTheatreServiceTest
     {
         var princesTheatreResponse = _cacheStore["GetPrincesTheatreMovies/Filmworld"];
         
-        var responseContent = JsonConvert.SerializeObject(princesTheatreResponse);
-        var responseMessage = new HttpResponseMessage(HttpStatusCode.OK)
-        {
-            Content = new StringContent(responseContent, Encoding.UTF8, "application/json")
-        };
-        
-        SetupSendAsync(responseMessage);
+        _mockHttpClientConfigurator.SetupSendAsyncResponse(princesTheatreResponse);
         SetupMemoryCache(true);
         
         var response = await _service.GetPrincesTheatreMovies(MovieProvider.Filmworld);
@@ -85,7 +76,7 @@ public class PrincesTheatreServiceTest
             Content = new StringContent(responseContent, Encoding.UTF8, "application/json")
         };
         
-        _mockHttpMessageHandler.Protected()
+        _mockHttpClientConfigurator.MockHttpMessageHandler.Protected()
             .SetupSequence<Task<HttpResponseMessage>>(
                 "SendAsync",
                 ItExpr.IsAny<HttpRequestMessage>(),
@@ -101,31 +92,12 @@ public class PrincesTheatreServiceTest
 
         Assert.NotNull(response);
         Assert.Equal("Film World", response.Provider);
-        _mockHttpMessageHandler.Protected().Verify(
+        _mockHttpClientConfigurator.MockHttpMessageHandler.Protected().Verify(
             "SendAsync",
             Times.Exactly(3),
             ItExpr.IsAny<HttpRequestMessage>(),
             ItExpr.IsAny<CancellationToken>()
         );
-    }
-    
-    private class MockHttpClientFactory(HttpClient client) : IHttpClientFactory
-    {
-        public HttpClient CreateClient(string name)
-        {
-            return client;
-        }
-    }
-
-    private void SetupSendAsync(HttpResponseMessage responseMessage)
-    {
-        _mockHttpMessageHandler.Protected()
-            .Setup<Task<HttpResponseMessage>>(
-                "SendAsync",
-                ItExpr.IsAny<HttpRequestMessage>(),
-                ItExpr.IsAny<CancellationToken>()
-            )
-            .ReturnsAsync(responseMessage);
     }
 
     private void SetupMemoryCache(bool success)
