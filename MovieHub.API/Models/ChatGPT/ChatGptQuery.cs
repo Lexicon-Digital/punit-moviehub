@@ -20,7 +20,7 @@ public class ChatGptQuery
         });
     }
 
-    [JsonProperty("model")] public string Model { get; set; } = "gpt-4";
+    [JsonProperty("model")] public string Model { get; set; } = "gpt-4o";
 
     [JsonProperty("messages")] public List<Message> Messages { get; set; } = [];
 

@@ -1,7 +1,7 @@
 # MovieHub API - Punit Dharmadhikari
 
 ## Overview
-MovieHub API provides detailed information on movies and the cinemas where they are shown. This API can retrieve movies by their attributes and provide detailed or general information based on user requests.
+MovieHub API provides detailed information on movies and the cinemas where they are shown. This API can retrieve movies by their attributes and provide detailed or general information based on user requests. Moreover, the API also includes a Chat bot endpoint that the users can ask questions to related to the movies.
 
 ## Requirements
 
@@ -28,9 +28,9 @@ dotnet restore
 ### Add configuration
 Add your Princess Theatre API key to the [MovieHub.API/appsettings.json](MovieHub.API/appsettings.json) configuration file in the `PrincessTheatre.APIKey` property, as shown below.
 
-![Add Princess Theatre API Key](screenshot-app-settings.png)
-
 Also add your [OpenAI API Key](https://platform.openai.com/settings/profile?tab=api-keys) to the same configuration file to enable the use of the `/Chatbot/query` endpoint.
+
+![Add Princess Theatre API Key](screenshot-app-settings.png)
 
 ### Configure the database
 Before running the application, copy the [moviehub-db-data-seed.sql](https://github.com/Lexicon-Digital/bench-dotnet-training/blob/master/moviehub-api-implementation-task/db/moviehub-db-data-seed.sql) file into the [./MovieHub.API/Scripts](./MovieHub.API/Scripts) folder.
@@ -81,6 +81,34 @@ Run the following command in the command line:
 
 ```shell
 dotnet test
+```
+
+### Chatbot Prompts
+
+The API features a `/Chatbot/query` endpoint that can be queried by asking direct questions related to the movies, cinemas and reviews.
+
+The question must be sent as a JSON object in a `POST` request, as below.
+
+```json
+{
+    "query": "What is the cheapest ticket price?"
+}
+```
+
+The API will utilise the [OpenAI API](https://platform.openai.com/docs/overview) to fetch an SQL query based on the database schema, which will then be run against the database. The questions need to be descriptive of the resource being queried. The generative AI has access to the database schema but no knowledge of the contents of the database itself, so it has no idea of how data is structured, e.g. Genres are stored in database as a single comma-separated string, but the AI model does not know that.
+
+**Note**: Only `SELECT` queries are allowed to be run against the database. The GPT is configured to reject any attempts at modifying any database resources, so any `ALTER`, `UPDATE` or `DELETE` queries will automatically be rejected. There are also failsafe mechanisms to ensure that nothing other than a `SELECT` query is run against the database.
+
+Some examples of questions that can be asked are below:
+
+```chatinput
+- Which movies were released prior to the year 2000?
+- Find all movies that are of the fantasy genre. Be mindful that genres are stored as a single string separated by commas.
+- What is the average ticket price of the movies?
+- What is the cheapest ticket price?
+- Fetch me the movie reviews for the movie with the highest reviews.
+- Which movie has the highest reviews?
+- Can you get a list of all cinemas where `Star Wars: The Phantom Menace (Episode I)` is showing?
 ```
 
 ### Some helpful commands
