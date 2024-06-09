@@ -97,7 +97,7 @@ The question must be sent as a JSON object in a `POST` request, as below.
 
 The API will utilise the [OpenAI API](https://platform.openai.com/docs/overview) to fetch an SQL query based on the database schema, which will then be run against the database. The questions need to be descriptive of the resource being queried. The generative AI has access to the database schema but no knowledge of the contents of the database itself, so it has no idea of how data is structured, e.g. Genres are stored in database as a single comma-separated string, but the AI model does not know that.
 
-**Note**: Only `SELECT` queries are allowed to be run against the database. The GPT is configured to reject any attempts at modifying any database resources, so any `ALTER`, `UPDATE` or `DELETE` queries will automatically be rejected. There are also failsafe mechanisms to ensure that nothing other than a `SELECT` query is run against the database.
+**Note**: Only `SELECT` queries are allowed to be run against the database. The GPT is configured to reject any attempts at modifying any database resources, so any `ALTER`, `UPDATE` or `DELETE` queries will automatically be rejected. There are also failsafe mechanisms to ensure that restricted information cannot be accessed. In fact, anything other than performing a `SELECT` query on movie-related tables is rejected.
 
 Some examples of questions that can be asked are below:
 
@@ -110,6 +110,41 @@ Some examples of questions that can be asked are below:
 - Which movie has the highest reviews?
 - Can you get a list of all cinemas where `Star Wars: The Phantom Menace (Episode I)` is showing?
 ```
+
+Some example screenshots of questions are below.
+
+**Example 1: Querying for the movie with the highest reviews**
+
+![Chatbot Success Example 1](screenshot-query-example-1.png)
+
+**Example 2: Querying for all the reviews for movie with highest reviews**
+
+![Chatbot Success Example 2](screenshot-query-example-2.png)
+
+
+Subsequently, any attempt to modify the database or access restricted information will be rejected.
+
+**Example 3: Trying to change anything in the database**
+![Chatbot Success Example 3](screenshot-query-example-3.png)
+
+**Example 4: Trying to access restricted information**
+![Chatbot Success Example 4](screenshot-query-example-4.png)
+
+### Future improvements
+
+The MovieHub API currently performs all necessary tasks of retrieving movie-related data. The Chatbot endpoint mostly works as expected, but there may be a few areas of improvements, as outlined below.
+
+**Enhanced Natural Language Processing (NLP):** Implement more advanced NLP techniques to improve the chatbot's understanding of complex questions.
+
+**Robust Security Measures:** Further develop SQL injection protections and implement comprehensive query sanitization (using Regex, etc.) to enhance security.
+
+**Performance Optimization:** Adding query caching and asynchronous query processing to improve performance and user experience.
+
+**Interactive Chatbot Interface:** Develop a graphical user interface that allows users to "talk" to the API directly.
+
+**Advanced Error Handling:** Implement more detailed error responses and fallback mechanisms to handle failures gracefully.
+
+**User Authentication and Role-Based Access:** Introduce user authentication and role-based access control to ensure database security and integrity.
 
 ### Some helpful commands
 The commands below help generate a JWT using the CLI to use with Postman or any other request. **Note** this is not necessary because the Postman collection already comes with a Login endpoint.
