@@ -51,13 +51,13 @@ public class ChatGptServiceTest
     [Fact]
     public async Task GetChatCompletionResponse_Runs_Raw_Query_When_Called()
     {
-        var chatGptResponse = new ChatGptCompletionResponse
+        var chatGptResponse = new ChatGptResponse
         {
             Choices =
             [
-                new ChatGptCompletionResponse.Choice
+                new ChatGptResponse.Choice
                 {
-                    Message = new ChatGptCompletionResponse.Choice.ChoiceMessage
+                    Message = new ChatGptResponse.Choice.ChoiceMessage
                     {
                         Content = "SELECT * FROM Movie;"
                     }
@@ -75,13 +75,13 @@ public class ChatGptServiceTest
     [Fact]
     public async Task GetChatCompletionResponse_Rejects_Any_Query_Other_Than_SELECT()
     {
-        var chatGptResponse = new ChatGptCompletionResponse
+        var chatGptResponse = new ChatGptResponse
         {
             Choices =
             [
-                new ChatGptCompletionResponse.Choice
+                new ChatGptResponse.Choice
                 {
-                    Message = new ChatGptCompletionResponse.Choice.ChoiceMessage
+                    Message = new ChatGptResponse.Choice.ChoiceMessage
                     {
                         Content = "DELETE FROM Movie WHERE Id = 1;"
                     }

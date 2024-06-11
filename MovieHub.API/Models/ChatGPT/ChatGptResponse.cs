@@ -2,7 +2,7 @@ using Newtonsoft.Json;
 
 namespace MovieHub.Models.ChatGPT;
 
-public class ChatGptCompletionResponse
+public class ChatGptResponse
 {
     [JsonProperty("id")] public string Id { get; init; } = string.Empty;
 

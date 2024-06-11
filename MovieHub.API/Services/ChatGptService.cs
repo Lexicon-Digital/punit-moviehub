@@ -42,9 +42,9 @@ public class ChatGptService(
 
         var response = await httpClient.PostAsync(baseUrl, requestContent);
 
-        if (!response.IsSuccessStatusCode) return null;
+        if (!response.IsSuccessStatusCode) throw new InvalidOperationException("An internal server error has occured");
         
-        var responseContent = await response.Content.ReadFromJsonAsync<ChatGptCompletionResponse>();
+        var responseContent = await response.Content.ReadFromJsonAsync<ChatGptResponse>();
 
         var rawQuery = responseContent?.Choices.First().Message.Content;
 
