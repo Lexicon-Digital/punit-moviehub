@@ -26,7 +26,7 @@ public static class MovieReviewsFactory
         return MockMovieReviewsDto.FirstOrDefault(review => review.Id == reviewId);
     }
 
-    public static MovieReview? CreateReviewForMovie(int movieId, MovieReviewCreationDto review, bool failed = false)
+    public static MovieReview? CreateMockReviewForMovie(int movieId, MovieReviewCreationDto review, bool failed = false)
     {
         return failed ? null : new MovieReview
         {
@@ -38,7 +38,7 @@ public static class MovieReviewsFactory
         };
     }
     
-    public static MovieReviewDto? CreateReviewDtoForMovie(int movieId, MovieReview review, bool failed = false)
+    public static MovieReviewDto? CreateMockReviewDtoForMovie(int movieId, MovieReview review, bool failed = false)
     {
         return failed ? null : new MovieReviewDto
         {
@@ -50,7 +50,7 @@ public static class MovieReviewsFactory
         };
     }
     
-    public static MovieReviewUpdateDto? UpdateReviewDtoForMovie(MovieReview review, bool failed = false)
+    public static MovieReviewUpdateDto? UpdateMockReviewDtoForMovie(MovieReview review, bool failed = false)
     {
         return failed ? null : new MovieReviewUpdateDto
         {

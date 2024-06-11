@@ -48,9 +48,15 @@ public class ChatGptService(
 
         var rawQuery = responseContent?.Choices.First().Message.Content;
 
-        if (rawQuery == null || !rawQuery.StartsWith("SELECT", StringComparison.OrdinalIgnoreCase))
-            throw new BadHttpRequestException($"Invalid query: {rawQuery}");
+        if (!IsValidQuery(rawQuery)) throw new BadHttpRequestException(rawQuery!);
 
-        return await _repository.RunQuery(rawQuery);
+        return await _repository.RunQuery(rawQuery!);
+    }
+
+    private static bool IsValidQuery(string? query)
+    {
+        return query != null 
+               && query.StartsWith("SELECT", StringComparison.OrdinalIgnoreCase) 
+               && !query.Contains("ERROR:");
     }
 }

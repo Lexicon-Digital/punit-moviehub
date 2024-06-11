@@ -18,8 +18,14 @@ public class ChatbotController(IChatGptService chatGptService) : Controller
     [HttpPost]
     public async Task<IActionResult> AskChatBot([FromBody] ChatbotQueryDto query)
     {
-        var chatGptResponse = await _chatGptService.GetChatCompletionResponse(query.Message);
-        if (chatGptResponse == null) return BadRequest();
-        return Ok(chatGptResponse);
+        try
+        {
+            var chatGptResponse = await _chatGptService.GetChatCompletionResponse(query.Message);
+            return Ok(chatGptResponse);
+        }
+        catch (BadHttpRequestException exception)
+        {
+            return BadRequest(exception.Message);
+        }
     }
 }

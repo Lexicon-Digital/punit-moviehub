@@ -91,8 +91,8 @@ public class MoviesControllerTest
     {
         const int movieId = 1;
 
-        var princessTheatreCinemaWorldResponse = MoviesFactory.GetPrincesTheatreResponse(MovieProvider.Cinemaworld);
-        var princessTheatreFilmWorldResponse = MoviesFactory.GetPrincesTheatreResponse(MovieProvider.Filmworld);
+        var princessTheatreCinemaWorldResponse = MoviesFactory.GetMockPrincesTheatreResponse(MovieProvider.Cinemaworld);
+        var princessTheatreFilmWorldResponse = MoviesFactory.GetMockPrincesTheatreResponse(MovieProvider.Filmworld);
         var movieEntity = MoviesFactory.GetMockMovieEntity(movieId);
 
         _mockRepository.Setup(repository => repository.GetMovieAsync(movieId, true))
@@ -105,13 +105,13 @@ public class MoviesControllerTest
             .ReturnsAsync(princessTheatreFilmWorldResponse);
         
         _mockMapper.Setup(mapper => mapper.Map<PrincesTheatreDto>(princessTheatreCinemaWorldResponse))
-            .Returns(MoviesFactory.GetPrincesTheatreDto(MovieProvider.Cinemaworld));
+            .Returns(MoviesFactory.GetMockPrincesTheatreDto(MovieProvider.Cinemaworld));
         
         _mockMapper.Setup(mapper => mapper.Map<PrincesTheatreDto>(princessTheatreFilmWorldResponse))
-            .Returns(MoviesFactory.GetPrincesTheatreDto(MovieProvider.Filmworld));
+            .Returns(MoviesFactory.GetMockPrincesTheatreDto(MovieProvider.Filmworld));
 
         _mockMapper.Setup(mapper => mapper.Map<MovieWithPrincesTheatrePricesDto>(movieEntity))
-            .Returns(MoviesFactory.GetMovieWithPrincesTheatrePricesDto());
+            .Returns(MoviesFactory.GetMockMovieWithPrincesTheatrePricesDto());
 
         var result = await _moviesController.GetMovie(movieId, details: true);
 

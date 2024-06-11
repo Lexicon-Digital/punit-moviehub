@@ -135,8 +135,8 @@ public class MovieReviewsControllerTest
             Comment = "Movie was fantastic"
         };
     
-        var movieReview = MovieReviewsFactory.CreateReviewForMovie(movieId, movieReviewCreationDto);
-        var movieReviewDto = MovieReviewsFactory.CreateReviewDtoForMovie(movieId, movieReview!);
+        var movieReview = MovieReviewsFactory.CreateMockReviewForMovie(movieId, movieReviewCreationDto);
+        var movieReviewDto = MovieReviewsFactory.CreateMockReviewDtoForMovie(movieId, movieReview!);
     
         _mockRepository.Setup(repository => repository.MovieExistsAsync(movieId)).ReturnsAsync(true);
         
@@ -211,7 +211,7 @@ public class MovieReviewsControllerTest
         };
     
         var movieReviewEntity = MovieReviewsFactory.GetMockMovieReviewEntity(reviewId);
-        var movieReviewToPatch = MovieReviewsFactory.UpdateReviewDtoForMovie(movieReviewEntity!);
+        var movieReviewToPatch = MovieReviewsFactory.UpdateMockReviewDtoForMovie(movieReviewEntity!);
     
         _mockRepository.Setup(repository => repository.MovieExistsAsync(movieId)).ReturnsAsync(true);
         _mockRepository.Setup(repository => repository.GetReviewAsync(reviewId)).ReturnsAsync(movieReviewEntity);

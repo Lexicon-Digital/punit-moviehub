@@ -27,7 +27,7 @@ public static class MoviesFactory
         return MockMoviesWithoutDetails;
     }
 
-    public static PrincesTheatreResponse GetPrincesTheatreResponse(MovieProvider provider)
+    public static PrincesTheatreResponse GetMockPrincesTheatreResponse(MovieProvider provider)
     {
         return new PrincesTheatreResponse
         {
@@ -48,7 +48,7 @@ public static class MoviesFactory
         };
     }
     
-    public static PrincesTheatreDto GetPrincesTheatreDto(MovieProvider provider)
+    public static PrincesTheatreDto GetMockPrincesTheatreDto(MovieProvider provider)
     {
         return new PrincesTheatreDto
         {
@@ -74,7 +74,7 @@ public static class MoviesFactory
         };
     }
     
-    public static MovieWithPrincesTheatrePricesDto GetMovieWithPrincesTheatrePricesDto()
+    public static MovieWithPrincesTheatrePricesDto GetMockMovieWithPrincesTheatrePricesDto()
     {
         return MovieWithPrincesTheatrePricesDto;
     }
