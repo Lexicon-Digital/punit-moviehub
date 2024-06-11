@@ -117,7 +117,7 @@ Some example screenshots of questions are below.
 
 ![Chatbot Success Example 1](screenshot-query-example-1.png)
 
-**Example 2: Querying for all the reviews for movie with highest reviews**
+**Example 2: Querying for show times for a specific movie**
 
 ![Chatbot Success Example 2](screenshot-query-example-2.png)
 

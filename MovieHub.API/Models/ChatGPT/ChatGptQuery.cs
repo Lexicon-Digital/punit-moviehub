@@ -16,8 +16,10 @@ public class ChatGptQuery
                       $"query against the database. IT'S VERY IMPORTANT THAT YOU ONLY GIVE ME THE QUERY WITHOUT ANY ADDITIONAL TEXT, " +
                       $"COMMENTS OR FORMATTING, BECAUSE YOUR QUERY RESPONSE WILL DIRECTLY BE RUN ON THE DATABASE. " +
                       $"Please be mindful that the question should only return SELECT queries, " +
-                      $"and no UPDATE or DELETE queries. Any questions related to updating or deleting anything in the database " +
-                      $"should be rejected by returning an error message with 'ERROR:' at the start followed by a description of the error message. " +
+                      $"and no UPDATE or DELETE queries." +
+                      $"Any questions related to updating or deleting anything in the database should be rejected. " +
+                      $"Also, any requests for sensitive information such as passwords should be rejected." +
+                      $"When rejecting a request, return an error message with the text 'ERROR:' at the start followed by a description of the error message. " +
                       $"This is the user input question: \"{message}\""
         });
     }
