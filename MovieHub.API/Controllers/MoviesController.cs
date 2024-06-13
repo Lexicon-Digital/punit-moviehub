@@ -60,6 +60,10 @@ public class MoviesController(IMovieHubRepository repository, IMapper mapper, IP
                 var cinemaWorldResponse =
                     await _princesTheatreService.GetPrincesTheatreMovies(MovieProvider.Cinemaworld);
 
+                var currencyResponse = await _princesTheatreService.GetPrincesTheatreCurrencyRates();
+
+                if (cinemaWorldResponse == null) throw new Exception();
+
                 var filmworldMovie = _mapper
                     .Map<PrincesTheatreDto>(filmWorldResponse)
                     .Movies
@@ -75,10 +79,10 @@ public class MoviesController(IMovieHubRepository repository, IMapper mapper, IP
                 if (filmworldMovie == null) throw new ArgumentNullException(nameof(filmworldMovie));
                 
                 var movie = _mapper.Map<MovieWithPrincesTheatrePricesDto>(movieEntity);
-                
+
+                movie.TicketPriceUsd = Math.Round(filmworldMovie.Price / Convert.ToDecimal(currencyResponse!.Rates.Au), 2);
                 movie.CinemaWorldPrice = cinemaworldMovie.Price;
                 movie.FilmWorldPrice = filmworldMovie.Price;
-                
                 return Ok(movie);
             }
             catch

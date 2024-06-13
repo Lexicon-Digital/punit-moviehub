@@ -8,6 +8,7 @@ using Moq.Protected;
 using MovieHub.Models.PrincesTheatre;
 using MovieHub.Services;
 using MovieHub.Tests.Helpers;
+using MovieHub.Tests.TestFactory;
 using Newtonsoft.Json;
 
 namespace MovieHub.Tests.Services;
@@ -98,6 +99,19 @@ public class PrincesTheatreServiceTest
             ItExpr.IsAny<HttpRequestMessage>(),
             ItExpr.IsAny<CancellationToken>()
         );
+    }
+    
+    [Fact]
+    public async Task GetPrincesTheatreCurrencyRates_Returns_Currency_Rates_When_Called()
+    {
+        var expectedResponse = PrincesTheatreResponseFactory.GetMockCurrencyResponse();
+        _mockHttpClientConfigurator.SetupSendAsyncResponse(expectedResponse);
+        
+        var response = await _service.GetPrincesTheatreCurrencyRates();
+
+        Assert.NotNull(response);
+        Assert.Equal("1.44058", response.Rates.Au);
+        Assert.Equal("USD", response.Base);
     }
 
     private void SetupMemoryCache(bool success)

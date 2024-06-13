@@ -104,6 +104,9 @@ public class MoviesControllerTest
         _mockPrincesTheatreService.Setup(service => service.GetPrincesTheatreMovies(MovieProvider.Filmworld))
             .ReturnsAsync(princessTheatreFilmWorldResponse);
         
+        _mockPrincesTheatreService.Setup(service => service.GetPrincesTheatreCurrencyRates())
+            .ReturnsAsync(PrincesTheatreResponseFactory.GetMockCurrencyResponse());
+        
         _mockMapper.Setup(mapper => mapper.Map<PrincesTheatreDto>(princessTheatreCinemaWorldResponse))
             .Returns(MoviesFactory.GetMockPrincesTheatreDto(MovieProvider.Cinemaworld));
         
@@ -121,6 +124,7 @@ public class MoviesControllerTest
         Assert.Equal(1, returnedMovie.Id);
         Assert.Equal((decimal) 25.00, returnedMovie.FilmWorldPrice);
         Assert.Equal((decimal) 26.00, returnedMovie.CinemaWorldPrice);
+        Assert.Equal((decimal) 17.35, returnedMovie.TicketPriceUsd);
     }
     
     [Fact]
