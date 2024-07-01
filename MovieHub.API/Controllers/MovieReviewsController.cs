@@ -4,7 +4,6 @@ using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.JsonPatch;
 using Microsoft.AspNetCore.Mvc;
 using MovieHub.Entities;
-using MovieHub.Models;
 using MovieHub.Models.MovieReview;
 using MovieHub.Services;
 

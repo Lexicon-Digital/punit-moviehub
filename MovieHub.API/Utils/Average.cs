@@ -4,7 +4,7 @@ namespace MovieHub.Utils;
 
 public static class Average
 {
-    public static decimal GetAverage(ICollection<MovieReviewDto> movieReviews)
+    public static decimal GetAverageScore(ICollection<MovieReviewDto> movieReviews)
     {
         return movieReviews.Count > 0 ? movieReviews.Average(review => review.Score) : decimal.Zero;
     }

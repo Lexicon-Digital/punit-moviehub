@@ -16,7 +16,7 @@ public class MovieWithPrincesTheatrePricesDto
     public string Rating { get; init; } = string.Empty;
     public string PrincessTheatreMovieId { get; init; } = string.Empty;
     
-    public decimal AverageScore => Utils.Average.GetAverage(MovieReviews);
+    public decimal AverageScore => Utils.Average.GetAverageScore(MovieReviews);
     
     public decimal FilmWorldPrice;
     

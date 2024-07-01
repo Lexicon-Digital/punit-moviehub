@@ -6,20 +6,20 @@ namespace MovieHub.Models.Movie;
 
 public class MovieDto
 {
-    public int Id { get; set; }
-    public string Title { get; set; } = string.Empty;
-    public DateTime ReleaseDate { get; set; }
-    public string Genre { get; set; } = string.Empty;
-    public int RunTime { get; set; }
-    public string Synopsis { get; set; } = string.Empty;
-    public string Director { get; set; } = string.Empty;
-    public string Rating { get; set; } = string.Empty;
-    public string PrincessTheatreMovieId { get; set; } = string.Empty;
+    public int Id { get; init; }
+    public string Title { get; init; } = string.Empty;
+    public DateTime ReleaseDate { get; init; }
+    public string Genre { get; init; } = string.Empty;
+    public int RunTime { get; init; }
+    public string Synopsis { get; init; } = string.Empty;
+    public string Director { get; init; } = string.Empty;
+    public string Rating { get; init; } = string.Empty;
+    public string PrincessTheatreMovieId { get; init; } = string.Empty;
     
-    public decimal AverageScore => Utils.Average.GetAverage(MovieReviews);
+    public decimal AverageScore => Utils.Average.GetAverageScore(MovieReviews);
     
-    public ICollection<MovieCinemaDto> MovieCinemas { get; set; } = new List<MovieCinemaDto>();
+    public ICollection<MovieCinemaDto> MovieCinemas { get; init; } = new List<MovieCinemaDto>();
     
     [JsonIgnore]
-    public ICollection<MovieReviewDto> MovieReviews { get; set; } = new List<MovieReviewDto>();
+    public ICollection<MovieReviewDto> MovieReviews { get; init; } = new List<MovieReviewDto>();
 }

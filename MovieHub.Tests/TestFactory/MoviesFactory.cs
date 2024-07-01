@@ -1,5 +1,4 @@
 using MovieHub.Entities;
-using MovieHub.Models;
 using MovieHub.Models.Movie;
 using MovieHub.Models.PrincesTheatre;
 
